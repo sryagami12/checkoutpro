@@ -40,10 +40,11 @@
    </head>
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
-      <form class="edit_checkout" id="edit_checkout_760789837" action="{{ route('store') }}" accept-charset="UTF-8" method="POST">
+      <form class="edit_checkout" id="edit_checkout_760789837" action="/store" accept-charset="UTF-8" method="POST">
          @csrf
          <input type="email" name="email">
          <input type="submit" value="enviar">
+         <input type="hidden" name="_token" value="{{ csrf_token() }}"/>
       </form>
       <div data-function='loading-screen' style='display: none;'>
          <div class='loading-screen-wrapper'>
