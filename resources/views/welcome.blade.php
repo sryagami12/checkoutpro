@@ -567,8 +567,6 @@
                               </div>
                            </div>
                         </div>
-                        @csrf
-
                         <input type="submit" value="Enviar" />
                         <div class='custom-control custom-checkbox space-top-4 text-center text-lg-left'>
                            <input name="checkout[accepts_marketing]" type="hidden" value="0" /><input class="custom-control-input js-value-changed-update" type="checkbox" value="1" checked="checked" name="checkout[accepts_marketing]" id="checkout_accepts_marketing" />
@@ -1305,6 +1303,7 @@
                </div>
             </div>
          </div>
+         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
       </form>
       <div data-function='loading-screen' style='display: none;'>
          <div class='loading-screen-wrapper'>
