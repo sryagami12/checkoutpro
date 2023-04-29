@@ -1165,7 +1165,57 @@
                                     </div>
                                     </label>
                                     <!-- checkout -->
-                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: block'></div>
+                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: block'>
+                                        <div class="fields-wrapper" style="">
+                                            <!-- / FIXME: gateway.hosted_fields_token do POST request every time. we need to cache token in checkout for 60 minutes and use it -->
+                                            <div class="bluesnap-container" data-api-url="https://ws.bluesnap.com" data-ccn-placeholder="Card number" data-checkout-id="760819533" data-cvv-placeholder="CVV" data-exp-placeholder="MM/YY" data-token="eyJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImNvbW1vbkp3dFBheWxvYWQiOnsiaWQiOiIyMDQ2NDcxNDIxMjM4MTY4NTU2MjQ5NjUiLCJkYXRlQ3JlYXRlZCI6MTY4Mjc2NTA5MDU4MH0sIm1lcmNoYW50SWQiOjExNDgxNjgsInNlbnRyeSI6eyJtZXJjaGFudCI6ZmFsc2UsImFwcHMiOltdfX19.EViRC2icbfahrsniyyrlTzvccUQq9alFlyaNASrS6mU._2">
+                                               <div class="form-group regular">
+                                                  <label for="card-number">
+                                                  Credit card number
+                                                  </label>
+                                                  <div class="form-control bluesnap-input bluesnap-ccn is-invalid" data-bluesnap="ccn"><iframe id="bluesnap-hosted-iframe-ccn" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCcnInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-visa" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-mastercard" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-amex" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-jcb" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-maestro" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-discover" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png">
+                                                  </div>
+                                                  <div class="bluesnap-credit-card-brand" id="bluesnap-diners-club" style="display: none;">
+                                                     <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png">
+                                                  </div>
+                                               </div>
+                                               <div class="d-flex">
+                                                  <div class="form-group regular mr-2 mb-0">
+                                                     <label for="expiration-date">
+                                                     Expire date
+                                                     </label>
+                                                     <div class="form-control bluesnap-input bluesnap-exp is-invalid" data-bluesnap="exp"><iframe id="bluesnap-hosted-iframe-exp" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfExpInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
+                                                  </div>
+                                                  <div class="form-group regular mb-0">
+                                                     <label for="cvv">
+                                                     Security Code
+                                                     </label>
+                                                     <div class="form-control bluesnap-input bluesnap-cvv" data-bluesnap="cvv"><iframe id="bluesnap-hosted-iframe-cvv" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCvvInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
+                                                  </div>
+                                               </div>
+                                            </div>
+                                            <iframe frameborder="0" height="1" scrolling="no" src="https://www.bluesnap.com/servlet/logo.htm?s=" style="position: absolute;" width="1">
+                                            <img height='1' src='https://www.bluesnap.com/servlet/logo.gif?s=' width='1'>
+                                            </iframe>
+                                         </div>
+                                    </div>
                                  </div>
                               </div>
                            </div>
