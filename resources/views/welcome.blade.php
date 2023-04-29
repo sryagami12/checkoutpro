@@ -6,7 +6,7 @@
    <!-- /Added by HTTrack -->
    <head>
       <title>
-         DELIVERY BOX LLC
+        CHECKOUT SECURE
       </title>
       <meta name="csrf-param" content="authenticity_token" />
       <meta name="csrf-token" content="aP0ZPjuhLI/IhwiUfRbYFkA39GwVfFJXvwzrNYD3EOM6ajnxr3E2PCW2fTPt+hLs79rjfQIgKRHGOa6T+8dUww==" />
