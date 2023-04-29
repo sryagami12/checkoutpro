@@ -22,7 +22,7 @@
          n.queue=[];t=b.createElement(e);t.async=!0;
          t.src=v;s=b.getElementsByTagName(e)[0];
          s.parentNode.insertBefore(t,s)}(window, document,'script',
-         '../../../../connect.facebook.net/en_US/fbevents.js');
+         '/connect.facebook.net/en_US/fbevents.js');
          fbq('init', '617396713608618');
          fbq('track', 'PageView');
       </script>
