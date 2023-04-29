@@ -12,7 +12,7 @@
       <meta name="csrf-token" content="aP0ZPjuhLI/IhwiUfRbYFkA39GwVfFJXvwzrNYD3EOM6ajnxr3E2PCW2fTPt+hLs79rjfQIgKRHGOa6T+8dUww==" />
       <link rel="stylesheet" media="screen" href="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
       <script src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
-      <link href='{{secure_asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png?v=1680240398')}} rel='icon'>
+      <link href="{{secure_asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png?v=1680240398')}}" rel='icon'>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
       <script>
          !function(f,b,e,v,n,t,s)
@@ -73,7 +73,7 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='../../../../cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428'>
+                                    <img src='{{secure_asset('cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428')}}'>
                                  </div>
                                  <div class='item-qty'>
                                     1
@@ -1015,7 +1015,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='../../../../cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428'>
+                                             <img src='{{secure_asset('cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428')}}'>
                                           </div>
                                           <div class='item-qty'>
                                              1
@@ -1121,7 +1121,7 @@
                               <!-- / checkout -->
                               <!-- / detailed_view -->
                               <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
-                                 <script src='{{secure_asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}></script>
+                                 <script src='{{secure_asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
                                  <div class='d-none d-lg-block'></div>
                                  <!-- gateway -->
                                  <!-- checkout -->
