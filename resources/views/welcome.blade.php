@@ -41,7 +41,7 @@
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
       <form class="edit_checkout" id="edit_checkout_760789837" action="{{ route('store') }}" accept-charset="UTF-8" method="POST">
-        @csrf 
+         @csrf
          <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
             <div class='row'>
                <div class='card'>
@@ -567,6 +567,8 @@
                               </div>
                            </div>
                         </div>
+                        @csrf
+
                         <input type="submit" value="Enviar" />
                         <div class='custom-control custom-checkbox space-top-4 text-center text-lg-left'>
                            <input name="checkout[accepts_marketing]" type="hidden" value="0" /><input class="custom-control-input js-value-changed-update" type="checkbox" value="1" checked="checked" name="checkout[accepts_marketing]" id="checkout_accepts_marketing" />
