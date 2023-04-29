@@ -931,7 +931,7 @@
                         <div class='space-top-8 d-none d-lg-block'>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='../../../../cdn-icons-png.flaticon.com/512/18/18188.png'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                               </div>
                               <p>
                                  <span>
@@ -943,7 +943,7 @@
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='../../../../cdn-icons-png.flaticon.com/512/3190/3190354.png'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                               </div>
                               <p>
                                  <span>
@@ -955,7 +955,7 @@
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='../../../../cdn-icons-png.flaticon.com/512/81/81566.png'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                               </div>
                               <p>
                                  <span>
@@ -1190,7 +1190,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='../../../../cdn-icons-png.flaticon.com/512/18/18188.png'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                      </div>
                      <p>
                         <span>
@@ -1204,7 +1204,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='../../../../cdn-icons-png.flaticon.com/512/3190/3190354.png'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                      </div>
                      <p>
                         <span>
@@ -1218,7 +1218,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='../../../../cdn-icons-png.flaticon.com/512/81/81566.png'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                      </div>
                      <p>
                         <span>
