@@ -998,7 +998,7 @@
                               <div class='completed d-none'>
                                  Completed
                               </div>
-                              <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' >
+                              <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                  <div class='checkout-contextual-loader'>
                                     <div></div>
                                     <div></div>
@@ -1165,7 +1165,7 @@
                                     </div>
                                     </label>
                                     <!-- checkout -->
-                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: none'></div>
+                                    <div class='js-gateway-form' data-function='payment-method-form'></div>
                                  </div>
                               </div>
                            </div>
