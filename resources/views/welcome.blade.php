@@ -1136,25 +1136,25 @@
                                     <div class='payment-logo-wrapper'>
                                        <div class='credit-card-brands'>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
                                           </div>
                                           <div class='credit-card-brand-logo'>
-                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png" />
+                                             <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
                                           </div>
                                           <div class='credit-card-more'>
                                              <span>
@@ -1172,7 +1172,7 @@
                            <div class='space-2'>
                               <input type="submit" name="commit" value="Complete Purchase" class="btn btn-primary" id="js-payment-btn" data-bluesnap="submitButton" data-disable-with="Complete Purchase" />
                               <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with
-                              <img src='../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png'>
+                              <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>
                         </div>
