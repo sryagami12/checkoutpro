@@ -1165,7 +1165,7 @@
                                     </div>
                                     </label>
                                     <!-- checkout -->
-                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: block'>
+                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: none'>
                                         <div class="fields-wrapper" style="">
                                             <!-- / FIXME: gateway.hosted_fields_token do POST request every time. we need to cache token in checkout for 60 minutes and use it -->
                                             <div class="bluesnap-container" data-api-url="https://ws.bluesnap.com" data-ccn-placeholder="Card number" data-checkout-id="760819533" data-cvv-placeholder="CVV" data-exp-placeholder="MM/YY" data-token="eyJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImNvbW1vbkp3dFBheWxvYWQiOnsiaWQiOiIyMDQ2NDcxNDIxMjM4MTY4NTU2MjQ5NjUiLCJkYXRlQ3JlYXRlZCI6MTY4Mjc2NTA5MDU4MH0sIm1lcmNoYW50SWQiOjExNDgxNjgsInNlbnRyeSI6eyJtZXJjaGFudCI6ZmFsc2UsImFwcHMiOltdfX19.EViRC2icbfahrsniyyrlTzvccUQq9alFlyaNASrS6mU._2">
