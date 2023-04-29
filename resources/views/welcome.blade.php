@@ -1165,7 +1165,7 @@
                                     </div>
                                     </label>
                                     <!-- checkout -->
-                                    <div class='js-gateway-form' data-function='payment-method-form'></div>
+                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: block'></div>
                                  </div>
                               </div>
                            </div>
