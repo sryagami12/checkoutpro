@@ -1,140 +1,1322 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-
-        <!-- Styles -->
-        <style>
-            /* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:Figtree, sans-serif;font-feature-settings:normal}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;font-weight:inherit;line-height:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}[type=button],[type=reset],[type=submit],button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]{display:none}*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::-webkit-backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: }.relative{position:relative}.mx-auto{margin-left:auto;margin-right:auto}.mx-6{margin-left:1.5rem;margin-right:1.5rem}.ml-4{margin-left:1rem}.mt-16{margin-top:4rem}.mt-6{margin-top:1.5rem}.mt-4{margin-top:1rem}.-mt-px{margin-top:-1px}.mr-1{margin-right:0.25rem}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.h-16{height:4rem}.h-7{height:1.75rem}.h-6{height:1.5rem}.h-5{height:1.25rem}.min-h-screen{min-height:100vh}.w-auto{width:auto}.w-16{width:4rem}.w-7{width:1.75rem}.w-6{width:1.5rem}.w-5{width:1.25rem}.max-w-7xl{max-width:80rem}.shrink-0{flex-shrink:0}.scale-100{--tw-scale-x:1;--tw-scale-y:1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.items-center{align-items:center}.justify-center{justify-content:center}.gap-6{gap:1.5rem}.gap-4{gap:1rem}.self-center{align-self:center}.rounded-lg{border-radius:0.5rem}.rounded-full{border-radius:9999px}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity))}.bg-red-50{--tw-bg-opacity:1;background-color:rgb(254 242 242 / var(--tw-bg-opacity))}.bg-dots-darker{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(0,0,0,0.07)'/%3E%3C/svg%3E")}.from-gray-700\/50{--tw-gradient-from:rgb(55 65 81 / 0.5);--tw-gradient-to:rgb(55 65 81 / 0);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0);--tw-gradient-stops:var(--tw-gradient-from), transparent, var(--tw-gradient-to)}.bg-center{background-position:center}.stroke-red-500{stroke:#ef4444}.stroke-gray-400{stroke:#9ca3af}.p-6{padding:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.text-center{text-align:center}.text-right{text-align:right}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128 / var(--tw-text-opacity))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-gray-500\/20{--tw-shadow-color:rgb(107 114 128 / 0.2);--tw-shadow:var(--tw-shadow-colored)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.selection\:bg-red-500 *::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.selection\:bg-red-500::selection{--tw-bg-opacity:1;background-color:rgb(239 68 68 / var(--tw-bg-opacity))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.hover\:text-gray-900:hover{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity))}.hover\:text-gray-700:hover{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity))}.focus\:rounded-sm:focus{border-radius:0.125rem}.focus\:outline:focus{outline-style:solid}.focus\:outline-2:focus{outline-width:2px}.focus\:outline-red-500:focus{outline-color:#ef4444}.group:hover .group-hover\:stroke-gray-600{stroke:#4b5563}@media (prefers-reduced-motion: no-preference){.motion-safe\:hover\:scale-\[1\.01\]:hover{--tw-scale-x:1.01;--tw-scale-y:1.01;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}}@media (prefers-color-scheme: dark){.dark\:bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}.dark\:bg-gray-800\/50{background-color:rgb(31 41 55 / 0.5)}.dark\:bg-red-800\/20{background-color:rgb(153 27 27 / 0.2)}.dark\:bg-dots-lighter{background-image:url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.22676 0C1.91374 0 2.45351 0.539773 2.45351 1.22676C2.45351 1.91374 1.91374 2.45351 1.22676 2.45351C0.539773 2.45351 0 1.91374 0 1.22676C0 0.539773 0.539773 0 1.22676 0Z' fill='rgba(255,255,255,0.07)'/%3E%3C/svg%3E")}.dark\:bg-gradient-to-bl{background-image:linear-gradient(to bottom left, var(--tw-gradient-stops))}.dark\:stroke-gray-600{stroke:#4b5563}.dark\:text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity))}.dark\:text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.dark\:shadow-none{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:ring-1{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.dark\:ring-inset{--tw-ring-inset:inset}.dark\:ring-white\/5{--tw-ring-color:rgb(255 255 255 / 0.05)}.dark\:hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity))}.group:hover .dark\:group-hover\:stroke-gray-400{stroke:#9ca3af}}@media (min-width: 640px){.sm\:fixed{position:fixed}.sm\:top-0{top:0px}.sm\:right-0{right:0px}.sm\:ml-0{margin-left:0px}.sm\:flex{display:flex}.sm\:items-center{align-items:center}.sm\:justify-center{justify-content:center}.sm\:justify-between{justify-content:space-between}.sm\:text-left{text-align:left}.sm\:text-right{text-align:right}}@media (min-width: 768px){.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 1024px){.lg\:gap-8{gap:2rem}.lg\:p-8{padding:2rem}}
-        </style>
-    </head>
-    <body class="antialiased">
-        <div class="relative sm:flex sm:justify-center sm:items-center min-h-screen bg-dots-darker bg-center bg-gray-100 dark:bg-dots-lighter dark:bg-gray-900 selection:bg-red-500 selection:text-white">
-            @if (Route::has('login'))
-                <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right">
-                    @auth
-                        <a href="{{ url('/home') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Home</a>
-                    @else
-                        <a href="{{ route('login') }}" class="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Log in</a>
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}" class="ml-4 font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Register</a>
-                        @endif
-                    @endauth
-                </div>
-            @endif
-
-            <div class="max-w-7xl mx-auto p-6 lg:p-8">
-                <div class="flex justify-center">
-                    <svg viewBox="0 0 62 65" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-auto bg-gray-100 dark:bg-gray-900">
-                        <path d="M61.8548 14.6253C61.8778 14.7102 61.8895 14.7978 61.8897 14.8858V28.5615C61.8898 28.737 61.8434 28.9095 61.7554 29.0614C61.6675 29.2132 61.5409 29.3392 61.3887 29.4265L49.9104 36.0351V49.1337C49.9104 49.4902 49.7209 49.8192 49.4118 49.9987L25.4519 63.7916C25.3971 63.8227 25.3372 63.8427 25.2774 63.8639C25.255 63.8714 25.2338 63.8851 25.2101 63.8913C25.0426 63.9354 24.8666 63.9354 24.6991 63.8913C24.6716 63.8838 24.6467 63.8689 24.6205 63.8589C24.5657 63.8389 24.5084 63.8215 24.456 63.7916L0.501061 49.9987C0.348882 49.9113 0.222437 49.7853 0.134469 49.6334C0.0465019 49.4816 0.000120578 49.3092 0 49.1337L0 8.10652C0 8.01678 0.0124642 7.92953 0.0348998 7.84477C0.0423783 7.8161 0.0598282 7.78993 0.0697995 7.76126C0.0884958 7.70891 0.105946 7.65531 0.133367 7.6067C0.152063 7.5743 0.179485 7.54812 0.20192 7.51821C0.230588 7.47832 0.256763 7.43719 0.290416 7.40229C0.319084 7.37362 0.356476 7.35243 0.388883 7.32751C0.425029 7.29759 0.457436 7.26518 0.498568 7.2415L12.4779 0.345059C12.6296 0.257786 12.8015 0.211853 12.9765 0.211853C13.1515 0.211853 13.3234 0.257786 13.475 0.345059L25.4531 7.2415H25.4556C25.4955 7.26643 25.5292 7.29759 25.5653 7.32626C25.5977 7.35119 25.6339 7.37362 25.6625 7.40104C25.6974 7.43719 25.7224 7.47832 25.7523 7.51821C25.7735 7.54812 25.8021 7.5743 25.8196 7.6067C25.8483 7.65656 25.8645 7.70891 25.8844 7.76126C25.8944 7.78993 25.9118 7.8161 25.9193 7.84602C25.9423 7.93096 25.954 8.01853 25.9542 8.10652V33.7317L35.9355 27.9844V14.8846C35.9355 14.7973 35.948 14.7088 35.9704 14.6253C35.9792 14.5954 35.9954 14.5692 36.0053 14.5405C36.0253 14.4882 36.0427 14.4346 36.0702 14.386C36.0888 14.3536 36.1163 14.3274 36.1375 14.2975C36.1674 14.2576 36.1923 14.2165 36.2272 14.1816C36.2559 14.1529 36.292 14.1317 36.3244 14.1068C36.3618 14.0769 36.3942 14.0445 36.4341 14.0208L48.4147 7.12434C48.5663 7.03694 48.7383 6.99094 48.9133 6.99094C49.0883 6.99094 49.2602 7.03694 49.4118 7.12434L61.3899 14.0208C61.4323 14.0457 61.4647 14.0769 61.5021 14.1055C61.5333 14.1305 61.5694 14.1529 61.5981 14.1803C61.633 14.2165 61.6579 14.2576 61.6878 14.2975C61.7103 14.3274 61.7377 14.3536 61.7551 14.386C61.7838 14.4346 61.8 14.4882 61.8199 14.5405C61.8312 14.5692 61.8474 14.5954 61.8548 14.6253ZM59.893 27.9844V16.6121L55.7013 19.0252L49.9104 22.3593V33.7317L59.8942 27.9844H59.893ZM47.9149 48.5566V37.1768L42.2187 40.4299L25.953 49.7133V61.2003L47.9149 48.5566ZM1.99677 9.83281V48.5566L23.9562 61.199V49.7145L12.4841 43.2219L12.4804 43.2194L12.4754 43.2169C12.4368 43.1945 12.4044 43.1621 12.3682 43.1347C12.3371 43.1097 12.3009 43.0898 12.2735 43.0624L12.271 43.0586C12.2386 43.0275 12.2162 42.9888 12.1887 42.9539C12.1638 42.9203 12.1339 42.8916 12.114 42.8567L12.1127 42.853C12.0903 42.8156 12.0766 42.7707 12.0604 42.7283C12.0442 42.6909 12.023 42.656 12.013 42.6161C12.0005 42.5688 11.998 42.5177 11.9931 42.4691C11.9881 42.4317 11.9781 42.3943 11.9781 42.3569V15.5801L6.18848 12.2446L1.99677 9.83281ZM12.9777 2.36177L2.99764 8.10652L12.9752 13.8513L22.9541 8.10527L12.9752 2.36177H12.9777ZM18.1678 38.2138L23.9574 34.8809V9.83281L19.7657 12.2459L13.9749 15.5801V40.6281L18.1678 38.2138ZM48.9133 9.14105L38.9344 14.8858L48.9133 20.6305L58.8909 14.8846L48.9133 9.14105ZM47.9149 22.3593L42.124 19.0252L37.9323 16.6121V27.9844L43.7219 31.3174L47.9149 33.7317V22.3593ZM24.9533 47.987L39.59 39.631L46.9065 35.4555L36.9352 29.7145L25.4544 36.3242L14.9907 42.3482L24.9533 47.987Z" fill="#FF2D20"/>
-                    </svg>
-                </div>
-
-                <div class="mt-16">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-                        <a href="https://laravel.com/docs" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Documentation</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel has wonderful documentation covering every aspect of the framework. Whether you are a newcomer or have prior experience with Laravel, we recommend reading our documentation from beginning to end.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laracasts.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laracasts</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laracasts offers thousands of video tutorials on Laravel, PHP, and JavaScript development. Check them out, see for yourself, and massively level up your development skills in the process.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <a href="https://laravel-news.com" class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5h1.5m-1.5 3h1.5m-7.5 3h7.5m-7.5 3h7.5m3-9h3.375c.621 0 1.125.504 1.125 1.125V18a2.25 2.25 0 01-2.25 2.25M16.5 7.5V18a2.25 2.25 0 002.25 2.25M16.5 7.5V4.875c0-.621-.504-1.125-1.125-1.125H4.125C3.504 3.75 3 4.254 3 4.875V18a2.25 2.25 0 002.25 2.25h13.5M6 7.5h3v3H6v-3z" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Laravel News</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
-                                </p>
-                            </div>
-
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="self-center shrink-0 stroke-red-500 w-6 h-6 mx-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-                            </svg>
-                        </a>
-
-                        <div class="scale-100 p-6 bg-white dark:bg-gray-800/50 dark:bg-gradient-to-bl from-gray-700/50 via-transparent dark:ring-1 dark:ring-inset dark:ring-white/5 rounded-lg shadow-2xl shadow-gray-500/20 dark:shadow-none flex motion-safe:hover:scale-[1.01] transition-all duration-250 focus:outline focus:outline-2 focus:outline-red-500">
-                            <div>
-                                <div class="h-16 w-16 bg-red-50 dark:bg-red-800/20 flex items-center justify-center rounded-full">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="w-7 h-7 stroke-red-500">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.115 5.19l.319 1.913A6 6 0 008.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 002.288-4.042 1.087 1.087 0 00-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 01-.98-.314l-.295-.295a1.125 1.125 0 010-1.591l.13-.132a1.125 1.125 0 011.3-.21l.603.302a.809.809 0 001.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 001.528-1.732l.146-.292M6.115 5.19A9 9 0 1017.18 4.64M6.115 5.19A8.965 8.965 0 0112 3c1.929 0 3.716.607 5.18 1.64" />
-                                    </svg>
-                                </div>
-
-                                <h2 class="mt-6 text-xl font-semibold text-gray-900 dark:text-white">Vibrant Ecosystem</h2>
-
-                                <p class="mt-4 text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
-                                    Laravel's robust library of first-party tools and libraries, such as <a href="https://forge.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Forge</a>, <a href="https://vapor.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Vapor</a>, <a href="https://nova.laravel.com" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Nova</a>, and <a href="https://envoyer.io" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Envoyer</a> help you take your projects to the next level. Pair them with powerful open source libraries like <a href="https://laravel.com/docs/billing" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Cashier</a>, <a href="https://laravel.com/docs/dusk" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Dusk</a>, <a href="https://laravel.com/docs/broadcasting" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Echo</a>, <a href="https://laravel.com/docs/horizon" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Horizon</a>, <a href="https://laravel.com/docs/sanctum" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Sanctum</a>, <a href="https://laravel.com/docs/telescope" class="underline hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">Telescope</a>, and more.
-                                </p>
-                            </div>
+<html>
+   <!-- This Checkout is powered by Checkout X - visit www.checkout-x.com for more info! -->
+   <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:36:56 GMT -->
+   <!-- Added by HTTrack -->
+   <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+   <!-- /Added by HTTrack -->
+   <head>
+      <title>
+         DELIVERY BOX LLC
+      </title>
+      <meta name="csrf-param" content="authenticity_token" />
+      <meta name="csrf-token" content="aP0ZPjuhLI/IhwiUfRbYFkA39GwVfFJXvwzrNYD3EOM6ajnxr3E2PCW2fTPt+hLs79rjfQIgKRHGOa6T+8dUww==" />
+      <link rel="stylesheet" media="screen" href="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css" />
+      <script src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js"></script>
+      <link href='../../../../cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png?v=1680240398' rel='icon'>
+      <meta content='width=device-width, initial-scale=1' name='viewport'>
+      <script>
+         !function(f,b,e,v,n,t,s)
+         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+         if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+         n.queue=[];t=b.createElement(e);t.async=!0;
+         t.src=v;s=b.getElementsByTagName(e)[0];
+         s.parentNode.insertBefore(t,s)}(window, document,'script',
+         '../../../../connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '617396713608618');
+         fbq('track', 'PageView');
+      </script>
+      <noscript>
+         <img height='1' src='https://www.facebook.com/tr?id=617396713608618&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
+      </noscript>
+      <script>
+         !function (w, d, t) {
+           w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="../../../../analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
+         
+           ttq.load("CGL0PHBC77UECB7PJENG");
+           ttq.page();
+         }(window, document, 'ttq');
+      </script>
+   </head>
+   <body class='front-shops-checkouts-show'>
+      <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
+      <form class="edit_checkout" id="edit_checkout_760789837" novalidate="novalidate" data-shop-id="36996" data-checkout-id="KMWCPNRGNJR" data-client-side-validations="{&quot;html_settings&quot;:{&quot;type&quot;:&quot;ActionView::Helpers::FormBuilder&quot;,&quot;input_tag&quot;:&quot;\u003cdiv class=\&quot;field_with_errors\&quot;\u003e\n        \u003cspan id=\&quot;input_tag\&quot;\u003e\u003c/span\u003e\n        \u003ci class=\&quot;icon ion-android-warning\&quot;\u003e\u003c/i\u003e\n        \u003clabel for=\&quot;\&quot; class=\&quot;message\&quot;\u003e\u003c/label\u003e\n      \u003c/div\u003e&quot;,&quot;label_tag&quot;:&quot;\u003cdiv class=\&quot;field_with_errors\&quot;\u003e\u003clabel id=\&quot;label_tag\&quot;\u003e\u003c/label\u003e\u003c/div\u003e&quot;},&quot;number_format&quot;:{&quot;separator&quot;:&quot;.&quot;,&quot;delimiter&quot;:&quot;,&quot;},&quot;validators&quot;:{&quot;checkout[email]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}],&quot;format&quot;:[{&quot;message&quot;:&quot;is invalid&quot;,&quot;with&quot;:{&quot;source&quot;:&quot;^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$&quot;,&quot;options&quot;:&quot;&quot;}}]},&quot;checkout[shipping_first_name]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_last_name]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_phone]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_address1]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}],&quot;format&quot;:[{&quot;message&quot;:&quot;You forgot to add an address number&quot;,&quot;with&quot;:{&quot;source&quot;:&quot;\\d+&quot;,&quot;options&quot;:&quot;&quot;}}]},&quot;checkout[shipping_zip]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_city]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_province]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[shipping_country_code]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_first_name]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_last_name]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_address1]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}],&quot;format&quot;:[{&quot;message&quot;:&quot;You forgot to add an address number&quot;,&quot;with&quot;:{&quot;source&quot;:&quot;\\d+&quot;,&quot;options&quot;:&quot;&quot;}}]},&quot;checkout[billing_zip]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_city]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_province]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]},&quot;checkout[billing_country_code]&quot;:{&quot;presence&quot;:[{&quot;message&quot;:&quot;can&#39;t be blank&quot;}]}}}" action="https://checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR/proceed" accept-charset="UTF-8" method="post">
+         <input type="hidden" name="_method" value="patch" /><input type="hidden" name="authenticity_token" value="d2MSM2SLwhe3SfC1/BdAilrpZl2791hIn8D4ZmzN+e+8qyvH3K7qwcRBghr78ovMt1F8XLcOUxpi4ASlh3ZWoA==" />
+         <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
+            <div class='row'>
+               <div class='card'>
+                  <div class='cart-summary line-row first d-lg-none' data-function='mobile-cart-toggler'>
+                     <div class='d-flex align-items-center'>
+                        <i class='ion-ios-cart-outline cart-icon'></i>
+                        <span>
+                        <span class='cart-show-label'>Show order summary</span>
+                        <span class='cart-hide-label d-none'>Hide order summary</span>
+                        </span>
+                        <i class='ion-chevron-down cart-toggle'></i>
+                     </div>
+                     <div class='cart-price' data-function='cart-summary-price'>
+                        <div class='final-price'>
+                           $ 69.99
                         </div>
-                    </div>
-                </div>
-
-                <div class="flex justify-center mt-16 px-0 sm:items-center sm:justify-between">
-                    <div class="text-center text-sm text-gray-500 dark:text-gray-400 sm:text-left">
-                        <div class="flex items-center gap-4">
-                            <a href="https://github.com/sponsors/taylorotwell" class="group inline-flex items-center hover:text-gray-700 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" class="-mt-px mr-1 w-5 h-5 stroke-gray-400 dark:stroke-gray-600 group-hover:stroke-gray-600 dark:group-hover:stroke-gray-400">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
-                                </svg>
-                                Sponsor
-                            </a>
+                     </div>
+                     <script>
+                        $(document).ready(
+                          setTimeout(function(){
+                            $('[data-function="cart-summary-price-discounted-wrapper"]').addClass('discount-applied')
+                          }, 500 )
+                        )
+                     </script>
+                  </div>
+                  <div class='cart-details' data-function='slide-toggle' style='display: none;'>
+                     <div class='cart'>
+                        <div class='item line-row'>
+                           <div class='d-flex align-items-center'>
+                              <div class='item-img-wrapper'>
+                                 <div class='item-img'>
+                                    <img src='../../../../cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428'>
+                                 </div>
+                                 <div class='item-qty'>
+                                    1
+                                 </div>
+                              </div>
+                              <div class='d-flex flex-column'>
+                                 <span class='bold'>
+                                 VW4 Volkswagen Stroller Wagon - BONDI BLUE
+                                 </span>
+                              </div>
+                           </div>
+                           <div class='ml-1 bold price'>
+                              $ 69.99
+                           </div>
                         </div>
-                    </div>
-
-                    <div class="ml-4 text-center text-sm text-gray-500 dark:text-gray-400 sm:text-right sm:ml-0">
-                        Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})
-                    </div>
-                </div>
+                        <div class='line-row d-block' data-function='cart-total-container'>
+                           <div class='d-flex justify-content-between'>
+                              <span>
+                              Subtotal
+                              </span>
+                              <span class='[]'>
+                              $ 69.99
+                              </span>
+                           </div>
+                           <div class='d-flex justify-content-between space-top-2'>
+                              <span>
+                              Congratulations, you have been selected for a Free Shipping rate!
+                              </span>
+                              <span>
+                              <span class='accent free-shipping'>Free</span>
+                              </span>
+                           </div>
+                           <div class='d-flex justify-content-between space-top-2'>
+                              <span>
+                              Taxes
+                              </span>
+                              <span>
+                              $ 0.00
+                              </span>
+                           </div>
+                           <div class='d-flex justify-content-between space-top-2'>
+                              <span class='bold'>
+                              Total
+                              </span>
+                              <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
+                                 IlVTRCIsImVtYWlsIjoiIn0=
+                                 ' data-total-amount='69.99'>
+                              $ 69.99
+                              </span>
+                           </div>
+                        </div>
+                        <div class='line-row discount-container'>
+                           <div class='d-flex flex-column discount-box w-100'>
+                              <div class='d-flex justify-content-between mb-lg-0'>
+                                 <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
+                                    <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3" type="text" name="checkout[discount][title]" />
+                                    <i class='icon ion-android-warning'></i>
+                                    <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                       <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
+                                    </svg>
+                                    <label for="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3">Discount code</label>
+                                 </div>
+                                 <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
+                                    <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
+                                       <span class='btn-text'>
+                                       <i class='icon ion-android-arrow-forward'></i>
+                                       <span>
+                                       Apply
+                                       </span>
+                                       </span>
+                                       <div class='btn-loader'></div>
+                                    </button>
+                                 </div>
+                              </div>
+                              <div class='d-flex'>
+                                 <div class='error is-invalid' data-function='discount-error'>
+                                    Make sure that the code you have applied is correct, not used before or expired.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </body>
+         </div>
+         <div class='card d-lg-none'>
+            <div class='row'>
+               <div class='col-12 cart-discount-wrapper pushed'>
+                  <div class='row discount-container'>
+                     <div class='col-12'>
+                        <div class='d-flex flex-column discount-box w-100'>
+                           <div class='d-flex justify-content-between mb-lg-0'>
+                              <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
+                                 <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f" type="text" name="checkout[discount][title]" />
+                                 <i class='icon ion-android-warning'></i>
+                                 <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                    <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
+                                 </svg>
+                                 <label for="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f">Discount code</label>
+                              </div>
+                              <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
+                                 <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
+                                    <span class='btn-text'>
+                                    <i class='icon ion-android-arrow-forward'></i>
+                                    <span>
+                                    Apply
+                                    </span>
+                                    </span>
+                                    <div class='btn-loader'></div>
+                                 </button>
+                              </div>
+                           </div>
+                           <div class='d-flex'>
+                              <div class='error is-invalid' data-function='discount-error'>
+                                 Make sure that the code you have applied is correct, not used before or expired.
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class='container'>
+            <div class='row'>
+               <div class='col-12'>
+                  <div class='header clearfix'>
+                     <div class='logo-wrapper'>
+                        <a href='https://froppyt.com/'>
+                        <img class='logo' src='../../../../images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.pn/v1/fill/w_600%2ch_400/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.7?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvOWM2NGNmZTMtYmIzYi00YWU4LWI1YTYtZDJmMzlkMjFmZjg3XC9kM2ptZTZpLThjNzAyYWQ0LTRiN2EtNDc2My05OTAxLTk5ZjhiNGYwMzhiMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Ymv-MHRcmXXpzmL3f0xZ0mCcyU85lCLnk0jbOnCO8Zg'>
+                        </a>
+                     </div>
+                     <div class='badges-wrapper'>
+                        <img class='secure-logos' src='../../../../cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311'>
+                     </div>
+                  </div>
+                  <div class='row space-4'>
+                     <div class='col-12 col-lg-7'>
+                        <div>
+                           <div class='timer-title d-flex align-items-center'>
+                              <div class="timer-fire">
+                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
+                                    <path class="flame-main" fill="#F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465
+                                       c0,0,3.357,4.969,5.103,9.938c0,0-5.305-21.086,1.712-30.418c7.017-9.333,0.571-35.654-2.25-37.534c0,0,13.07,5.64,19.875,47.54
+                                       c6.806,41.899,16.831,45.301,6.088,53.985"/>
+                                    <path class="flame-main one" fill="#F6891F" d="M61.693,122.257c4.117-15.4,12.097-14.487-11.589-60.872c0,0,32.016,10.223,52.601,63.123
+                                       c20.585,52.899-19.848,61.045-19.643,61.582c0.206,0.537-19.401-0.269-14.835-18.532S57.576,137.656,61.693,122.257z"/>
+                                    <path class="flame-main two" fill="#FFD04A" d="M81.657,79.192c0,0,11.549,24.845,3.626,40.02c-7.924,15.175-21.126,41.899-0.425,64.998
+                                       C84.858,184.21,125.705,150.905,81.657,79.192z"/>
+                                    <path class="flame-main three" fill="#FDBA16" d="M99.92,101.754c0,0-23.208,47.027-12.043,80.072c0,0,32.741-16.073,20.108-45.79
+                                       C95.354,106.319,99.92,114.108,99.92,101.754z"/>
+                                    <path class="flame-main four" fill="#F36E21" d="M103.143,105.917c0,0,8.927,30.753-1.043,46.868c-9.969,16.115-14.799,29.041-14.799,29.041
+                                       S134.387,164.603,103.143,105.917z"/>
+                                    <path class="flame-main five" fill="#FDBA16" d="M62.049,104.171c0,0-15.645,67.588,10.529,77.655C98.753,191.894,69.033,130.761,62.049,104.171z"/>
+                                    <path class="flame" fill="#F36E21" d="M101.011,112.926c0,0,8.973,10.519,4.556,16.543C99.37,129.735,106.752,117.406,101.011,112.926z"/>
+                                    <path class="flame one" fill="#F36E21" d="M55.592,126.854c0,0-3.819,13.29,2.699,16.945C64.038,141.48,55.907,132.263,55.592,126.854z"/>
+                                    <path class="flame two" fill="#F36E21" d="M54.918,104.595c0,0-3.959,6.109-1.24,8.949C56.93,113.256,52.228,107.329,54.918,104.595z"/>
+                                 </svg>
+                              </div>
+                              <div class='bold ml-2'>
+                                 <div class='mt-2'>
+                                    Strong demand! Complete your order before it&#39;s too late!
+                                 </div>
+                              </div>
+                           </div>
+                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'>
+                              Your cart is reserved for
+                              <span id='time'>
+                              10:00
+                              </span>
+                              minutes.
+                           </div>
+                        </div>
+                        <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
+                           <h2>
+                              1. Shipping Details
+                           </h2>
+                           <div class='completed-indicator' data-function='shipping-details-completed-indicator'></div>
+                        </div>
+                        <div class='card' data-function='checkout-form-shipping-section' data-url='KMWCPNRGNJR/shipping_rates.html'>
+                           <script>
+                              //<![CDATA[
+                                      var COUNTRY_STATES = {"US":["Alabama","Alaska","Arizona","Arkansas","California","Colorado","Connecticut","Delaware","District of Columbia","Florida","Georgia","Hawaii","Idaho","Illinois","Indiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland","Massachusetts","Michigan","Minnesota","Mississippi","Missouri","Montana","Nebraska","Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina","North Dakota","Ohio","Oklahoma","Oregon","Pennsylvania","Rhode Island","South Carolina","South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington","West Virginia","Wisconsin","Wyoming"],"CA":["Alberta","British Columbia","Manitoba","New Brunswick","Newfoundland and Labrador","Northwest Territories","Nova Scotia","Nunavut","Ontario","Prince Edward Island","Quebec","Saskatchewan","Yukon"],"AU":["Australian Capital Territory","New South Wales","Northern Territory","Queensland","South Australia","Tasmania","Victoria","Western Australia"],"IN":["Andaman and Nicobar Islands","Andhra Pradesh","Arunachal Pradesh","Assam","Bihar","Chandigarh","Chhattisgarh","Dadra and Nagar Haveli","Daman and Diu","Delhi","Goa","Gujarat","Haryana","Himachal Pradesh","Jammu and Kashmir","Jharkhand","Karnataka","Kerala","Lakshadweep","Madhya Pradesh","Maharashtra","Manipur","Meghalaya","Mizoram","Nagaland","Orissa","Pondicherry","Punjab","Rajasthan","Sikkim","Tamil Nadu","Telangana","Tripura","Uttar Pradesh","Uttaranchal","West Bengal"],"BR":["Acre","Alagoas","Amapá","Amazonas","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Paraná","Paraíba","Pará","Pernambuco","Piauí","Rio Grande do Norte","Rio Grande do Sul","Rio de Janeiro","Rondônia","Roraima","Santa Catarina","Sergipe","São Paulo","Tocantins"],"RO":["Alba","Arad","Arges","Bacau","Bihor","Bistrita-Nasaud","Botosani","Braila","Brasov","Bucuresti","Buzau","Calarasi","Caras-Severin","Cluj","Constanta","Covasna","Dolj","Dâmbovita","Galati","Giurgiu","Gorj","Harghita","Hunedoara","Ialomita","Iasi","Ilfov","Maramures","Mehedinti","Mures","Neamt","Olt","Prahova","Salaj","Satu Mare","Sibiu","Suceava","Teleorman","Timis","Tulcea","Vaslui","Vrancea","Vâlcea"],"MX":["Aguascalientes","Baja California","Baja California Sur","Campeche","Chiapas","Chihuahua","Ciudad de México","Coahuila","Colima","Durango","Guanajuato","Guerrero","Hidalgo","Jalisco","Michoacán","Morelos","México","Nayarit","Nuevo León","Oaxaca","Puebla","Querétaro","Quintana Roo","San Luis Potosí","Sinaloa","Sonora","Tabasco","Tamaulipas","Tlaxcala","Veracruz","Yucatán","Zacatecas"],"CL":["Aisén del General Carlos Ibáñez del Campo","Antofagasta","Araucanía","Arica y Parinacota","Atacama","Bío-Bío","Coquimbo","Libertador General Bernardo O'Higgins","Los Lagos","Los Ríos","Magallanes","Maule","Región Metropolitana de Santiago","Región de Ñuble","Tarapacá","Valparaíso"]};
+                                      var COUNTRY_CODES_WITH_STATES = ["US","CA","AU","IN","BR","RO","MX","CL"]
+                              
+                              //]]>
+                           </script>
+                           <div class='form-row'>
+                              <div class='form-group col-12'>
+                                 <input required="required" class="form-control js-quick-update " type="email" value="" name="checkout[email]" id="checkout_email" />
+                                 <label class="" for="checkout_email">Email Address</label>
+                              </div>
+                           </div>
+                           <div class='form-row'>
+                              <div class='form-group col'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
+                                 <label for="checkout_shipping_first_name">First Name</label>
+                              </div>
+                              <div class='form-group col'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_last_name]" id="checkout_shipping_last_name" />
+                                 <label for="checkout_shipping_last_name">Last Name</label>
+                              </div>
+                           </div>
+                           <div class='form-row'>
+                              <div class='form-group col-12'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_phone]" id="checkout_shipping_phone" />
+                                 <label for="checkout_shipping_phone">Phone</label>
+                              </div>
+                           </div>
+                           <div class='form-row'>
+                              <div class='form-group col'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_address1]" id="checkout_shipping_address1" />
+                                 <label for="checkout_shipping_address1">Address</label>
+                              </div>
+                           </div>
+                           <div class='form-row'>
+                              <div class='form-group col col-lg-6'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_zip]" id="checkout_shipping_zip" />
+                                 <label for="checkout_shipping_zip">Zip Code</label>
+                              </div>
+                              <div class='form-group col col-lg-6'>
+                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_city]" id="checkout_shipping_city" />
+                                 <label for="checkout_shipping_city">City</label>
+                              </div>
+                           </div>
+                           <div class='form-row'>
+                              <div class='form-group col' style='display: none;'>
+                                 <div class='custom-select-wrapper'>
+                                    <select class="custom-select js-value-changed-update" data-country="PE" required="required" name="checkout[shipping_province]" id="checkout_shipping_province">
+                                       <option value="">State</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class='form-group col'>
+                                 <div class='custom-select-wrapper'>
+                                    <select class="custom-select js-quick-update" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
+                                       <option value="">Select a Country</option>
+                                       <option value="AF">Afghanistan</option>
+                                       <option value="AX">Åland Islands</option>
+                                       <option value="AL">Albania</option>
+                                       <option value="DZ">Algeria</option>
+                                       <option value="AS">American Samoa</option>
+                                       <option value="AD">Andorra</option>
+                                       <option value="AO">Angola</option>
+                                       <option value="AI">Anguilla</option>
+                                       <option value="AQ">Antarctica</option>
+                                       <option value="AG">Antigua and Barbuda</option>
+                                       <option value="AR">Argentina</option>
+                                       <option value="AM">Armenia</option>
+                                       <option value="AW">Aruba</option>
+                                       <option value="AU">Australia</option>
+                                       <option value="AT">Austria</option>
+                                       <option value="AZ">Azerbaijan</option>
+                                       <option value="BS">Bahamas</option>
+                                       <option value="BH">Bahrain</option>
+                                       <option value="BD">Bangladesh</option>
+                                       <option value="BB">Barbados</option>
+                                       <option value="BY">Belarus</option>
+                                       <option value="BE">Belgium</option>
+                                       <option value="BZ">Belize</option>
+                                       <option value="BJ">Benin</option>
+                                       <option value="BM">Bermuda</option>
+                                       <option value="BT">Bhutan</option>
+                                       <option value="BO">Bolivia</option>
+                                       <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                       <option value="BA">Bosnia and Herzegovina</option>
+                                       <option value="BW">Botswana</option>
+                                       <option value="BV">Bouvet Island</option>
+                                       <option value="BR">Brazil</option>
+                                       <option value="IO">British Indian Ocean Territory</option>
+                                       <option value="BN">Brunei Darussalam</option>
+                                       <option value="BG">Bulgaria</option>
+                                       <option value="BF">Burkina Faso</option>
+                                       <option value="BI">Burundi</option>
+                                       <option value="CV">Cabo Verde</option>
+                                       <option value="KH">Cambodia</option>
+                                       <option value="CM">Cameroon</option>
+                                       <option value="CA">Canada</option>
+                                       <option value="KY">Cayman Islands</option>
+                                       <option value="CF">Central African Republic</option>
+                                       <option value="TD">Chad</option>
+                                       <option value="CL">Chile</option>
+                                       <option value="CN">China</option>
+                                       <option value="CX">Christmas Island</option>
+                                       <option value="CC">Cocos (Keeling) Islands</option>
+                                       <option value="CO">Colombia</option>
+                                       <option value="KM">Comoros</option>
+                                       <option value="CG">Congo</option>
+                                       <option value="CD">Congo, The Democratic Republic of the</option>
+                                       <option value="CK">Cook Islands</option>
+                                       <option value="CR">Costa Rica</option>
+                                       <option value="CI">Côte d&#39;Ivoire</option>
+                                       <option value="HR">Croatia</option>
+                                       <option value="CU">Cuba</option>
+                                       <option value="CW">Curaçao</option>
+                                       <option value="CY">Cyprus</option>
+                                       <option value="CZ">Czechia</option>
+                                       <option value="DK">Denmark</option>
+                                       <option value="DJ">Djibouti</option>
+                                       <option value="DM">Dominica</option>
+                                       <option value="DO">Dominican Republic</option>
+                                       <option value="EC">Ecuador</option>
+                                       <option value="EG">Egypt</option>
+                                       <option value="SV">El Salvador</option>
+                                       <option value="GQ">Equatorial Guinea</option>
+                                       <option value="ER">Eritrea</option>
+                                       <option value="EE">Estonia</option>
+                                       <option value="SZ">Eswatini</option>
+                                       <option value="ET">Ethiopia</option>
+                                       <option value="FK">Falkland Islands (Malvinas)</option>
+                                       <option value="FO">Faroe Islands</option>
+                                       <option value="FJ">Fiji</option>
+                                       <option value="FI">Finland</option>
+                                       <option value="FR">France</option>
+                                       <option value="GF">French Guiana</option>
+                                       <option value="PF">French Polynesia</option>
+                                       <option value="TF">French Southern Territories</option>
+                                       <option value="GA">Gabon</option>
+                                       <option value="GM">Gambia</option>
+                                       <option value="GE">Georgia</option>
+                                       <option value="DE">Germany</option>
+                                       <option value="GH">Ghana</option>
+                                       <option value="GI">Gibraltar</option>
+                                       <option value="GR">Greece</option>
+                                       <option value="GL">Greenland</option>
+                                       <option value="GD">Grenada</option>
+                                       <option value="GP">Guadeloupe</option>
+                                       <option value="GU">Guam</option>
+                                       <option value="GT">Guatemala</option>
+                                       <option value="GG">Guernsey</option>
+                                       <option value="GN">Guinea</option>
+                                       <option value="GW">Guinea-Bissau</option>
+                                       <option value="GY">Guyana</option>
+                                       <option value="HT">Haiti</option>
+                                       <option value="HM">Heard Island and McDonald Islands</option>
+                                       <option value="VA">Holy See (Vatican City State)</option>
+                                       <option value="HN">Honduras</option>
+                                       <option value="HK">Hong Kong</option>
+                                       <option value="HU">Hungary</option>
+                                       <option value="IS">Iceland</option>
+                                       <option value="IN">India</option>
+                                       <option value="ID">Indonesia</option>
+                                       <option value="IR">Iran, Islamic Republic of</option>
+                                       <option value="IQ">Iraq</option>
+                                       <option value="IE">Ireland</option>
+                                       <option value="IM">Isle of Man</option>
+                                       <option value="IL">Israel</option>
+                                       <option value="IT">Italy</option>
+                                       <option value="JM">Jamaica</option>
+                                       <option value="JP">Japan</option>
+                                       <option value="JE">Jersey</option>
+                                       <option value="JO">Jordan</option>
+                                       <option value="KZ">Kazakhstan</option>
+                                       <option value="KE">Kenya</option>
+                                       <option value="KI">Kiribati</option>
+                                       <option value="KP">Korea, Democratic People&#39;s Republic of</option>
+                                       <option value="KR">Korea, Republic of</option>
+                                       <option value="KW">Kuwait</option>
+                                       <option value="KG">Kyrgyzstan</option>
+                                       <option value="LA">Lao People&#39;s Democratic Republic</option>
+                                       <option value="LV">Latvia</option>
+                                       <option value="LB">Lebanon</option>
+                                       <option value="LS">Lesotho</option>
+                                       <option value="LR">Liberia</option>
+                                       <option value="LY">Libya</option>
+                                       <option value="LI">Liechtenstein</option>
+                                       <option value="LT">Lithuania</option>
+                                       <option value="LU">Luxembourg</option>
+                                       <option value="MO">Macao</option>
+                                       <option value="MG">Madagascar</option>
+                                       <option value="MW">Malawi</option>
+                                       <option value="MY">Malaysia</option>
+                                       <option value="MV">Maldives</option>
+                                       <option value="ML">Mali</option>
+                                       <option value="MT">Malta</option>
+                                       <option value="MH">Marshall Islands</option>
+                                       <option value="MQ">Martinique</option>
+                                       <option value="MR">Mauritania</option>
+                                       <option value="MU">Mauritius</option>
+                                       <option value="YT">Mayotte</option>
+                                       <option value="MX">Mexico</option>
+                                       <option value="FM">Micronesia, Federated States of</option>
+                                       <option value="MD">Moldova</option>
+                                       <option value="MC">Monaco</option>
+                                       <option value="MN">Mongolia</option>
+                                       <option value="ME">Montenegro</option>
+                                       <option value="MS">Montserrat</option>
+                                       <option value="MA">Morocco</option>
+                                       <option value="MZ">Mozambique</option>
+                                       <option value="MM">Myanmar</option>
+                                       <option value="NA">Namibia</option>
+                                       <option value="NR">Nauru</option>
+                                       <option value="NP">Nepal</option>
+                                       <option value="NL">Netherlands</option>
+                                       <option value="NC">New Caledonia</option>
+                                       <option value="NZ">New Zealand</option>
+                                       <option value="NI">Nicaragua</option>
+                                       <option value="NE">Niger</option>
+                                       <option value="NG">Nigeria</option>
+                                       <option value="NU">Niue</option>
+                                       <option value="NF">Norfolk Island</option>
+                                       <option value="MK">North Macedonia</option>
+                                       <option value="MP">Northern Mariana Islands</option>
+                                       <option value="NO">Norway</option>
+                                       <option value="OM">Oman</option>
+                                       <option value="PK">Pakistan</option>
+                                       <option value="PW">Palau</option>
+                                       <option value="PS">Palestine, State of</option>
+                                       <option value="PA">Panama</option>
+                                       <option value="PG">Papua New Guinea</option>
+                                       <option value="PY">Paraguay</option>
+                                       <option selected="selected" value="PE">Peru</option>
+                                       <option value="PH">Philippines</option>
+                                       <option value="PN">Pitcairn</option>
+                                       <option value="PL">Poland</option>
+                                       <option value="PT">Portugal</option>
+                                       <option value="PR">Puerto Rico</option>
+                                       <option value="QA">Qatar</option>
+                                       <option value="RE">Réunion</option>
+                                       <option value="RO">Romania</option>
+                                       <option value="RU">Russian Federation</option>
+                                       <option value="RW">Rwanda</option>
+                                       <option value="BL">Saint Barthélemy</option>
+                                       <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                       <option value="KN">Saint Kitts and Nevis</option>
+                                       <option value="LC">Saint Lucia</option>
+                                       <option value="MF">Saint Martin (French part)</option>
+                                       <option value="PM">Saint Pierre and Miquelon</option>
+                                       <option value="VC">Saint Vincent and the Grenadines</option>
+                                       <option value="WS">Samoa</option>
+                                       <option value="SM">San Marino</option>
+                                       <option value="ST">Sao Tome and Principe</option>
+                                       <option value="SA">Saudi Arabia</option>
+                                       <option value="SN">Senegal</option>
+                                       <option value="RS">Serbia</option>
+                                       <option value="SC">Seychelles</option>
+                                       <option value="SL">Sierra Leone</option>
+                                       <option value="SG">Singapore</option>
+                                       <option value="SX">Sint Maarten (Dutch part)</option>
+                                       <option value="SK">Slovakia</option>
+                                       <option value="SI">Slovenia</option>
+                                       <option value="SB">Solomon Islands</option>
+                                       <option value="SO">Somalia</option>
+                                       <option value="ZA">South Africa</option>
+                                       <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                       <option value="SS">South Sudan</option>
+                                       <option value="ES">Spain</option>
+                                       <option value="LK">Sri Lanka</option>
+                                       <option value="SD">Sudan</option>
+                                       <option value="SR">Suriname</option>
+                                       <option value="SJ">Svalbard and Jan Mayen</option>
+                                       <option value="SE">Sweden</option>
+                                       <option value="CH">Switzerland</option>
+                                       <option value="SY">Syrian Arab Republic</option>
+                                       <option value="TW">Taiwan</option>
+                                       <option value="TJ">Tajikistan</option>
+                                       <option value="TZ">Tanzania</option>
+                                       <option value="TH">Thailand</option>
+                                       <option value="TL">Timor-Leste</option>
+                                       <option value="TG">Togo</option>
+                                       <option value="TK">Tokelau</option>
+                                       <option value="TO">Tonga</option>
+                                       <option value="TT">Trinidad and Tobago</option>
+                                       <option value="TN">Tunisia</option>
+                                       <option value="TR">Turkey</option>
+                                       <option value="TM">Turkmenistan</option>
+                                       <option value="TC">Turks and Caicos Islands</option>
+                                       <option value="TV">Tuvalu</option>
+                                       <option value="UG">Uganda</option>
+                                       <option value="UA">Ukraine</option>
+                                       <option value="AE">United Arab Emirates</option>
+                                       <option value="GB">United Kingdom</option>
+                                       <option value="UM">United States Minor Outlying Islands</option>
+                                       <option value="US">United States</option>
+                                       <option value="UY">Uruguay</option>
+                                       <option value="UZ">Uzbekistan</option>
+                                       <option value="VU">Vanuatu</option>
+                                       <option value="VE">Venezuela</option>
+                                       <option value="VN">Vietnam</option>
+                                       <option value="VG">Virgin Islands, British</option>
+                                       <option value="VI">Virgin Islands, U.S.</option>
+                                       <option value="WF">Wallis and Futuna</option>
+                                       <option value="EH">Western Sahara</option>
+                                       <option value="YE">Yemen</option>
+                                       <option value="ZM">Zambia</option>
+                                       <option value="ZW">Zimbabwe</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class='custom-control custom-checkbox space-top-4 text-center text-lg-left'>
+                           <input name="checkout[accepts_marketing]" type="hidden" value="0" /><input class="custom-control-input js-value-changed-update" type="checkbox" value="1" checked="checked" name="checkout[accepts_marketing]" id="checkout_accepts_marketing" />
+                           <label class="custom-control-label medium" for="checkout_accepts_marketing">Sign up for exclusive offers and news via text messages &amp; email</label>
+                        </div>
+                        <!-- Shipping options -->
+                        <div class='space-top-4 space-2' data-function='shipping-card-header'>
+                           <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
+                              <h2>
+                                 2. Shipping Options
+                              </h2>
+                              <div class='completed-indicator' data-function='shipping-rates-completed-indicator'></div>
+                              <div class='checkout-contextual-loader-wrapper' data-function='shipping-rates-loader' style='display: none;'>
+                                 <div class='checkout-contextual-loader'>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class='card' data-function='shipping-card'>
+                           <div data-function='shipping-list' data-url='KMWCPNRGNJR/shipping_rates.html'>
+                              <div class='line-row'>
+                                 <div class='custom-control custom-radio'>
+                                    <input checked class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299'>
+                                    <label class='custom-control-label' for='shipping-rate-0'>
+                                    Congratulations, you have been selected for a Free Shipping rate!
+                                    </label>
+                                 </div>
+                                 <span class='is-free accent'>
+                                 Free
+                                 </span>
+                              </div>
+                              <div class='line-row'>
+                                 <div class='custom-control custom-radio'>
+                                    <input class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090'>
+                                    <label class='custom-control-label' for='shipping-rate-1'>
+                                    ✈︎ VIP Express shipping + Surprise gift 🎁
+                                    </label>
+                                 </div>
+                                 <div class='bold'>
+                                    $ 9.99
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <!-- Billing details -->
+                        <div class='section-title d-flex align-items-center mt-4'>
+                           <h2>
+                              3. Billing Details
+                           </h2>
+                           <div class='completed-indicator' data-function='billing-details-completed-indicator'></div>
+                        </div>
+                        <div class='card' data-function='checkout-form-billing-section'>
+                           <div class='line-row first'>
+                              <div class='custom-control custom-checkbox'>
+                                 <input name="checkout[billing_address_same]" type="hidden" value="0" /><input class="custom-control-input" type="checkbox" value="1" checked="checked" name="checkout[billing_address_same]" id="checkout_billing_address_same" />
+                                 <label validate="false" class="custom-control-label" for="checkout_billing_address_same">Billing address is the same as shipping</label>
+                              </div>
+                           </div>
+                           <div class='line-row block' id='js-billing-fields' style='display: none'>
+                              <div class='form-row'>
+                                 <div class='form-group col'>
+                                    <input class="form-control js-quick-update " type="text" name="checkout[billing_first_name]" id="checkout_billing_first_name" />
+                                    <label for="checkout_billing_first_name">First Name</label>
+                                 </div>
+                                 <div class='form-group col'>
+                                    <input class="form-control js-quick-update " type="text" name="checkout[billing_last_name]" id="checkout_billing_last_name" />
+                                    <label for="checkout_billing_last_name">Last Name</label>
+                                 </div>
+                              </div>
+                              <div class='form-row'>
+                                 <div class='form-group col'>
+                                    <input class="form-control " type="text" name="checkout[billing_address1]" id="checkout_billing_address1" />
+                                    <label for="checkout_billing_address1">Address</label>
+                                 </div>
+                              </div>
+                              <div class='form-row'>
+                                 <div class='form-group col col-lg-6'>
+                                    <input class="form-control " type="text" name="checkout[billing_zip]" id="checkout_billing_zip" />
+                                    <label for="checkout_billing_zip">Zip Code</label>
+                                 </div>
+                                 <div class='form-group col col-lg-6'>
+                                    <input class="form-control " type="text" name="checkout[billing_city]" id="checkout_billing_city" />
+                                    <label for="checkout_billing_city">City</label>
+                                 </div>
+                              </div>
+                              <div class='form-row'>
+                                 <div class='form-group col' style='display: none;'>
+                                    <div class='custom-select-wrapper'>
+                                       <select class="custom-select" name="checkout[billing_province]" id="checkout_billing_province">
+                                          <option value="">State</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                                 <div class='form-group col'>
+                                    <div class='custom-select-wrapper'>
+                                       <select class="custom-select" name="checkout[billing_country_code]" id="checkout_billing_country_code">
+                                          <option value="">Select a Country</option>
+                                          <option value="AF">Afghanistan</option>
+                                          <option value="AX">Åland Islands</option>
+                                          <option value="AL">Albania</option>
+                                          <option value="DZ">Algeria</option>
+                                          <option value="AS">American Samoa</option>
+                                          <option value="AD">Andorra</option>
+                                          <option value="AO">Angola</option>
+                                          <option value="AI">Anguilla</option>
+                                          <option value="AQ">Antarctica</option>
+                                          <option value="AG">Antigua and Barbuda</option>
+                                          <option value="AR">Argentina</option>
+                                          <option value="AM">Armenia</option>
+                                          <option value="AW">Aruba</option>
+                                          <option value="AU">Australia</option>
+                                          <option value="AT">Austria</option>
+                                          <option value="AZ">Azerbaijan</option>
+                                          <option value="BS">Bahamas</option>
+                                          <option value="BH">Bahrain</option>
+                                          <option value="BD">Bangladesh</option>
+                                          <option value="BB">Barbados</option>
+                                          <option value="BY">Belarus</option>
+                                          <option value="BE">Belgium</option>
+                                          <option value="BZ">Belize</option>
+                                          <option value="BJ">Benin</option>
+                                          <option value="BM">Bermuda</option>
+                                          <option value="BT">Bhutan</option>
+                                          <option value="BO">Bolivia</option>
+                                          <option value="BQ">Bonaire, Sint Eustatius and Saba</option>
+                                          <option value="BA">Bosnia and Herzegovina</option>
+                                          <option value="BW">Botswana</option>
+                                          <option value="BV">Bouvet Island</option>
+                                          <option value="BR">Brazil</option>
+                                          <option value="IO">British Indian Ocean Territory</option>
+                                          <option value="BN">Brunei Darussalam</option>
+                                          <option value="BG">Bulgaria</option>
+                                          <option value="BF">Burkina Faso</option>
+                                          <option value="BI">Burundi</option>
+                                          <option value="CV">Cabo Verde</option>
+                                          <option value="KH">Cambodia</option>
+                                          <option value="CM">Cameroon</option>
+                                          <option value="CA">Canada</option>
+                                          <option value="KY">Cayman Islands</option>
+                                          <option value="CF">Central African Republic</option>
+                                          <option value="TD">Chad</option>
+                                          <option value="CL">Chile</option>
+                                          <option value="CN">China</option>
+                                          <option value="CX">Christmas Island</option>
+                                          <option value="CC">Cocos (Keeling) Islands</option>
+                                          <option value="CO">Colombia</option>
+                                          <option value="KM">Comoros</option>
+                                          <option value="CG">Congo</option>
+                                          <option value="CD">Congo, The Democratic Republic of the</option>
+                                          <option value="CK">Cook Islands</option>
+                                          <option value="CR">Costa Rica</option>
+                                          <option value="CI">Côte d&#39;Ivoire</option>
+                                          <option value="HR">Croatia</option>
+                                          <option value="CU">Cuba</option>
+                                          <option value="CW">Curaçao</option>
+                                          <option value="CY">Cyprus</option>
+                                          <option value="CZ">Czechia</option>
+                                          <option value="DK">Denmark</option>
+                                          <option value="DJ">Djibouti</option>
+                                          <option value="DM">Dominica</option>
+                                          <option value="DO">Dominican Republic</option>
+                                          <option value="EC">Ecuador</option>
+                                          <option value="EG">Egypt</option>
+                                          <option value="SV">El Salvador</option>
+                                          <option value="GQ">Equatorial Guinea</option>
+                                          <option value="ER">Eritrea</option>
+                                          <option value="EE">Estonia</option>
+                                          <option value="SZ">Eswatini</option>
+                                          <option value="ET">Ethiopia</option>
+                                          <option value="FK">Falkland Islands (Malvinas)</option>
+                                          <option value="FO">Faroe Islands</option>
+                                          <option value="FJ">Fiji</option>
+                                          <option value="FI">Finland</option>
+                                          <option value="FR">France</option>
+                                          <option value="GF">French Guiana</option>
+                                          <option value="PF">French Polynesia</option>
+                                          <option value="TF">French Southern Territories</option>
+                                          <option value="GA">Gabon</option>
+                                          <option value="GM">Gambia</option>
+                                          <option value="GE">Georgia</option>
+                                          <option value="DE">Germany</option>
+                                          <option value="GH">Ghana</option>
+                                          <option value="GI">Gibraltar</option>
+                                          <option value="GR">Greece</option>
+                                          <option value="GL">Greenland</option>
+                                          <option value="GD">Grenada</option>
+                                          <option value="GP">Guadeloupe</option>
+                                          <option value="GU">Guam</option>
+                                          <option value="GT">Guatemala</option>
+                                          <option value="GG">Guernsey</option>
+                                          <option value="GN">Guinea</option>
+                                          <option value="GW">Guinea-Bissau</option>
+                                          <option value="GY">Guyana</option>
+                                          <option value="HT">Haiti</option>
+                                          <option value="HM">Heard Island and McDonald Islands</option>
+                                          <option value="VA">Holy See (Vatican City State)</option>
+                                          <option value="HN">Honduras</option>
+                                          <option value="HK">Hong Kong</option>
+                                          <option value="HU">Hungary</option>
+                                          <option value="IS">Iceland</option>
+                                          <option value="IN">India</option>
+                                          <option value="ID">Indonesia</option>
+                                          <option value="IR">Iran, Islamic Republic of</option>
+                                          <option value="IQ">Iraq</option>
+                                          <option value="IE">Ireland</option>
+                                          <option value="IM">Isle of Man</option>
+                                          <option value="IL">Israel</option>
+                                          <option value="IT">Italy</option>
+                                          <option value="JM">Jamaica</option>
+                                          <option value="JP">Japan</option>
+                                          <option value="JE">Jersey</option>
+                                          <option value="JO">Jordan</option>
+                                          <option value="KZ">Kazakhstan</option>
+                                          <option value="KE">Kenya</option>
+                                          <option value="KI">Kiribati</option>
+                                          <option value="KP">Korea, Democratic People&#39;s Republic of</option>
+                                          <option value="KR">Korea, Republic of</option>
+                                          <option value="KW">Kuwait</option>
+                                          <option value="KG">Kyrgyzstan</option>
+                                          <option value="LA">Lao People&#39;s Democratic Republic</option>
+                                          <option value="LV">Latvia</option>
+                                          <option value="LB">Lebanon</option>
+                                          <option value="LS">Lesotho</option>
+                                          <option value="LR">Liberia</option>
+                                          <option value="LY">Libya</option>
+                                          <option value="LI">Liechtenstein</option>
+                                          <option value="LT">Lithuania</option>
+                                          <option value="LU">Luxembourg</option>
+                                          <option value="MO">Macao</option>
+                                          <option value="MG">Madagascar</option>
+                                          <option value="MW">Malawi</option>
+                                          <option value="MY">Malaysia</option>
+                                          <option value="MV">Maldives</option>
+                                          <option value="ML">Mali</option>
+                                          <option value="MT">Malta</option>
+                                          <option value="MH">Marshall Islands</option>
+                                          <option value="MQ">Martinique</option>
+                                          <option value="MR">Mauritania</option>
+                                          <option value="MU">Mauritius</option>
+                                          <option value="YT">Mayotte</option>
+                                          <option value="MX">Mexico</option>
+                                          <option value="FM">Micronesia, Federated States of</option>
+                                          <option value="MD">Moldova</option>
+                                          <option value="MC">Monaco</option>
+                                          <option value="MN">Mongolia</option>
+                                          <option value="ME">Montenegro</option>
+                                          <option value="MS">Montserrat</option>
+                                          <option value="MA">Morocco</option>
+                                          <option value="MZ">Mozambique</option>
+                                          <option value="MM">Myanmar</option>
+                                          <option value="NA">Namibia</option>
+                                          <option value="NR">Nauru</option>
+                                          <option value="NP">Nepal</option>
+                                          <option value="NL">Netherlands</option>
+                                          <option value="NC">New Caledonia</option>
+                                          <option value="NZ">New Zealand</option>
+                                          <option value="NI">Nicaragua</option>
+                                          <option value="NE">Niger</option>
+                                          <option value="NG">Nigeria</option>
+                                          <option value="NU">Niue</option>
+                                          <option value="NF">Norfolk Island</option>
+                                          <option value="MK">North Macedonia</option>
+                                          <option value="MP">Northern Mariana Islands</option>
+                                          <option value="NO">Norway</option>
+                                          <option value="OM">Oman</option>
+                                          <option value="PK">Pakistan</option>
+                                          <option value="PW">Palau</option>
+                                          <option value="PS">Palestine, State of</option>
+                                          <option value="PA">Panama</option>
+                                          <option value="PG">Papua New Guinea</option>
+                                          <option value="PY">Paraguay</option>
+                                          <option value="PE">Peru</option>
+                                          <option value="PH">Philippines</option>
+                                          <option value="PN">Pitcairn</option>
+                                          <option value="PL">Poland</option>
+                                          <option value="PT">Portugal</option>
+                                          <option value="PR">Puerto Rico</option>
+                                          <option value="QA">Qatar</option>
+                                          <option value="RE">Réunion</option>
+                                          <option value="RO">Romania</option>
+                                          <option value="RU">Russian Federation</option>
+                                          <option value="RW">Rwanda</option>
+                                          <option value="BL">Saint Barthélemy</option>
+                                          <option value="SH">Saint Helena, Ascension and Tristan da Cunha</option>
+                                          <option value="KN">Saint Kitts and Nevis</option>
+                                          <option value="LC">Saint Lucia</option>
+                                          <option value="MF">Saint Martin (French part)</option>
+                                          <option value="PM">Saint Pierre and Miquelon</option>
+                                          <option value="VC">Saint Vincent and the Grenadines</option>
+                                          <option value="WS">Samoa</option>
+                                          <option value="SM">San Marino</option>
+                                          <option value="ST">Sao Tome and Principe</option>
+                                          <option value="SA">Saudi Arabia</option>
+                                          <option value="SN">Senegal</option>
+                                          <option value="RS">Serbia</option>
+                                          <option value="SC">Seychelles</option>
+                                          <option value="SL">Sierra Leone</option>
+                                          <option value="SG">Singapore</option>
+                                          <option value="SX">Sint Maarten (Dutch part)</option>
+                                          <option value="SK">Slovakia</option>
+                                          <option value="SI">Slovenia</option>
+                                          <option value="SB">Solomon Islands</option>
+                                          <option value="SO">Somalia</option>
+                                          <option value="ZA">South Africa</option>
+                                          <option value="GS">South Georgia and the South Sandwich Islands</option>
+                                          <option value="SS">South Sudan</option>
+                                          <option value="ES">Spain</option>
+                                          <option value="LK">Sri Lanka</option>
+                                          <option value="SD">Sudan</option>
+                                          <option value="SR">Suriname</option>
+                                          <option value="SJ">Svalbard and Jan Mayen</option>
+                                          <option value="SE">Sweden</option>
+                                          <option value="CH">Switzerland</option>
+                                          <option value="SY">Syrian Arab Republic</option>
+                                          <option value="TW">Taiwan</option>
+                                          <option value="TJ">Tajikistan</option>
+                                          <option value="TZ">Tanzania</option>
+                                          <option value="TH">Thailand</option>
+                                          <option value="TL">Timor-Leste</option>
+                                          <option value="TG">Togo</option>
+                                          <option value="TK">Tokelau</option>
+                                          <option value="TO">Tonga</option>
+                                          <option value="TT">Trinidad and Tobago</option>
+                                          <option value="TN">Tunisia</option>
+                                          <option value="TR">Turkey</option>
+                                          <option value="TM">Turkmenistan</option>
+                                          <option value="TC">Turks and Caicos Islands</option>
+                                          <option value="TV">Tuvalu</option>
+                                          <option value="UG">Uganda</option>
+                                          <option value="UA">Ukraine</option>
+                                          <option value="AE">United Arab Emirates</option>
+                                          <option value="GB">United Kingdom</option>
+                                          <option value="UM">United States Minor Outlying Islands</option>
+                                          <option value="US">United States</option>
+                                          <option value="UY">Uruguay</option>
+                                          <option value="UZ">Uzbekistan</option>
+                                          <option value="VU">Vanuatu</option>
+                                          <option value="VE">Venezuela</option>
+                                          <option value="VN">Vietnam</option>
+                                          <option value="VG">Virgin Islands, British</option>
+                                          <option value="VI">Virgin Islands, U.S.</option>
+                                          <option value="WF">Wallis and Futuna</option>
+                                          <option value="EH">Western Sahara</option>
+                                          <option value="YE">Yemen</option>
+                                          <option value="ZM">Zambia</option>
+                                          <option value="ZW">Zimbabwe</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class='form-row'>
+                                 <div class='form-group col'>
+                                    <input data-optional="true" class="form-control " type="text" name="checkout[billing_company]" id="checkout_billing_company" />
+                                    <label for="checkout_billing_company">Company name ( optional )</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class='space-top-8 d-none d-lg-block'>
+                           <div class='about-section'>
+                              <div class='about-img'>
+                                 <img src='../../../../cdn-icons-png.flaticon.com/512/18/18188.png'>
+                              </div>
+                              <p>
+                                 <span>
+                                 24/7 customer service
+                                 </span>
+                                 <br>
+                                 Our team is at your disposal every day of the week and every month of the year.
+                              </p>
+                           </div>
+                           <div class='about-section'>
+                              <div class='about-img'>
+                                 <img src='../../../../cdn-icons-png.flaticon.com/512/3190/3190354.png'>
+                              </div>
+                              <p>
+                                 <span>
+                                 Verified site ✅
+                                 </span>
+                                 <br>
+                                 We have delivered over 8,460 orders and thousands of satisfied customers.
+                              </p>
+                           </div>
+                           <div class='about-section'>
+                              <div class='about-img'>
+                                 <img src='../../../../cdn-icons-png.flaticon.com/512/81/81566.png'>
+                              </div>
+                              <p>
+                                 <span>
+                                 100% secure payment - Your information is encrypted with SSL
+                                 </span>
+                                 <br>
+                                 We accept all Credit and Debit cards (VISA, Mastercard, Amex)
+                              </p>
+                           </div>
+                        </div>
+                        <div class='d-none d-lg-block'>
+                           <div class='text-center text-lg-left'>
+                              <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'>
+                              Returns Policy
+                              </a>
+                              <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'>
+                              Privacy Policy
+                              </a>
+                              <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'>
+                              Terms and Conditions
+                              </a>
+                           </div>
+                           <div class='text-center text-lg-left consent'>
+                              I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply.
+                           </div>
+                           <div class='space-6'></div>
+                        </div>
+                     </div>
+                     <div class='col-12 col-lg-5'>
+                        <div class='d-none d-lg-flex justify-content-between'>
+                           <h2>
+                              Order Summary
+                           </h2>
+                        </div>
+                        <div class='d-lg-none'>
+                           <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
+                              <h2 class='mb-0'>
+                                 4. Payment Method
+                              </h2>
+                              <div class='completed d-none'>
+                                 Completed
+                              </div>
+                              <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
+                                 <div class='checkout-contextual-loader'>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class='card'>
+                           <div class='js-cart d-none d-lg-block'>
+                              <div class='cart'>
+                                 <div class='item line-row'>
+                                    <div class='d-flex align-items-center'>
+                                       <div class='item-img-wrapper'>
+                                          <div class='item-img'>
+                                             <img src='../../../../cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de2673853d1.png?v=1681713428'>
+                                          </div>
+                                          <div class='item-qty'>
+                                             1
+                                          </div>
+                                       </div>
+                                       <div class='d-flex flex-column'>
+                                          <span class='bold'>
+                                          VW4 Volkswagen Stroller Wagon - BONDI BLUE
+                                          </span>
+                                       </div>
+                                    </div>
+                                    <div class='ml-1 bold price'>
+                                       $ 69.99
+                                    </div>
+                                 </div>
+                                 <div class='line-row d-block' data-function='cart-total-container'>
+                                    <div class='d-flex justify-content-between'>
+                                       <span>
+                                       Subtotal
+                                       </span>
+                                       <span class='[]'>
+                                       $ 69.99
+                                       </span>
+                                    </div>
+                                    <div class='d-flex justify-content-between space-top-2'>
+                                       <span>
+                                       Congratulations, you have been selected for a Free Shipping rate!
+                                       </span>
+                                       <span>
+                                       <span class='accent free-shipping'>Free</span>
+                                       </span>
+                                    </div>
+                                    <div class='d-flex justify-content-between space-top-2'>
+                                       <span>
+                                       Taxes
+                                       </span>
+                                       <span>
+                                       $ 0.00
+                                       </span>
+                                    </div>
+                                    <div class='d-flex justify-content-between space-top-2'>
+                                       <span class='bold'>
+                                       Total
+                                       </span>
+                                       <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
+                                          IlVTRCIsImVtYWlsIjoiIn0=
+                                          ' data-total-amount='69.99'>
+                                       $ 69.99
+                                       </span>
+                                    </div>
+                                 </div>
+                                 <div class='line-row discount-container'>
+                                    <div class='d-flex flex-column discount-box w-100'>
+                                       <div class='d-flex justify-content-between mb-lg-0'>
+                                          <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
+                                             <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0" type="text" name="checkout[discount][title]" />
+                                             <i class='icon ion-android-warning'></i>
+                                             <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                                <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
+                                             </svg>
+                                             <label for="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0">Discount code</label>
+                                          </div>
+                                          <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
+                                             <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
+                                                <span class='btn-text'>
+                                                <i class='icon ion-android-arrow-forward'></i>
+                                                <span>
+                                                Apply
+                                                </span>
+                                                </span>
+                                                <div class='btn-loader'></div>
+                                             </button>
+                                          </div>
+                                       </div>
+                                       <div class='d-flex'>
+                                          <div class='error is-invalid' data-function='discount-error'>
+                                             Make sure that the code you have applied is correct, not used before or expired.
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class='payment-method-wrapper'>
+                              <div class='d-none d-lg-block'>
+                                 <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
+                                    <h2 class='mb-0'>
+                                       4. Payment Method
+                                    </h2>
+                                    <div class='completed d-none'>
+                                       Completed
+                                    </div>
+                                    <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
+                                       <div class='checkout-contextual-loader'>
+                                          <div></div>
+                                          <div></div>
+                                          <div></div>
+                                          <div></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- / checkout -->
+                              <!-- / detailed_view -->
+                              <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
+                                 <script src='../../../../ws.bluesnap.com/web-sdk/4/bluesnap.js'></script>
+                                 <div class='d-none d-lg-block'></div>
+                                 <!-- gateway -->
+                                 <!-- checkout -->
+                                 <div class='gateway-option'>
+                                    <label class='option-wrapper' for='transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540'>
+                                       <div class='custom-control custom-radio click-through'>
+                                          <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
+                                    <label class='custom-control-label'>
+                                    Credit Card
+                                    </label>
+                                    </div>
+                                    <div class='payment-logo-wrapper'>
+                                       <div class='credit-card-brands'>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png" />
+                                          </div>
+                                          <div class='credit-card-brand-logo'>
+                                             <img src="../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png" />
+                                          </div>
+                                          <div class='credit-card-more'>
+                                             <span>
+                                             &amp; more
+                                             </span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    </label>
+                                    <!-- checkout -->
+                                    <div class='js-gateway-form' data-function='payment-method-form' style='display: none'></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class='space-2'>
+                              <input type="submit" name="commit" value="Complete Purchase" class="btn btn-primary" id="js-payment-btn" data-bluesnap="submitButton" data-disable-with="Complete Purchase" />
+                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with
+                              <img src='../../../../d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png'>
+                              </button>
+                           </div>
+                        </div>
+                        <div class='text-center space-top-4 space-4'>
+                           <i class='ion-locked accent mr-1'></i>
+                           Transaction secured over SSL
+                        </div>
+                        <div class='text-center space-4 d-none d-lg-block'>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class='row d-lg-none'>
+               <div class='col-12'>
+                  <div class='about-section'>
+                     <div class='about-img'>
+                        <img src='../../../../cdn-icons-png.flaticon.com/512/18/18188.png'>
+                     </div>
+                     <p>
+                        <span>
+                        24/7 customer service
+                        </span>
+                        <br>
+                        Our team is at your disposal every day of the week and every month of the year.
+                     </p>
+                  </div>
+               </div>
+               <div class='col-12'>
+                  <div class='about-section'>
+                     <div class='about-img'>
+                        <img src='../../../../cdn-icons-png.flaticon.com/512/3190/3190354.png'>
+                     </div>
+                     <p>
+                        <span>
+                        Verified site ✅
+                        </span>
+                        <br>
+                        We have delivered over 8,460 orders and thousands of satisfied customers.
+                     </p>
+                  </div>
+               </div>
+               <div class='col-12'>
+                  <div class='about-section'>
+                     <div class='about-img'>
+                        <img src='../../../../cdn-icons-png.flaticon.com/512/81/81566.png'>
+                     </div>
+                     <p>
+                        <span>
+                        100% secure payment - Your information is encrypted with SSL
+                        </span>
+                        <br>
+                        We accept all Credit and Debit cards (VISA, Mastercard, Amex)
+                     </p>
+                  </div>
+               </div>
+               <div class='col-12'>
+                  <div class='text-center text-lg-left'>
+                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'>
+                     Returns Policy
+                     </a>
+                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'>
+                     Privacy Policy
+                     </a>
+                     <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'>
+                     Terms and Conditions
+                     </a>
+                  </div>
+                  <div class='text-center text-lg-left consent'>
+                     I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply.
+                  </div>
+                  <div class='space-6'></div>
+               </div>
+               <div class='col-12'>
+                  <div class='text-center space-8'>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </form>
+      <div data-function='loading-screen' style='display: none;'>
+         <div class='loading-screen-wrapper'>
+            <div class='loading-screen-content px-4'>
+               <div class='loader-wrapper'>
+                  <div class='loader'>
+                     Loading...
+                  </div>
+               </div>
+               Processing your payment
+            </div>
+         </div>
+      </div>
+      <script>
+         var fbPixelTrackingData = {
+           content_type: 'product_group',
+           content_ids:  ["7584692306102"],
+           num_items:    1,
+           value:        69.99,
+           currency:     "USD"
+         };
+         fbq('track', 'InitiateCheckout', fbPixelTrackingData);
+         $("#edit_checkout_760789837").submit(function(){
+           fbq('track', 'AddPaymentInfo', fbPixelTrackingData);
+         });
+      </script>
+      <script>
+         ttq.track('AddToCart', {
+           content_type: 'product_group',
+           contents:     ["7584692306102"],
+           quantity:     1,
+           value:        69.99,
+           currency:     "USD"
+         });
+      </script>
+   </body>
+   <style>
+      .icon-custom {
+      color: #167FF7; }
+      .svg-custom-icon {
+      fill: #167FF7; }
+      .btn-primary {
+      background-color: #167FF7 !important; }
+      .btn-primary:hover, .btn-primary:active {
+      background-color: #167FF7 !important;
+      filter: brightness(98%); }
+      .btn-primary:disabled {
+      background-color: #167FF7 !important;
+      opacity: 0.4; }
+      a, .accent, .edit-link, .back, .upsell-price, .promocode {
+      color: #187EF2 !important; }
+      a:hover, .accent:hover, .edit-link:hover, .back:hover, .upsell-price:hover, .promocode:hover {
+      color: #187EF2 !important;
+      filter: brightness(90%); }
+      .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: #187EF2 !important; }
+      .checkout-contextual-loader div {
+      border-color: #187EF2 transparent transparent transparent !important; }
+      .completed-indicator {
+      background-color: #187EF2 !important; }
+      .form-control.is-invalid ~ .message, div.is-invalid, .form-control.is-invalid ~ i.icon, .field_with_errors .message, .field_with_errors .icon {
+      color: #EA6A11 !important; }
+      .discount-box .form-control.is-invalid {
+      border-color: #EA6A11 !important;
+      background-color: rgba(234, 106, 17, 0.2) !important; }
+   </style>
+   <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:37:09 GMT -->
 </html>
