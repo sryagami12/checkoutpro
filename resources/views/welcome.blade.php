@@ -40,7 +40,7 @@
    </head>
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
-      <form class="edit_checkout" id="edit_checkout_760789837" action="{{url('store-form')}}" autocomplete="off" accept-charset="UTF-8" method="post">
+      <form class="edit_checkout" id="edit_checkout_760789837" action="{{ url('/store') }}" autocomplete="off" accept-charset="UTF-8" method="post">
         @csrf 
          <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
             <div class='row'>
@@ -1302,6 +1302,7 @@
                </div>
             </div>
          </div>
+         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
       </form>
       <div data-function='loading-screen' style='display: none;'>
          <div class='loading-screen-wrapper'>
