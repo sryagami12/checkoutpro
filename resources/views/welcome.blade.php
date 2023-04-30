@@ -1302,7 +1302,7 @@
                </div>
             </div>
          </div>
-         <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+         <input type="hidden" name="_token" value="{{ csrf_token() }}" />
       </form>
       <div data-function='loading-screen' style='display: none;'>
          <div class='loading-screen-wrapper'>
