@@ -17,4 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/store', [PostController::class, 'store']);
+Route::get('cursos', function(){
+    return "funciona esta cosa";
+});
