@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-    public function postStore(Request $request)
+    public function store(Request $request)
     {
-        return $request;
+        return $request->getContent();
     }
 }
