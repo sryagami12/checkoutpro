@@ -9,6 +9,6 @@ class PostController extends Controller
 
     public function postStore(Request $request)
     {
-        //
+        return $request;
     }
 }
