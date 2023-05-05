@@ -1220,7 +1220,7 @@
                               </div>
                            </div>
                            <div class='space-2'>
-                              <input type="submit" value="Complete Purchase" class="btn btn-primary" data-disable-with="Complete Purchase" />
+                              <input type="submit" value="Complete Purchase" class="btn btn-primary"/>
                               <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with
                               <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
