@@ -7,7 +7,7 @@
    <title>prueba pro</title>
 </head>
 <body>
-   <form action="/cursos" method="GET">
+   <form action="/store" method="GET">
       @csrf
       <input type="text" name="name">
       <input type="submit" value="enviar">
