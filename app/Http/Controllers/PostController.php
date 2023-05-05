@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 class PostController extends Controller
 {
 
-    public function store()
+    public function store(Request $request)
     {
-        return "hola";
+        return $request;
     }
 }
