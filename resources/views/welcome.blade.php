@@ -1212,7 +1212,14 @@
                                                      <label for="cvv">
                                                      Security Code
                                                      </label>
-                                                     <div class="form-control bluesnap-input bluesnap-cvv" data-bluesnap="cvv"><iframe id="bluesnap-hosted-iframe-cvv" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCvvInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
+                                                     
+                                                      <div class="form-control bluesnap-input bluesnap-cvv" data-bluesnap="cvv">
+                                                         
+                                                            <input id="cvv" maxlength="4" autocomplete="cc-csc" type="tel" aria-errormessage="ariaError" placeholder="CVV" aria-label="Card CVC/CVV input" class="valid" aria-invalid="false" name= "credit_card_cvv">
+                                                            <span id="ariaError" aria-live="assertive"></span>
+                                                            <style id="inputStyle">:focus { color: black;  } input { color: black; font-size: 14px; font-family: 'Montserrat', sans-serif;  } .invalid { color: red;  } </style>
+                                                         
+                                                         <iframe id="bluesnap-hosted-iframe-cvv" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCvvInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
                                                   </div>
                                                </div>
                                             </div>
