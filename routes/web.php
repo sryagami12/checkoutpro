@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('/store', 'PostController@store')->name('store');
+Route::post('/store', [PostController::class, 'store']);
