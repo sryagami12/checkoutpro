@@ -12,7 +12,7 @@ class PostController extends Controller
     {
         $sheetdb = new SheetDB('i77oen0q9b6ry');
         $sheetdb->create([
-            'email'                     => $request["checkout"]->input('email'),
+            'email'                     => $request["checkout"]->get('email'),
             'shipping_first_name'       => $request->input('shipping_first_name'),
             'shipping_last_name'        => $request->input('shipping_last_name'),
             'shipping_phone'            => $request->input('shipping_phone'),
