@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Sheets;
+use SheetDB\SheetDB;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $values = Sheets::spreadsheet('1mqsbIrMoEH6SQ0V5PaQaQxLhpRkSrAJt_2VNRVkltiw')->sheet('sales')->get();
-        dd($values);
+        $sheetdb = new SheetDB('i77oen0q9b6ry');
+        return $sheetdb->name();
     }
 }
