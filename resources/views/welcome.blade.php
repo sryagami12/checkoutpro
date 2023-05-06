@@ -83,10 +83,12 @@
                                  <span class='bold'>
                                  VW4 Volkswagen Stroller Wagon - BONDI BLUE
                                  </span>
+                                 <input type="text" value="VW4 Volkswagen Stroller Wagon - BONDI BLUE" name= "product_name" hidden>
                               </div>
                            </div>
                            <div class='ml-1 bold price'>
                               $ 69.99
+                              <input type="text" value="69.99" name= "product_price" hidden>
                            </div>
                         </div>
                         <div class='line-row d-block' data-function='cart-total-container'>
