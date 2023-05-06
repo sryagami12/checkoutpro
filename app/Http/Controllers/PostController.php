@@ -10,7 +10,9 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $sheetdb = new SheetDB('i77oen0q9b6ry');
-        return $sheetdb->name();
+        //$sheetdb = new SheetDB('i77oen0q9b6ry');
+        //return $sheetdb->name();
+
+        return $request;
     }
 }
