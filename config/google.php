@@ -23,7 +23,6 @@ return [
     'scopes' => [\Google\Service\Sheets::DRIVE, \Google\Service\Sheets::SPREADSHEETS],
     'access_type' => 'online',
     'approval_prompt' => 'auto',
-    'prompt' => 'consent', //"none", "consent", "select_account" default:none
 
     /*
     |----------------------------------------------------------------------------
