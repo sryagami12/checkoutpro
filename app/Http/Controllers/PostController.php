@@ -10,7 +10,7 @@ class PostController extends Controller
 
     public function store(Request $request)
     {
-        $values = Sheets::spreadsheet('1mqsbIrMoEH6SQ0V5PaQaQxLhpRkSrAJt_2VNRVkltiw')->sheet('sales')->all();
+        $values = Sheets::spreadsheet('1mqsbIrMoEH6SQ0V5PaQaQxLhpRkSrAJt_2VNRVkltiw')->sheet('sales')->get();
         return $values;
     }
 }
