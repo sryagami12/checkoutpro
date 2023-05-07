@@ -27,7 +27,7 @@
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td><img src="https://cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de26738.png" alt="image product"></td>
+                                <td><img src="https://cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de26738.png" alt="image product" width="50px;"></td>
                                 <td>vw4 Volkswagen Stroller Wagon (Green - Blue) ✅</td>
                                 <td>$ 69.99</td>
                                 <td>
