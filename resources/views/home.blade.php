@@ -18,29 +18,30 @@
                         <thead>
                             <tr>
                             <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope="col">Product Image</th>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Product Price</th>
+                            <th scope="col">Options</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
+                                <th scope="row">1</th>
+                                <td><img src="" alt="image product"></td>
+                                <td>vw4 Volkswagen Stroller Wagon (Green - Blue) ✅</td>
+                                <td>$ 69.99</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          Dropdown button
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                          <a class="dropdown-item" href="#">Open Link</a>
+                                          <a class="dropdown-item" href="#">Edit Product Link</a>
+                                          <a class="dropdown-item" href="#">Delete Product Link</a>
+                                        </div>
+                                      </div>
+                                </td>
                             </tr>
                         </tbody>
                     </table>
