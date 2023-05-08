@@ -31,7 +31,7 @@
                                     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name Here...">
                                 </div>
                                 <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Product Price</label>
+                                    <label for="exampleFormControlInput1" class="form-label">Product Price ($)</label>
                                     <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00">
                                 </div>
                                 <div class="mb-3">
@@ -41,7 +41,30 @@
                                 <div class="mb-3">
                                     <label for="formFile" class="form-label">Product Image</label>
                                     <input class="form-control" type="file" id="formFile">
-                                  </div>
+                                </div>
+                                <hr>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Free option Label here..." value="Congratulations, you have been selected for a Free Shipping rate!">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label ($)</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Express Option Label Here..." value="✈︎ VIP Express shipping + Surprise gift 🎁">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label ($)</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="9.99">
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Taxes ($)</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
+                                </div>
+
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
