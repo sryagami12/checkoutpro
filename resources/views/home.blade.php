@@ -19,60 +19,63 @@
                     </button>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">New Product Checkout Link</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <form action="" method="POST">
+                            @csrf
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="exampleModalLabel">New Product Checkout Link</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                  </div>
+                                  <div class="modal-body">
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Product Name</label>
+                                          <input type="text" name="product_name" class="form-control" id="exampleFormControlInput1" placeholder="Product Name Here...">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Product Price ($)</label>
+                                          <input type="number" name="product_price" class="form-control" id="exampleFormControlInput1" placeholder="0.00">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
+                                          <input type="number" name="product_quantity" class="form-control" id="exampleFormControlInput1" placeholder="0">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="formFile" class="form-label">Product Image</label>
+                                          <input class="form-control" name="product_image_path" type="file" id="formFile">
+                                      </div>
+                                      <hr>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label</label>
+                                          <input type="text" name="checkout_free_option_label" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Free option Label here..." value="Congratulations, you have been selected for a Free Shipping rate!">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label ($)</label>
+                                          <input type="number" name="checkout_free_option_Value" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label</label>
+                                          <input type="text" name="checkout_express_option_label" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Express Option Label Here..." value="✈︎ VIP Express shipping + Surprise gift 🎁">
+                                      </div>
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label ($)</label>
+                                          <input type="number" name="checkout_express_option_value" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="9.99">
+                                      </div>
+                                      
+                                      <div class="mb-3">
+                                          <label for="exampleFormControlInput1" class="form-label">Taxes ($)</label>
+                                          <input type="number" name="checkout_taxes_value" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
+                                      </div>
+      
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <input type="submit" class="btn btn-primary" value="Save">
+                                  </div>
+                                </div>
                             </div>
-                            <div class="modal-body">
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Product Name</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name Here...">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Product Price ($)</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formFile" class="form-label">Product Image</label>
-                                    <input class="form-control" type="file" id="formFile">
-                                </div>
-                                <hr>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Free option Label here..." value="Congratulations, you have been selected for a Free Shipping rate!">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Checkout Free option Label ($)</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label</label>
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Checkout Express Option Label Here..." value="✈︎ VIP Express shipping + Surprise gift 🎁">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Checkout Express Option Label ($)</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="9.99">
-                                </div>
-                                
-                                <div class="mb-3">
-                                    <label for="exampleFormControlInput1" class="form-label">Taxes ($)</label>
-                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
-                                </div>
-
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                        </form>
+                    </div>
 
                     <table class="table table-striped">
                         <thead>
