@@ -22,15 +22,30 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">New Product Checkout Link</h1>
                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              ...
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Product Name</label>
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Product Name Here...">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Product Price</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0.00">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
+                                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="0">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formFile" class="form-label">Product Image</label>
+                                    <input class="form-control" type="file" id="formFile">
+                                  </div>
                             </div>
                             <div class="modal-footer">
                               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                              <button type="button" class="btn btn-primary">Save changes</button>
+                              <button type="button" class="btn btn-primary">Save</button>
                             </div>
                           </div>
                         </div>
