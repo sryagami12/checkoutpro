@@ -107,12 +107,12 @@
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Options
+                                            Options
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" target="_blank" href="/productbyid?id={{$productlink->product_id}}">Open Link</a>
-                                          <a class="dropdown-item" href="#">Edit Product Link</a>
-                                          <a class="dropdown-item" href="#">Delete Product Link</a>
+                                            <a class="dropdown-item" target="_blank" href="/productbyid?id={{$productlink->product_id}}">Open Link</a>
+                                            <a class="dropdown-item" href="#">Edit Product Link</a>
+                                            <a class="dropdown-item" href="#">Delete Product Link</a>
                                         </div>
                                     </div>
                                 </td>
