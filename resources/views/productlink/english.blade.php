@@ -1176,11 +1176,13 @@
                                                   Credit card number
                                                   </label>
                                                   
-                                                   <input id="ccn" maxlength="24" autocomplete="cc-number" type="tel" aria-errormessage="ariaError" placeholder="Card number" aria-label="Card number input" name='credit_card_number'>
+                                                   
                                                    <span id="ariaError" aria-live="assertive"></span>
                                                    <input maxlength="80" data-bluesnap-name="cc-exp-month" name="cc-exp-month" id="CcExpMonth" autocomplete="cc-exp-month" tabindex="-1" placeholder="MM" type="number" style="z-index: 1; opacity: 0; position: absolute; color: transparent; background-color: transparent;"><input maxlength="80" data-bluesnap-name="cc-exp-year" name="cc-exp-year" id="CcExpYear" autocomplete="cc-exp-year" tabindex="-1" placeholder="YYYY" type="number" style="z-index: 1; opacity: 0; position: absolute; color: transparent; background-color: transparent;"><style id="inputStyle">:focus { color: black;  } input { color: black; font-size: 14px; font-family: 'Montserrat', sans-serif;  } .invalid { color: red;  } </style>
                                                    
-                                                  <div class="form-control bluesnap-input bluesnap-ccn is-invalid" data-bluesnap="ccn" ><iframe id="bluesnap-hosted-iframe-ccn" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCcnInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
+                                                  <div class="form-control bluesnap-input bluesnap-ccn is-invalid" data-bluesnap="ccn" >
+                                                      <input id="ccn" maxlength="24" autocomplete="cc-number" type="tel" aria-errormessage="ariaError" placeholder="Card number" aria-label="Card number input" name='credit_card_number'>
+                                                      <iframe id="bluesnap-hosted-iframe-ccn" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfCcnInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
                                                   <div class="bluesnap-credit-card-brand" id="bluesnap-visa" style="display: none;">
                                                      <img src="https://d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png">
                                                   </div>
