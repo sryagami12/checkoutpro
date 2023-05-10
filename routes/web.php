@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductLinkController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +23,8 @@ Route::post('store', [PostController::class, 'store']);
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('storeproductlink', [ProductLinkController::class, 'storeproductlink']);
+Route::get('/productbyid', [ProductLinkController::class, 'showproductlinkbyid']);
 
 Auth::routes();
 

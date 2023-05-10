@@ -14,14 +14,15 @@ return new class extends Migration
         Schema::create('product_checkout', function (Blueprint $table) {
             $table->id('product_id');
             $table->string('product_name');
-            $table->numeric('product_price');
-            $table->numeric('product_quantity');
+            $table->decimal('product_price');
+            $table->decimal('product_quantity');
             $table->string('product_image_path');
             $table->string('checkout_free_option_label');
-            $table->numeric('checkout_free_option_Value');
+            $table->decimal('checkout_free_option_Value');
             $table->string('checkout_express_option_label');
-            $table->numeric('checkout_express_option_value');
-            $table->numeric('checkout_taxes_value');
+            $table->decimal('checkout_express_option_value');
+            $table->decimal('checkout_taxes_value');
+            $table->string('checkout_language');
             $table->timestamps();
         });
     }

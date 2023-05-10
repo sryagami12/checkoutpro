@@ -19,7 +19,7 @@
                     </button>
 
                     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <form action="" method="POST">
+                        <form action="/storeproductlink" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="modal-dialog">
                                 <div class="modal-content">
@@ -66,6 +66,14 @@
                                           <label for="exampleFormControlInput1" class="form-label">Taxes ($)</label>
                                           <input type="number" name="checkout_taxes_value" class="form-control" id="exampleFormControlInput1" placeholder="0.00" value="0.00">
                                       </div>
+
+                                      <div class="mb-3">
+                                        <label for="exampleFormControlInput1" class="form-label">Language</label>
+                                        <select class="form-select" aria-label="Default select example" name="checkout_language">
+                                            <option value="English">English</option>
+                                            <option value="Spanish">Spanish</option>
+                                        </select>
+                                    </div>
       
                                   </div>
                                   <div class="modal-footer">
@@ -81,6 +89,7 @@
                         <thead>
                             <tr>
                             <th scope="col">#</th>
+                            <th scope="col">Link Language</th>
                             <th scope="col">Product Image</th>
                             <th scope="col">Product Name</th>
                             <th scope="col">Product Price</th>
@@ -88,24 +97,27 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($productlinks as $productlink)
                             <tr>
-                                <th scope="row">1</th>
-                                <td><img src="https://cdn.shopify.com/s/files/1/0522/7433/1830/products/220829-Product-VW4-BLU-01_92e3b433-ce48-4e38-a4da-d5334de26738.png" alt="image product" width="50px;"></td>
-                                <td>vw4 Volkswagen Stroller Wagon (Green - Blue) ✅</td>
-                                <td>$ 69.99</td>
+                                <th scope="row">{{$productlink->product_id}}</th>
+                                <td>{{$productlink->checkout_language}}</td>
+                                <td><img src="{{asset('storage/app/'.$productlink->product_image_path)}}" alt="image product" width="50px;"></td>
+                                <td>{{$productlink->product_name}}</td>
+                                <td>$ {{$productlink->product_price}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                           Options
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                          <a class="dropdown-item" href="#">Open Link</a>
+                                          <a class="dropdown-item" target="_blank" href="/productbyid?id={{$productlink->product_id}}">Open Link</a>
                                           <a class="dropdown-item" href="#">Edit Product Link</a>
                                           <a class="dropdown-item" href="#">Delete Product Link</a>
                                         </div>
-                                      </div>
+                                    </div>
                                 </td>
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
