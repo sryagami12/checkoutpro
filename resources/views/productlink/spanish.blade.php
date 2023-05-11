@@ -1263,7 +1263,7 @@
                            </style>
                            <div class="row">
                               <div class="col-12">
-                                  
+                                  <div class="d-flex flex-column px-4 mb-4">
                                       <span>Credit Card</span>
                                       <div class="inputWithIcon">
                                           <input class="form-control" type="text" value="5136 1845 5468 3894">
@@ -1271,7 +1271,7 @@
                                              <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png" alt="">
                                           </span>
                                       </div>
-                                  
+                                  </div>
                               </div>
                               <div class="col-md-6">
                                   <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
