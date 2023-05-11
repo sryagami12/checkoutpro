@@ -1250,16 +1250,6 @@
     font-family: 'Montserrat', sans-serif
 }
 
-body{
-    background-color:#3ecc6d;
-}
-
-.container {
-    margin: 20px auto;
-    width: 800px;
-    padding: 30px
-}
-
 .card.box1 {
     width: 350px;
     height: 500px;
