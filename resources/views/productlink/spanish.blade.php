@@ -49,8 +49,8 @@
                      <div class='d-flex align-items-center'>
                         <i class='ion-ios-cart-outline cart-icon'></i>
                         <span>
-                        <span class='cart-show-label'>Show order summary</span>
-                        <span class='cart-hide-label d-none'>Hide order summary</span>
+                        <span class='cart-show-label'>Mostrar resumen del pedido</span>
+                        <span class='cart-hide-label d-none'>Ocultar resumen del pedido</span>
                         </span>
                         <i class='ion-chevron-down cart-toggle'></i>
                      </div>
@@ -110,7 +110,7 @@
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span>
-                              Taxes
+                              Impuestos
                               </span>
                               <span>
                                  {{$productlink->checkout_taxes_value}}
@@ -136,14 +136,14 @@
                                     <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
                                        <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                     </svg>
-                                    <label for="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3">Discount code</label>
+                                    <label for="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3">Código de descuento</label>
                                  </div>
                                  <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
                                     <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
                                        <span class='btn-text'>
                                        <i class='icon ion-android-arrow-forward'></i>
                                        <span>
-                                       Apply
+                                       Aplicar
                                        </span>
                                        </span>
                                        <div class='btn-loader'></div>
@@ -152,7 +152,7 @@
                               </div>
                               <div class='d-flex'>
                                  <div class='error is-invalid' data-function='discount-error'>
-                                    Make sure that the code you have applied is correct, not used before or expired.
+                                    Asegúrate de que el código que has aplicado sea correcto, no se haya usado antes o esté caducado.
                                  </div>
                               </div>
                            </div>
@@ -182,7 +182,7 @@
                                     <span class='btn-text'>
                                     <i class='icon ion-android-arrow-forward'></i>
                                     <span>
-                                    Apply
+                                    Aplicar
                                     </span>
                                     </span>
                                     <div class='btn-loader'></div>
@@ -191,7 +191,7 @@
                            </div>
                            <div class='d-flex'>
                               <div class='error is-invalid' data-function='discount-error'>
-                                 Make sure that the code you have applied is correct, not used before or expired.
+                                 Asegúrate de que el código que has aplicado sea correcto, no se haya usado antes o esté caducado.
                               </div>
                            </div>
                         </div>
@@ -244,16 +244,16 @@
                               </div>
                            </div>
                            <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'>
-                              Your cart is reserved for
+                              Su carrito está reservado para
                               <span id='time'>
                               10:00
                               </span>
-                              minutes.
+                              minutos.
                            </div>
                         </div>
                         <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                            <h2>
-                              1. Shipping Details
+                              1. Detalles de envío
                            </h2>
                            <div class='completed-indicator' data-function='shipping-details-completed-indicator'></div>
                         </div>
@@ -268,53 +268,53 @@
                            <div class='form-row'>
                               <div class='form-group col-12'>
                                  <input required="required" class="form-control js-quick-update " type="email" value="" name="checkout[email]" id="checkout_email" />
-                                 <label class="" for="checkout_email">Email Address</label>
+                                 <label class="" for="checkout_email">Email</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
-                                 <label for="checkout_shipping_first_name">First Name</label>
+                                 <label for="checkout_shipping_first_name">Nombres</label>
                               </div>
                               <div class='form-group col'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_last_name]" id="checkout_shipping_last_name" />
-                                 <label for="checkout_shipping_last_name">Last Name</label>
+                                 <label for="checkout_shipping_last_name">Apellidos</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col-12'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_phone]" id="checkout_shipping_phone" />
-                                 <label for="checkout_shipping_phone">Phone</label>
+                                 <label for="checkout_shipping_phone">Celular</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_address1]" id="checkout_shipping_address1" />
-                                 <label for="checkout_shipping_address1">Address</label>
+                                 <label for="checkout_shipping_address1">Dirección</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col col-lg-6'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_zip]" id="checkout_shipping_zip" />
-                                 <label for="checkout_shipping_zip">Zip Code</label>
+                                 <label for="checkout_shipping_zip">Código Postal</label>
                               </div>
                               <div class='form-group col col-lg-6'>
                                  <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_city]" id="checkout_shipping_city" />
-                                 <label for="checkout_shipping_city">City</label>
+                                 <label for="checkout_shipping_city">Ciudad</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col' style='display: none;'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select js-value-changed-update" data-country="PE" required="required" name="checkout[shipping_province]" id="checkout_shipping_province">
-                                       <option value="">State</option>
+                                       <option value="">Estado</option>
                                     </select>
                                  </div>
                               </div>
                               <div class='form-group col'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select js-quick-update" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
-                                       <option value="">Select a Country</option>
+                                       <option value="">Selecciona un País</option>
                                        <option value="AF">Afghanistan</option>
                                        <option value="AX">Åland Islands</option>
                                        <option value="AL">Albania</option>
@@ -571,13 +571,13 @@
                         </div>
                         <div class='custom-control custom-checkbox space-top-4 text-center text-lg-left'>
                            <input name="checkout[accepts_marketing]" type="hidden" value="0" /><input class="custom-control-input js-value-changed-update" type="checkbox" value="1" checked="checked" name="checkout[accepts_marketing]" id="checkout_accepts_marketing" />
-                           <label class="custom-control-label medium" for="checkout_accepts_marketing">Sign up for exclusive offers and news via text messages &amp; email</label>
+                           <label class="custom-control-label medium" for="checkout_accepts_marketing">Regístrese para recibir ofertas exclusivas y noticias a través de mensajes de texto & amp; correo electrónico</label>
                         </div>
                         <!-- Shipping options -->
                         <div class='space-top-4 space-2' data-function='shipping-card-header'>
                            <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                               <h2>
-                                 2. Shipping Options
+                                 2. Opciones de envío
                               </h2>
                               <div class='completed-indicator' data-function='shipping-rates-completed-indicator'></div>
                               <div class='checkout-contextual-loader-wrapper' data-function='shipping-rates-loader' style='display: none;'>
@@ -619,7 +619,7 @@
                         <!-- Billing details -->
                         <div class='section-title d-flex align-items-center mt-4'>
                            <h2>
-                              3. Billing Details
+                              3. Detalles de facturación
                            </h2>
                            <div class='completed-indicator' data-function='billing-details-completed-indicator'></div>
                         </div>
@@ -634,41 +634,41 @@
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input class="form-control js-quick-update " type="text" name="checkout[billing_first_name]" id="checkout_billing_first_name" />
-                                    <label for="checkout_billing_first_name">First Name</label>
+                                    <label for="checkout_billing_first_name">Nombres</label>
                                  </div>
                                  <div class='form-group col'>
                                     <input class="form-control js-quick-update " type="text" name="checkout[billing_last_name]" id="checkout_billing_last_name" />
-                                    <label for="checkout_billing_last_name">Last Name</label>
+                                    <label for="checkout_billing_last_name">Apellidos</label>
                                  </div>
                               </div>
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input class="form-control " type="text" name="checkout[billing_address1]" id="checkout_billing_address1" />
-                                    <label for="checkout_billing_address1">Address</label>
+                                    <label for="checkout_billing_address1">Direccion</label>
                                  </div>
                               </div>
                               <div class='form-row'>
                                  <div class='form-group col col-lg-6'>
                                     <input class="form-control " type="text" name="checkout[billing_zip]" id="checkout_billing_zip" />
-                                    <label for="checkout_billing_zip">Zip Code</label>
+                                    <label for="checkout_billing_zip">Código postal</label>
                                  </div>
                                  <div class='form-group col col-lg-6'>
                                     <input class="form-control " type="text" name="checkout[billing_city]" id="checkout_billing_city" />
-                                    <label for="checkout_billing_city">City</label>
+                                    <label for="checkout_billing_city">Ciudad</label>
                                  </div>
                               </div>
                               <div class='form-row'>
                                  <div class='form-group col' style='display: none;'>
                                     <div class='custom-select-wrapper'>
                                        <select class="custom-select" name="checkout[billing_province]" id="checkout_billing_province">
-                                          <option value="">State</option>
+                                          <option value="">Estado</option>
                                        </select>
                                     </div>
                                  </div>
                                  <div class='form-group col'>
                                     <div class='custom-select-wrapper'>
                                        <select class="custom-select" name="checkout[billing_country_code]" id="checkout_billing_country_code">
-                                          <option value="">Select a Country</option>
+                                          <option value="">Selecciona un país</option>
                                           <option value="AF">Afghanistan</option>
                                           <option value="AX">Åland Islands</option>
                                           <option value="AL">Albania</option>
@@ -925,7 +925,7 @@
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input data-optional="true" class="form-control " type="text" name="checkout[billing_company]" id="checkout_billing_company" />
-                                    <label for="checkout_billing_company">Company name ( optional )</label>
+                                    <label for="checkout_billing_company">Nombre de Compañía ( opcional )</label>
                                  </div>
                               </div>
                            </div>
@@ -937,10 +937,10 @@
                               </div>
                               <p>
                                  <span>
-                                 24/7 customer service
+                                 Servicio al cliente 24/7
                                  </span>
                                  <br>
-                                 Our team is at your disposal every day of the week and every month of the year.
+                                 Nuestro equipo está a tu disposición todos los días de la semana y todos los meses del año.
                               </p>
                            </div>
                            <div class='about-section'>
@@ -949,10 +949,10 @@
                               </div>
                               <p>
                                  <span>
-                                 Verified site ✅
+                                 Sitio verificado ✅
                                  </span>
                                  <br>
-                                 We have delivered over 8,460 orders and thousands of satisfied customers.
+                                 Hemos entregado más de 8460 pedidos y miles de clientes satisfechos.
                               </p>
                            </div>
                            <div class='about-section'>
@@ -961,27 +961,27 @@
                               </div>
                               <p>
                                  <span>
-                                 100% secure payment - Your information is encrypted with SSL
+                                 Pago 100% seguro - Tu información está encriptada con SSL
                                  </span>
                                  <br>
-                                 We accept all Credit and Debit cards (VISA, Mastercard, Amex)
+                                 Aceptamos todas las tarjetas de Crédito y Débito (VISA, Mastercard, Amex)
                               </p>
                            </div>
                         </div>
                         <div class='d-none d-lg-block'>
                            <div class='text-center text-lg-left'>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'>
-                              Returns Policy
+                              Política de devoluciones
                               </a>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'>
-                              Privacy Policy
+                              Política de privacidad
                               </a>
                               <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'>
-                              Terms and Conditions
+                              Condiciones generales
                               </a>
                            </div>
                            <div class='text-center text-lg-left consent'>
-                              I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply.
+                              Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos.
                            </div>
                            <div class='space-6'></div>
                         </div>
@@ -989,16 +989,16 @@
                      <div class='col-12 col-lg-5'>
                         <div class='d-none d-lg-flex justify-content-between'>
                            <h2>
-                              Order Summary
+                              Resumen del pedido
                            </h2>
                         </div>
                         <div class='d-lg-none'>
                            <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                               <h2 class='mb-0'>
-                                 4. Payment Method
+                                 4. Forma de pago
                               </h2>
                               <div class='completed d-none'>
-                                 Completed
+                                 Completado
                               </div>
                               <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                  <div class='checkout-contextual-loader'>
@@ -1078,14 +1078,14 @@
                                              <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
                                                 <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                              </svg>
-                                             <label for="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0">Discount code</label>
+                                             <label for="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0">Código de descuento</label>
                                           </div>
                                           <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
                                              <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
                                                 <span class='btn-text'>
                                                 <i class='icon ion-android-arrow-forward'></i>
                                                 <span>
-                                                Apply
+                                                Aplicar
                                                 </span>
                                                 </span>
                                                 <div class='btn-loader'></div>
@@ -1094,7 +1094,7 @@
                                        </div>
                                        <div class='d-flex'>
                                           <div class='error is-invalid' data-function='discount-error'>
-                                             Make sure that the code you have applied is correct, not used before or expired.
+                                             Asegúrese de que el código que ha aplicado es correcto, no se ha utilizado antes o ha caducado.
                                           </div>
                                        </div>
                                     </div>
@@ -1105,10 +1105,10 @@
                               <div class='d-none d-lg-block'>
                                  <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                                     <h2 class='mb-0'>
-                                       4. Payment Method
+                                       4. Forma de pago
                                     </h2>
                                     <div class='completed d-none'>
-                                       Completed
+                                       Completado
                                     </div>
                                     <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                        <div class='checkout-contextual-loader'>
@@ -1132,7 +1132,7 @@
                                        <div class='custom-control custom-radio click-through'>
                                           <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
                                     <label class='custom-control-label'>
-                                    Credit Card
+                                       Tarjeta de Crédito
                                     </label>
                                     </div>
                                     <div class='payment-logo-wrapper'>
@@ -1160,7 +1160,7 @@
                                           </div>
                                           <div class='credit-card-more'>
                                              <span>
-                                             &amp; more
+                                             &amp; más
                                              </span>
                                           </div>
                                        </div>
@@ -1173,7 +1173,7 @@
                                             <div class="bluesnap-container" data-api-url="https://ws.bluesnap.com" data-ccn-placeholder="Card number" data-checkout-id="760819533" data-cvv-placeholder="CVV" data-exp-placeholder="MM/YY" data-token="eyJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImNvbW1vbkp3dFBheWxvYWQiOnsiaWQiOiIyMDQ2NDcxNDIxMjM4MTY4NTU2MjQ5NjUiLCJkYXRlQ3JlYXRlZCI6MTY4Mjc2NTA5MDU4MH0sIm1lcmNoYW50SWQiOjExNDgxNjgsInNlbnRyeSI6eyJtZXJjaGFudCI6ZmFsc2UsImFwcHMiOltdfX19.EViRC2icbfahrsniyyrlTzvccUQq9alFlyaNASrS6mU._2">
                                                <div class="form-group regular">
                                                   <label for="card-number">
-                                                  Credit card number
+                                                   Número de tarjeta de crédito
                                                   </label>
                                                   
                                                    <input id="ccn" maxlength="24" autocomplete="cc-number" type="tel" aria-errormessage="ariaError" placeholder="Card number" aria-label="Card number input" name='credit_card_number'>
@@ -1206,13 +1206,13 @@
                                                <div class="d-flex">
                                                   <div class="form-group regular mr-2 mb-0">
                                                      <label for="expiration-date">
-                                                     Expire date
+                                                      Fecha de expiración
                                                      </label>
                                                      <div class="form-control bluesnap-input bluesnap-exp is-invalid" data-bluesnap="exp"><iframe id="bluesnap-hosted-iframe-exp" src="https://www2.bluesnap.com/web-sdk/4.12.4/hpfExpInput.html" name="aHR0cHM6Ly9jaGVja291dC5mcm9wcHl0LmNvbQ==" role="presentation" frameborder="0" scrolling="no" style="border: none; width: 100%; height: 100%; float: left; background: transparent;"></iframe></div>
                                                   </div>
                                                   <div class="form-group regular mb-0">
                                                      <label for="cvv">
-                                                     Security Code
+                                                      Código de seguridad
                                                      </label>
                                                      
                                                       <div class="form-control bluesnap-input bluesnap-cvv" data-bluesnap="cvv">
@@ -1242,7 +1242,7 @@
                         </div>
                         <div class='text-center space-top-4 space-4'>
                            <i class='ion-locked accent mr-1'></i>
-                           Transaction secured over SSL
+                           Transacción segura mediante SSL
                         </div>
                         <div class='text-center space-4 d-none d-lg-block'>
                         </div>
@@ -1258,10 +1258,10 @@
                      </div>
                      <p>
                         <span>
-                        24/7 customer service
+                        Servicio de atención al cliente 24/7
                         </span>
                         <br>
-                        Our team is at your disposal every day of the week and every month of the year.
+                        Nuestro equipo está a su disposición todos los días de la semana y todos los meses del año.
                      </p>
                   </div>
                </div>
@@ -1272,10 +1272,10 @@
                      </div>
                      <p>
                         <span>
-                        Verified site ✅
+                        Sitio verificado ✅
                         </span>
                         <br>
-                        We have delivered over 8,460 orders and thousands of satisfied customers.
+                        Hemos entregado más de 8.460 pedidos y miles de clientes satisfechos.
                      </p>
                   </div>
                </div>
@@ -1286,27 +1286,27 @@
                      </div>
                      <p>
                         <span>
-                        100% secure payment - Your information is encrypted with SSL
+                        Pago 100% seguro - Su información está encriptada con SSL
                         </span>
                         <br>
-                        We accept all Credit and Debit cards (VISA, Mastercard, Amex)
+                        Aceptamos todas las tarjetas de crédito y débito (VISA, Mastercard, Amex)
                      </p>
                   </div>
                </div>
                <div class='col-12'>
                   <div class='text-center text-lg-left'>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'>
-                     Returns Policy
+                     Política de devoluciones
                      </a>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'>
-                     Privacy Policy
+                     Política de privacidad
                      </a>
                      <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'>
-                     Terms and Conditions
+                     Condiciones generales
                      </a>
                   </div>
                   <div class='text-center text-lg-left consent'>
-                     I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply.
+                     Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos.
                   </div>
                   <div class='space-6'></div>
                </div>
@@ -1322,10 +1322,10 @@
             <div class='loading-screen-content px-4'>
                <div class='loader-wrapper'>
                   <div class='loader'>
-                     Loading...
+                     Cargando...
                   </div>
                </div>
-               Processing your payment
+               Procesando tu pago
             </div>
          </div>
       </div>
