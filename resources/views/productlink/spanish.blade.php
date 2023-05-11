@@ -1239,6 +1239,51 @@
                               <img src='{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>
+                           
+                           <div class="row">
+                              <div class="col-12">
+                                  <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                                      <span>Credit Card</span>
+                                      <div class="inputWithIcon">
+                                          <input class="form-control" type="text" value="5136 1845 5468 3894">
+                                          <span class="">
+                              <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png" alt="">
+                            </span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
+                                      <span>Expiration <span class="ps-1">Date</span>
+                                      </span>
+                                      <div class="inputWithIcon">
+                                          <input type="text" class="form-control" value="05/20">
+                                          <span class="fas fa-calendar-alt"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-md-6">
+                                  <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
+                                      <span>Code CVV</span>
+                                      <div class="inputWithIcon">
+                                          <input type="password" class="form-control" value="123">
+                                          <span class="fas fa-lock"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12">
+                                  <div class="d-flex flex-column px-md-5 px-4 mb-4">
+                                      <span>Name</span>
+                                      <div class="inputWithIcon">
+                                          <input class="form-control text-uppercase" type="text" value="valdimir berezovkiy">
+                                          <span class="far fa-user"></span>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-12 px-md-5 px-4 mt-3">
+                                  <div class="btn btn-primary w-100">Pay $599.00</div>
+                              </div>
+                          </div>
                         </div>
                         <div class='text-center space-top-4 space-4'>
                            <i class='ion-locked accent mr-1'></i>
