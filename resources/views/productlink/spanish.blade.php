@@ -1271,9 +1271,8 @@
                                     </span>
                                  </div> 
                               </div>
-
-                              
                           </div>
+                          <br>
                           <div class="row">
                               <div class="col-md-6">
                                  <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
