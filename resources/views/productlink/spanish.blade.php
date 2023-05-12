@@ -1155,7 +1155,7 @@
                                              </div>
                                           </div>
                                           <div class="row">
-                                             <div class="col-md-6">
+                                             <div class="col-lg-3 col-6">
                                                 <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
                                                    <div class="inputWithIcon">
@@ -1164,7 +1164,7 @@
                                                    </div>
                                                 </div>
                                              </div>
-                                             <div class="col-md-6">
+                                             <div class="col-lg-3 col-6">
                                                 <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
                                                    <div class="inputWithIcon">
@@ -1345,10 +1345,6 @@
       .discount-box .form-control.is-invalid {
          border-color: #EA6A11 !important;
          background-color: rgba(234, 106, 17, 0.2) !important;
-      }
-
-      .payment-method{
-         opacity: 1;
       }
    </style>
    <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:37:09 GMT -->
