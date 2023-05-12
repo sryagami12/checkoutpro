@@ -1234,6 +1234,26 @@
                                                 </div>
                                              </div>
                                           </div>
+                                          <div class="row">
+                                             <div class="col-md-6">
+                                                <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
+                                                   <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
+                                                   <div class="inputWithIcon">
+                                                      <input type="text" class="form-control" value="05/20">
+                                                      <span class="fas fa-calendar-alt"></span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-6">
+                                                <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
+                                                   <label class="form-label" style="font-size: 11px">Código de seguridad</label>
+                                                   <div class="inputWithIcon">
+                                                      <input type="password" class="form-control" value="123">
+                                                      <span class="fas fa-lock"></span>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                          </div>
                                           <iframe frameborder="0" height="1" scrolling="no" src="https://www.bluesnap.com/servlet/logo.htm?s=" style="position: absolute;" width="1">
                                              <img height='1' src='https://www.bluesnap.com/servlet/logo.gif?s=' width='1'>
                                           </iframe>
@@ -1249,26 +1269,6 @@
                            </div>
 
                            <br>
-                           <div class="row">
-                              <div class="col-md-6">
-                                 <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
-                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
-                                    <div class="inputWithIcon">
-                                       <input type="text" class="form-control" value="05/20">
-                                       <span class="fas fa-calendar-alt"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-6">
-                                 <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
-                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
-                                    <div class="inputWithIcon">
-                                       <input type="password" class="form-control" value="123">
-                                       <span class="fas fa-lock"></span>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
                         </div>
                         <div class='text-center space-top-4 space-4'>
                            <i class='ion-locked accent mr-1'></i> Transacción segura mediante SSL
