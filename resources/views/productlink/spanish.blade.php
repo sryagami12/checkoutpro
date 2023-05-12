@@ -6,8 +6,6 @@
    <!-- /Added by HTTrack -->
    <head>
       <title> CHECKOUT SECURE </title>
-      <meta name="csrf-param" content="authenticity_token" />
-      <meta name="csrf-token" content="aP0ZPjuhLI/IhwiUfRbYFkA39GwVfFJXvwzrNYD3EOM6ajnxr3E2PCW2fTPt+hLs79rjfQIgKRHGOa6T+8dUww==" />
       <link rel="stylesheet" media="screen" href="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
       <script src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
       <link href="{{asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
@@ -1079,7 +1077,7 @@
                               </div>
                               <!-- / checkout -->
                               <!-- / detailed_view -->
-                              
+                              <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
                               <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
                                  
                                  <div class='d-none d-lg-block'></div>
