@@ -1080,7 +1080,7 @@
                               <!-- / checkout -->
                               <!-- / detailed_view -->
                               <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
-                              <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html' style="opacity: 1;">
+                              <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
                                  
                                  <div class='d-none d-lg-block'></div>
                                  <!-- gateway -->
@@ -1182,6 +1182,12 @@
                                        </div>
                                     </div>
                                  </div>
+
+                                 <style>
+                                    .payment-method{
+                                       opacity: 1;
+                                    }
+                                 </style>
                               </div>
                            </div>
                            <div class='space-2'>
