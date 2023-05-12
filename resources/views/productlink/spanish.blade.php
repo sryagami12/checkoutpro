@@ -1155,7 +1155,7 @@
                                              </div>
                                           </div>
                                           <div class="row">
-                                             <div class="col-lg-6 col-6">
+                                             <div class="col-lg-12 col-6">
                                                 <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
                                                    <div class="inputWithIcon">
@@ -1164,7 +1164,7 @@
                                                    </div>
                                                 </div>
                                              </div>
-                                             <div class="col-lg-6 col-6">
+                                             <div class="col-lg-12 col-6">
                                                 <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
                                                    <div class="inputWithIcon">
