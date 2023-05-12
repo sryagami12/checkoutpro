@@ -1182,12 +1182,6 @@
                                        </div>
                                     </div>
                                  </div>
-
-                                 <style>
-                                    .payment-method{
-                                       opacity: 1;
-                                    }
-                                 </style>
                               </div>
                            </div>
                            <div class='space-2'>
@@ -1353,6 +1347,10 @@
       .discount-box .form-control.is-invalid {
          border-color: #EA6A11 !important;
          background-color: rgba(234, 106, 17, 0.2) !important;
+      }
+
+      .payment-method{
+         opacity: 1;
       }
    </style>
    <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:37:09 GMT -->
