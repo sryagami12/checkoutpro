@@ -1079,7 +1079,7 @@
                               </div>
                               <!-- / checkout -->
                               <!-- / detailed_view -->
-                              <div class='payment-method' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
+                              <div class='' data-function='payment-method' data-url='KMWCPNRGNJR/payment_methods.html'>
                                  <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
                                  <div class='d-none d-lg-block'></div>
                                  <!-- gateway -->
