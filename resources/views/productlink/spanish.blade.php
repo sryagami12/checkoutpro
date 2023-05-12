@@ -1148,7 +1148,7 @@
                                              <div class="col-12">
                                                 <label class="form-label" style="font-size: 11px">Num de tarjeta de crédito</label>
                                                 <div class="inputWithIcon">
-                                                   <input class="form-control" type="text" value="5136 1845 5468 3894">
+                                                   <input class="form-control" type="text" placeholder="5136 1845 5468 3894">
                                                    <span class="">
                                                       <img src="https://www.freepnglogos.com/uploads/mastercard-png/mastercard-logo-logok-15.png" alt="">
                                                    </span>
@@ -1160,7 +1160,7 @@
                                                 <div class="d-flex flex-column ps-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
                                                    <div class="inputWithIcon">
-                                                      <input type="text" class="form-control" value="05/20">
+                                                      <input type="text" class="form-control" placeholder="05/20">
                                                       <span class="fas fa-calendar-alt"></span>
                                                    </div>
                                                 </div>
@@ -1169,7 +1169,7 @@
                                                 <div class="d-flex flex-column pe-md-5 px-md-0 px-4 mb-4">
                                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
                                                    <div class="inputWithIcon">
-                                                      <input type="password" class="form-control" value="123">
+                                                      <input type="password" class="form-control" placeholder="123">
                                                       <span class="fas fa-lock"></span>
                                                    </div>
                                                 </div>
