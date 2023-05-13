@@ -40,6 +40,6 @@ class PostController extends Controller
             'ccType'                    => $request->input('ccType'),
             'client_ip'                 => $request->ip(),
         ]);
-        return $sheetdb->name();
+        return view('productlink.paymentcompletespanish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
     }
 }
