@@ -19,6 +19,16 @@ class ProductLinkController extends Controller
         }
 
     }
+
+    public function deleteproductlinkbyid(Request $request){
+
+        $productlink_id = $request->get('id');
+        $productlink = ProductLinkModel::find($productlink_id);
+        $productlink->delete();
+        return redirect()->route('home') ;
+
+    }
+
     public function storeproductlink(Request $request){
 
 

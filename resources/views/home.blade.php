@@ -111,8 +111,8 @@
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" target="_blank" href="/productbyid?id={{$productlink->product_id}}">Open Link</a>
-                                            <a class="dropdown-item" href="#">Edit Product Link</a>
-                                            <a class="dropdown-item" href="#">Delete Product Link</a>
+                                            <!--<a class="dropdown-item" href="#">Edit Product Link</a>-->
+                                            <a class="dropdown-item" href="/deleteproductbyid?id={{$productlink->product_id}}">Delete Product Link</a>
                                         </div>
                                     </div>
                                 </td>

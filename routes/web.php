@@ -25,6 +25,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::post('storeproductlink', [ProductLinkController::class, 'storeproductlink']);
 Route::get('/productbyid', [ProductLinkController::class, 'showproductlinkbyid']);
+Route::get('/deleteproductbyid', [ProductLinkController::class, 'deleteproductlinkbyid']);
 
 Auth::routes();
 
