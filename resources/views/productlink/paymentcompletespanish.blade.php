@@ -55,14 +55,10 @@
                                     <path class="flame two" fill="#F36E21" d="M54.918,104.595c0,0-3.959,6.109-1.24,8.949C56.93,113.256,52.228,107.329,54.918,104.595z" />
                                  </svg>
                               </div>
-                              <div class='bold ml-2'>
-                                 <div class='mt-2'> ¡Gran demanda! Haga su pedido antes de que sea demasiado tarde. </div>
-                              </div>
                            </div>
-                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'> Su carrito está reservado para <span id='time'> 10:00 </span> minutos. </div>
                         </div>
                         <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
-                           <h2> Gracias por tu compra ☺️ </h2>
+                           <h2> Gracias por tu compra ☺️ <span>{{$shipping_first_name}}</span></h2>
                            <div class='completed-indicator' data-function='shipping-details-completed-indicator'></div>
                         </div>
                         <div class='card' data-function='checkout-form-shipping-section' data-url='KMWCPNRGNJR/shipping_rates.html'>
@@ -73,7 +69,7 @@
                                  <label class="" for="checkout_email">Email</label>
                               </div>
                            </div>
-                           
+
                         </div>
                      </div>
                   </div>
