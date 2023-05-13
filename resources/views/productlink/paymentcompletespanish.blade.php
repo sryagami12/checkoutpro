@@ -65,11 +65,22 @@
 
                            <div class='form-row'>
                               <div class='form-group col-12'>
-                                 <input required="required" class="form-control js-quick-update " type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
-                                 <label class="" for="checkout_email">Email</label>
+                                 <p>
+                                    Estimado/a {{$shipping_first_name}},
+
+                                    En nombre de todo el equipo, quiero expresarle nuestro más sincero agradecimiento por haber elegido nuestro producto. Es un verdadero honor para nosotros que haya confiado en nuestra marca para satisfacer sus necesidades.
+                                    
+                                    Quiero informarle que su pago ha sido recibido con éxito y estamos trabajando diligentemente para procesar su pedido lo antes posible. Le aseguramos que su compra será manejada con la máxima atención y cuidado, y le mantendremos informado/a sobre cualquier actualización en relación a su pedido.
+                                    
+                                    Esperamos que disfrute de su producto VW4 tanto como nosotros disfrutamos de crearlo. Si tiene alguna pregunta o necesita asistencia adicional, por favor no dude en contactarnos en cualquier momento.
+                                    
+                                    Una vez más, muchas gracias por elegir nuestros productos y servicios. Valoramos su negocio y esperamos tener la oportunidad de servirle en el futuro.
+                                    
+                                    Atentamente,
+                                    El equipo de Checkout Secure.
+                                 </p>
                               </div>
                            </div>
-
                         </div>
                      </div>
                   </div>
