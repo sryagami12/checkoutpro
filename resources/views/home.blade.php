@@ -101,7 +101,7 @@
                             <tr>
                                 <th scope="row">{{$productlink->product_id}}</th>
                                 <td>{{$productlink->checkout_language}}</td>
-                                <td><img src="{{asset('storage/app/'.$productlink->product_image_path)}}" alt="image product" width="50px;"></td>
+                                <td><img src="{{asset('storage/'.$productlink->product_image_path)}}" alt="image product" width="50px;"></td>
                                 <td>{{$productlink->product_name}}</td>
                                 <td>$ {{$productlink->product_price}}</td>
                                 <td>
