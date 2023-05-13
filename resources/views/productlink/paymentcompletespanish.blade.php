@@ -63,8 +63,11 @@
                         </div>
                         <div class='card' data-function='checkout-form-shipping-section' data-url='KMWCPNRGNJR/shipping_rates.html'>
 
+                            <div class="row">
+                                <h1>Tu pago esta siendo procesado 💳 </h1>
+                            </div>
                            <div class='form-row'>
-                              <div class='form-group col-12'>
+                              <div class='form-group col-8'>
                                  <p>
                                     Estimado/a {{$shipping_first_name}},
 
