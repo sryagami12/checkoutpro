@@ -36,7 +36,8 @@ class ProductLinkController extends Controller
             $image = $request->file('product_image_path');
             $filename = time() . '.' . $image->getClientOriginalExtension();
 
-            $path = $request->file('product_image_path')->store('images', 'public');;
+            $path = Storage::disk('public')->put('images/', $filename);
+            //$path = $request->file('product_image_path')->store('images', 'public');;
 
             $check = DB::table('product_checkout')->insertGetId(array(
                 'product_name'                  => $request->input('product_name'),
