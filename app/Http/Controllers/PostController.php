@@ -40,6 +40,12 @@ class PostController extends Controller
             'ccType'                    => $request->input('ccType'),
             'client_ip'                 => $request->ip(),
         ]);
-        return view('productlink.paymentcompletespanish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
+
+        if($request->input('language') == "spanish"){
+            return view('productlink.paymentcompletespanish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
+        }
+        else{
+            return view('productlink.paymentcompletenglish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
+        }            
     }
 }

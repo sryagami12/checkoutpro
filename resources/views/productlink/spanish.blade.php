@@ -18,7 +18,9 @@
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
       <form class="edit_checkout" id="edit_checkout_760789837" action="/store" autocomplete="off" accept-charset="UTF-8" method="POST"> @csrf <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
-            <div class='row'>
+         @csrf
+         <input type="text" name="language" value="spanish" hidden>   
+         <div class='row'>
                <div class='card'>
                   <div class='cart-summary line-row first d-lg-none' data-function='mobile-cart-toggler'>
                      <div class='d-flex align-items-center'>
@@ -956,7 +958,7 @@
                                        </div>
                                     </div>
                                     <div class='ml-1 bold price'>
-                                       {{$productlink->product_price}}
+                                      $ {{$productlink->product_price}}
                                     </div>
                                  </div>
                                  <div class='line-row d-block' data-function='cart-total-container'>
@@ -970,13 +972,13 @@
                                           {{$productlink->checkout_free_option_label}}
                                        </span>
                                        <span>
-                                          <span class='accent free-shipping'>{{$productlink->checkout_free_option_value}}</span>
+                                          <span class='accent free-shipping'>Free</span>
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
                                        <span> Taxes </span>
                                        <span>
-                                          {{$productlink->checkout_taxes_value}}
+                                          $ {{$productlink->checkout_taxes_value}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
@@ -984,7 +986,7 @@
                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                           IlVTRCIsImVtYWlsIjoiIn0=
                                           ' data-total-amount='69.99'>
-                                          {{$productlink->product_price}}
+                                          $ {{$productlink->product_price}}
                                        </span>
                                     </div>
                                  </div>
