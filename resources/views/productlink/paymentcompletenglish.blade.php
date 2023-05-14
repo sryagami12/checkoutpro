@@ -65,7 +65,7 @@
 
                            <div class='form-row'>
                               <div class='form-grouYp col-12'>
-                                <h2 class="form">our payment is being processed 💳...</h2>
+                                <h2 class="form">Your payment is being processed 💳...</h2>
                                  <p>
                                     Dear {{$shipping_first_name}},
 
