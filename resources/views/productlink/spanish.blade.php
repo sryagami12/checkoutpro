@@ -48,7 +48,7 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='{{asset('storage/'.$productlink->product_image_path)}}'>
+                                    <img src='{{asset($productlink->product_image_path)}}'>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
                               </div>
@@ -945,7 +945,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='{{asset('storage/'.$productlink->product_image_path)}}'>
+                                             <img src='{{asset($productlink->product_image_path)}}'>
                                           </div>
                                           <div class='item-qty'>
                                              {{$productlink->product_quantity}}
