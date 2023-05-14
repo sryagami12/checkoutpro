@@ -67,9 +67,9 @@
     "minimum-stability": "stable",
     "prefer-stable": true,
     "post-install-cmd": [
+        "ln -sr storage/app/public public/storage",
         "php artisan clear-compiled",
         "php artisan optimize",
-        "chmod -R 777 public/",
-        "ln -sr storage/app/public public/storage"
+        "chmod -R 777 public/"    
     ]
 }
