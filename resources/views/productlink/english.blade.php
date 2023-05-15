@@ -578,7 +578,7 @@
                                  function updateShippingPrice(inputRadio){
                                     
                                     if(inputRadio.id == 'shipping-rate-1'){
-                                       console.log(document.getElementById('shipping_express_id').text);
+                                       console.log(document.getElementById('shipping_express_id'));
                                     }
                                     
                                  }
