@@ -973,7 +973,7 @@
                                           {{$productlink->checkout_free_option_label}}
                                        </span>
                                        <span>
-                                          <span class='accent free-shipping'>{{$productlink->checkout_free_option_value}}</span>
+                                          <span class='accent free-shipping'>Free</span>
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
