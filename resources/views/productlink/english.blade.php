@@ -1097,7 +1097,7 @@
                                                 width: 50px;
                                                 height: 20px;
                                                 object-fit: cover;
-                                                padding: 3px;
+                                                margin: 3px;
                                              }
 
                                              .inputWithIcon span {
