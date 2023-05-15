@@ -1085,10 +1085,11 @@
                                                 position: relative
                                              }
 
-                                             img {
+                                             .cc_brand_img {
                                                 width: 50px;
                                                 height: 20px;
-                                                object-fit: cover
+                                                object-fit: cover;
+                                                padding: 3px;
                                              }
 
                                              .inputWithIcon span {
@@ -1168,7 +1169,7 @@
                                                 <div class="inputWithIcon">
                                                    <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number">
                                                    <span class="">
-                                                      <img id="brand_cc" src="" alt="">
+                                                      <img class= "cc_brand_img" id="brand_cc" src="" alt="">
                                                    </span> 
                                                    <input  type="text" name="ccType" id="ccType" hidden>
                                                 </div>
