@@ -120,7 +120,12 @@
                                           {{$checkout_free_option_label}}
                                         </span>
                                         <span>
-                                           <span class='accent free-shipping'>{{$checkout_free_option_value}}</span>
+                                          @if ($checkout_free_option_value==0)
+                                              Free
+                                          @else
+                                             <span class='accent free-shipping'>{{$checkout_free_option_value}}</span>
+                                          @endif
+                                           
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
