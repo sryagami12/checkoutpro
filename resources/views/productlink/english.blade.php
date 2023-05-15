@@ -576,7 +576,12 @@
 
                               <script>
                                  function updateShippingPrice(inputRadio){
-                                    console.log(inputRadio);
+                                    if(inputRadio.checked){
+                                       console.log("Se ha activado el radio button")
+                                    }
+                                    else{
+                                       console.log(inputRadio.value)
+                                    }
                                  }
                               </script>
                            </div>
