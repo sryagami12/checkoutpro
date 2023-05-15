@@ -52,7 +52,7 @@ class PostController extends Controller
             ]);
         }
         else{
-            return view('productlink.paymentcompletespanish',[
+            return view('productlink.paymentcompletenglish',[
                 'shipping_first_name' => $request->input('checkout')['shipping_first_name'],
                 'product_quantity' => $request->input('product_quantity'),
                 'product_name' => $request->input('product_name'),
