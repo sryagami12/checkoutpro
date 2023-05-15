@@ -87,7 +87,7 @@
 
                     <div class='col-12 col-lg-5'>
                         <div class='card'>
-                            <div class='js-cart d-none d-lg-block'>
+                            <div class='js-cart d-lg-block'>
                                <div class='cart'>
                                   <div class='item line-row'>
                                      <div class='d-flex align-items-center'>
