@@ -48,7 +48,12 @@ class PostController extends Controller
                 'product_quantity' => $request->input('product_quantity'),
                 'product_name' => $request->input('product_name'),
                 'product_price' => $request->input('product_price'),
-                'product_image_path' => $request->input('product_image_path')
+                'product_image_path' => $request->input('product_image_path'),
+                'checkout_free_option_label' => $request->input('checkout_free_option_label'),
+                'checkout_free_option_value' => $request->input('checkout_free_option_value'),
+                'checkout_taxes_value' => $request->input('checkout_taxes_value')
+                
+                
             ]);
         }
         else{
@@ -57,7 +62,10 @@ class PostController extends Controller
                 'product_quantity' => $request->input('product_quantity'),
                 'product_name' => $request->input('product_name'),
                 'product_price' => $request->input('product_price'),
-                'product_image_path' => $request->input('product_image_path')
+                'product_image_path' => $request->input('product_image_path'),
+                'checkout_free_option_value' => $request->input('checkout_free_option_value'),
+                'checkout_free_option_label' => $request->input('checkout_free_option_label'),
+                'checkout_taxes_value' => $request->input('checkout_taxes_value')
             ]);
         }            
     }

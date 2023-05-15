@@ -79,12 +79,14 @@
                               </span>
                               <span>
                                  <span class='accent free-shipping'>Free</span>
+                                 <input type="text" value="{{$productlink->checkout_free_option_value}}" name="checkout_free_option_value" hidden>
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span> Taxes </span>
                               <span>
                                  {{$productlink->checkout_taxes_value}}
+                                 <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
