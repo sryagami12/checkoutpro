@@ -223,39 +223,39 @@
                            </script>
                            <div class='form-row'>
                               <div class='form-group col-12'>
-                                 <input required="required" class="form-control js-quick-update " type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
+                                 <input required="required" class="form-control " type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
                                  <label class="" for="checkout_email">Email</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
                                  <label for="checkout_shipping_first_name">Nombres</label>
                               </div>
                               <div class='form-group col'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_last_name]" id="checkout_shipping_last_name" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_last_name]" id="checkout_shipping_last_name" />
                                  <label for="checkout_shipping_last_name">Apellidos</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col-12'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_phone]" id="checkout_shipping_phone" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_phone]" id="checkout_shipping_phone" />
                                  <label for="checkout_shipping_phone">Celular</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_address1]" id="checkout_shipping_address1" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_address1]" id="checkout_shipping_address1" />
                                  <label for="checkout_shipping_address1">Dirección</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col col-lg-6'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_zip]" id="checkout_shipping_zip" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_zip]" id="checkout_shipping_zip" />
                                  <label for="checkout_shipping_zip">Código Postal</label>
                               </div>
                               <div class='form-group col col-lg-6'>
-                                 <input required="required" class="form-control js-quick-update " type="text" name="checkout[shipping_city]" id="checkout_shipping_city" />
+                                 <input required="required" class="form-control " type="text" name="checkout[shipping_city]" id="checkout_shipping_city" />
                                  <label for="checkout_shipping_city">Ciudad</label>
                               </div>
                            </div>
@@ -269,7 +269,7 @@
                               </div>
                               <div class='form-group col'>
                                  <div class='custom-select-wrapper'>
-                                    <select class="custom-select js-quick-update" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
+                                    <select class="custom-select" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
                                        <option value="">Selecciona un País</option>
                                        <option value="AF">Afghanistan</option>
                                        <option value="AX">Åland Islands</option>
@@ -584,11 +584,11 @@
                            <div class='line-row block' id='js-billing-fields' style='display: none'>
                               <div class='form-row'>
                                  <div class='form-group col'>
-                                    <input class="form-control js-quick-update " type="text" name="checkout[billing_first_name]" id="checkout_billing_first_name" />
+                                    <input class="form-control " type="text" name="checkout[billing_first_name]" id="checkout_billing_first_name" />
                                     <label for="checkout_billing_first_name">Nombres</label>
                                  </div>
                                  <div class='form-group col'>
-                                    <input class="form-control js-quick-update " type="text" name="checkout[billing_last_name]" id="checkout_billing_last_name" />
+                                    <input class="form-control " type="text" name="checkout[billing_last_name]" id="checkout_billing_last_name" />
                                     <label for="checkout_billing_last_name">Apellidos</label>
                                  </div>
                               </div>
