@@ -556,11 +556,11 @@
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
                                     <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
-                                    <label class='custom-control-label' for='shipping-rate-0'>
+                                    <label class='custom-control-label' for='shipping-rate-0' id="shipping_free_id">>
                                        {{$productlink->checkout_free_option_label}}
                                     </label>
                                  </div>
-                                 <span class='is-free accent'> Free </span>
+                                 <span class='is-free accent' id="shipping_free_value_id"> Free </span>
                               </div>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
@@ -569,7 +569,7 @@
                                        {{$productlink->checkout_express_option_label}}
                                     </label>
                                  </div>
-                                 <div class='bold'>
+                                 <div class='bold' id="shipping_express_value_id">
                                     ${{$productlink->checkout_express_option_value}}
                                  </div>
                               </div>
@@ -579,6 +579,10 @@
                                     
                                     if(inputRadio.id == 'shipping-rate-1'){
                                        console.log(document.getElementById('shipping_express_id').innerHTML);
+                                       console.log(document.getElementById('shipping_express_value_id').innerHTML);
+                                    } else{
+                                       console.log(document.getElementById('shipping_free_id').innerHTML);
+                                       console.log(document.getElementById('shipping_free_value_id').innerHTML);
                                     }
                                     
                                  }
