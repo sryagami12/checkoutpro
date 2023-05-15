@@ -565,7 +565,7 @@
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
                                     <input class='custom-control-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090' onchange="updateShippingPrice(this);">
-                                    <label class='custom-control-label' for='shipping-rate-1'>
+                                    <label class='custom-control-label' for='shipping-rate-1' id="shipping_express_id">
                                        {{$productlink->checkout_express_option_label}}
                                     </label>
                                  </div>
@@ -576,12 +576,11 @@
 
                               <script>
                                  function updateShippingPrice(inputRadio){
-                                    if(inputRadio.checked){
-                                       console.log("Se ha activado el radio button")
+                                    
+                                    if(inputRadio.id == 'shipping-rate-1'){
+                                       console.log(document.getElementById('shipping_express_id').text);
                                     }
-                                    else{
-                                       console.log(inputRadio.value)
-                                    }
+                                    
                                  }
                               </script>
                            </div>
