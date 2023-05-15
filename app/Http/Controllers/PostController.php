@@ -52,7 +52,13 @@ class PostController extends Controller
             ]);
         }
         else{
-            return view('productlink.paymentcompletenglish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
+            return view('productlink.paymentcompletespanish',[
+                'shipping_first_name' => $request->input('checkout')['shipping_first_name'],
+                'product_quantity' => $request->input('product_quantity'),
+                'product_name' => $request->input('product_name'),
+                'product_price' => $request->input('product_price'),
+                'product_image_path' => $request->input('product_image_path')
+            ]);
         }            
     }
 }
