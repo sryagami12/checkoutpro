@@ -578,11 +578,11 @@
                                  function updateShippingPrice(inputRadio){
                                     
                                     if(inputRadio.id == 'shipping-rate-1'){
-                                       console.log(document.getElementById('shipping_express_id').innerHTML);
-                                       console.log(document.getElementById('shipping_express_value_id').innerHTML);
+                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
                                     } else{
-                                       console.log(document.getElementById('shipping_free_id').innerHTML);
-                                       console.log(document.getElementById('shipping_free_value_id').innerHTML);
+                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
                                     }
                                     
                                  }
@@ -989,11 +989,11 @@
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
-                                       <span>
+                                       <span id="chipping_selected_id">
                                           {{$productlink->checkout_free_option_label}}
                                        </span>
                                        <span>
-                                          <span class='accent free-shipping'>Free</span>
+                                          <span class='accent free-shipping' id="chipping_selected_value_id">Free</span>
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
