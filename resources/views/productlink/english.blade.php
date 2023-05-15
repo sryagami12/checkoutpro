@@ -229,7 +229,7 @@
                            </script>
                            <div class='form-row'>
                               <div class='form-group col-12'>
-                                 <input required="required" class="form-control js-quick-update " type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
+                                 <input required="required" class="form-control" type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
                                  <label class="" for="checkout_email">Email Address</label>
                               </div>
                            </div>
