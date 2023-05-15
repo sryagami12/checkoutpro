@@ -555,7 +555,7 @@
                            <div data-function='shipping-list' data-url='KMWCPNRGNJR/shipping_rates.html'>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input checked class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
+                                    <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
                                     <label class='custom-control-label' for='shipping-rate-0'>
                                        {{$productlink->checkout_free_option_label}}
                                     </label>
@@ -564,7 +564,7 @@
                               </div>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090' onchange="updateShippingPrice(this);">
+                                    <input class='custom-control-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090' onchange="updateShippingPrice(this);">
                                     <label class='custom-control-label' for='shipping-rate-1'>
                                        {{$productlink->checkout_express_option_label}}
                                     </label>
