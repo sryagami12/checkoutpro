@@ -48,19 +48,21 @@
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
                                     <img src='{{asset($productlink->product_image_path)}}'>
+                                    <input type="text" value="{{$productlink->product_image_path}}" name="product_image_path" hidden>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
+                                 <input type="number" value="{{$productlink->product_quantity}}" name="product_quantity" hidden>
                               </div>
                               <div class='d-flex flex-column'>
                                  <span class='bold'>
                                     {{$productlink->product_name}}
                                  </span>
-                                 <input type="text" value="VW4 Volkswagen Stroller Wagon - BONDI BLUE" name="product_name" hidden>
+                                 <input type="text" value="{{$productlink->product_name}}" name="product_name" hidden>
                               </div>
                            </div>
                            <div class='ml-1 bold price'>
                               {{$productlink->product_price}}
-                              <input type="text" value="69.99" name="product_price" hidden>
+                              <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
                            </div>
                         </div>
                         <div class='line-row d-block' data-function='cart-total-container'>
@@ -73,6 +75,7 @@
                            <div class='d-flex justify-content-between space-top-2'>
                               <span>
                                  {{$productlink->checkout_free_option_label}}
+                                 <input type="text" value="{{$productlink->checkout_free_option_label}}" name="checkout_free_option_label" hidden>
                               </span>
                               <span>
                                  <span class='accent free-shipping'>Free</span>

@@ -56,7 +56,7 @@
                                  <span class='bold'>
                                     {{$productlink->product_name}}
                                  </span>
-                                 <input type="text" value="VW4 Volkswagen Stroller Wagon - BONDI BLUE" name="product_name" hidden>
+                                 <input type="text" value="{{$productlink->product_name}}" name="product_name" hidden>
                               </div>
                            </div>
                            <div class='ml-1 bold price'>

@@ -15,6 +15,7 @@ class PostController extends Controller
             'date'                      => date('d-m-Y H:i:s'),
             'product_name'              => $request->input('product_name'),
             'product_price'             => $request->input('product_price'),
+            'product_quantity'          => $request->input('product_quantity'),
             'email'                     => $request->input('checkout')["email"],
             'shipping_first_name'       => $request->input('checkout')['shipping_first_name'],
             'shipping_last_name'        => $request->input('checkout')['shipping_last_name'],
@@ -42,7 +43,13 @@ class PostController extends Controller
         ]);
 
         if($request->input('language') == "spanish"){
-            return view('productlink.paymentcompletespanish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);
+            return view('productlink.paymentcompletespanish',[
+                'shipping_first_name' => $request->input('checkout')['shipping_first_name'],
+                'product_quantity' => $request->input('product_quantity'),
+                'product_name' => $request->input('product_name'),
+                'product_price' => $request->input('product_price'),
+                'product_image_path' => $request->input('product_image_path')
+            ]);
         }
         else{
             return view('productlink.paymentcompletenglish',['shipping_first_name' => $request->input('checkout')['shipping_first_name']]);

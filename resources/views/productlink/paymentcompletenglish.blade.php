@@ -93,31 +93,31 @@
                                      <div class='d-flex align-items-center'>
                                         <div class='item-img-wrapper'>
                                            <div class='item-img'>
-                                              <img src='{{asset('storage/'.$productlink->product_image_path)}}'>
+                                              <img src='{{asset($product_image_path)}}'>
                                            </div>
                                            <div class='item-qty'>
-                                              {{$productlink->product_quantity}}
+                                              {{$product_quantity}}
                                            </div>
                                         </div>
                                         <div class='d-flex flex-column'>
                                            <span class='bold'>
-                                              {{$productlink->product_name}}
+                                              {{$product_name}}
                                            </span>
                                         </div>
                                      </div>
                                      <div class='ml-1 bold price'>
-                                       $ {{$productlink->product_price}}
+                                       $ {{$product_price}}
                                      </div>
                                   </div>
                                   <div class='line-row d-block' data-function='cart-total-container'>
                                      <div class='d-flex justify-content-between'>
                                         <span> Subtotal </span>
-                                        <span class='[]'> ${{$productlink->product_price}}
+                                        <span class='[]'> ${{$product_price}}
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span>
-                                           {{$productlink->checkout_free_option_label}}
+                                           
                                         </span>
                                         <span>
                                            <span class='accent free-shipping'>Free</span>
@@ -126,7 +126,7 @@
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span> Taxes </span>
                                         <span>
-                                           $ {{$productlink->checkout_taxes_value}}
+                                           
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
@@ -134,7 +134,7 @@
                                         <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                            IlVTRCIsImVtYWlsIjoiIn0=
                                            ' data-total-amount='69.99'>
-                                           $ {{$productlink->product_price}}
+                                           $ {{$product_price}}
                                         </span>
                                      </div>
                                   </div>
@@ -166,196 +166,6 @@
                                   </div>
                                </div>
                             </div>
-                            <div class='payment-method-wrapper'>
-                               <div class='d-none d-lg-block'>
-                                  <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
-                                     <h2 class='mb-0'> 4. Forma de pago </h2>
-                                     <div class='completed d-none'> Completado </div>
-                                     <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
-                                        <div class='checkout-contextual-loader'>
-                                           <div></div>
-                                           <div></div>
-                                           <div></div>
-                                           <div></div>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                               <!-- / checkout -->
-                               <!-- / detailed_view -->
-                               <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
-                               <div class='payment-method' data-function='payment-method'>
-                                  
-                                  <div class='d-none d-lg-block'></div>
-                                  <!-- gateway -->
-                                  <!-- checkout -->
-                                  <div class='gateway-option'>
-                                     <label class='option-wrapper' for='transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540'>
-                                        <div class='custom-control custom-radio click-through'>
-                                           <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
-                                           <label class='custom-control-label'> Tarjeta de Crédito </label>
-                                        </div>
-                                        <div class='payment-logo-wrapper'>
-                                           <div class='credit-card-brands'>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
-                                              </div>
-                                              <div class='credit-card-brand-logo'>
-                                                 <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
-                                              </div>
-                                              <div class='credit-card-more'>
-                                                 <span> &amp; más </span>
-                                              </div>
-                                           </div>
-                                        </div>
-                                     </label>
-                                     <!-- checkout -->
-                                     <div class='js-gateway-form' data-function='payment-method-form'>
-                                        <div class="fields-wrapper" style="">
-                                           <!-- / FIXME: gateway.hosted_fields_token do POST request every time. we need to cache token in checkout for 60 minutes and use it -->
-                                           <style>
-                                              .inputWithIcon {
-                                                 position: relative
-                                              }
-    
-                                              img {
-                                                 width: 50px;
-                                                 height: 20px;
-                                                 object-fit: cover
-                                              }
-    
-                                              .inputWithIcon span {
-                                                 position: absolute;
-                                                 right: 0px;
-                                                 bottom: 9px;
-                                                 color: #57c97d;
-                                                 cursor: pointer;
-                                                 transition: 0.3s;
-                                                 font-size: 14px
-                                              }
-                                           </style>
-                                           <script
-                                              src="https://code.jquery.com/jquery-3.2.1.min.js"
-                                              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-                                              crossorigin="anonymous"></script>
-                                           <script type="text/javascript" src="{{asset('payments\jquery.payment.js')}}"></script>
-                                           <script>
-                                              jQuery(function($) {
-                                                 $("#brand_cc").hide();
-                                                 $('.cc-number').payment('formatCardNumber');
-                                                 $('.cc-exp').payment('formatCardExpiry');
-                                                 $('.cc-cvc').payment('formatCardCVC');
-    
-                                                 $('#cc-number').on('keyup',function(){
-                                                    var cardType = $.payment.cardType($('#cc-number').val());
-                                                    document.getElementById('ccType').value = cardType;
-                                                    console.log(document.getElementById('ccType').value);
-                                                    switch (cardType) {
-                                                       case "visa":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}");
-                                                          break;
-    
-                                                       case "mastercard":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}");
-                                                          break;
-    
-                                                       case "amex":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}");
-                                                          break;
-    
-                                                       case "maestro":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}");
-                                                          break;
-    
-                                                       case "jcb":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}");
-                                                          break; 
-                                                          
-                                                       case "discover":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}");
-                                                          break;
-                                                       
-                                                       case "dinersclub":
-                                                          $("#brand_cc").show();
-                                                          $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}");
-                                                          break;
-    
-                                                       default:
-                                                          $("#brand_cc").hide();
-                                                          break;
-                                                    }
-                                                 })
-                                              });
-    
-                                              
-                                           </script>
-                                           <div class="row">
-                                              <div class="col-12">
-                                                 <label class="form-label" style="font-size: 11px">Num de tarjeta de crédito</label>
-                                                 <div class="inputWithIcon">
-                                                    <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number">
-                                                    <span class="">
-                                                       <img id="brand_cc" src="" alt="">
-                                                    </span> 
-                                                    <input  type="text" name="ccType" id="ccType" hidden>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                           <div class="row">
-                                              <div class="col-lg-6 col-6">
-                                                 <div class="d-flex flex-column">
-                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
-                                                    <div class="inputWithIcon">
-                                                       <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp">
-                                                       <span class="fas fa-calendar-alt"></span>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                              <div class="col-lg-6 col-6">
-                                                 <div class="d-flex flex-column">
-                                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
-                                                    <div class="inputWithIcon">
-                                                       <input id="cc-cvc" type="password" class="form-control cc-cvc" autocomplete="off" placeholder="•••" name="credit_card_cvv">
-                                                       <span class="fas fa-lock"></span>
-                                                    </div>
-                                                 </div>
-                                              </div>
-                                           </div>
-                                           <iframe frameborder="0" height="1" scrolling="no" src="https://www.bluesnap.com/servlet/logo.htm?s=" style="position: absolute;" width="1">
-                                              <img height='1' src='https://www.bluesnap.com/servlet/logo.gif?s=' width='1'>
-                                           </iframe>
-                                        </div>
-                                     </div>
-                                  </div>
-                               </div>
-                            </div>
-                            <div class='space-2'>
-                               <input type="submit" value="Completar compra" class="btn btn-primary" />
-                               <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
-                               </button>
-                            </div>
-    
                             <br>
                         </div>
                     </div>
