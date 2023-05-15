@@ -73,14 +73,14 @@
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
-                              <span>
+                              <span id="shipping_label_mobile">
                                  {{$productlink->checkout_free_option_label}}
-                                 <input type="text" value="{{$productlink->checkout_free_option_label}}" name="checkout_free_option_label" hidden>
                               </span>
+                              <input type="text" value="{{$productlink->checkout_free_option_label}}" name="checkout_free_option_label" hidden>
                               <span>
-                                 <span class='accent free-shipping'>Free</span>
-                                 <input type="text" value="{{$productlink->checkout_free_option_value}}" name="checkout_free_option_value" hidden>
+                                 <span class='accent free-shipping' id="shipping_value_mobile">Free</span>
                               </span>
+                              <input type="text" value="{{$productlink->checkout_free_option_value}}" name="checkout_free_option_value" hidden>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span> Taxes </span>
@@ -556,7 +556,7 @@
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
                                     <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
-                                    <label class='custom-control-label' for='shipping-rate-0' id="shipping_free_id">>
+                                    <label class='custom-control-label' for='shipping-rate-0' id="shipping_free_id">
                                        {{$productlink->checkout_free_option_label}}
                                     </label>
                                  </div>
@@ -580,9 +580,13 @@
                                     if(inputRadio.id == 'shipping-rate-1'){
                                        document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
                                        document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
+                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
                                     } else{
                                        document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                                        document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
                                     }
                                     
                                  }
