@@ -982,7 +982,7 @@
                                           </span>
                                        </div>
                                     </div>
-                                    <div class='ml-1 bold price'>
+                                    <div class='ml-1 bold price' id="price_bold">
                                        {{$productlink->product_price}}
                                     </div>
                                  </div>
