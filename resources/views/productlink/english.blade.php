@@ -1205,7 +1205,7 @@
                                                 <div class="d-flex flex-column">
                                                    <label class="form-label" style="font-size: 11px">Expire date</label>
                                                    <div class="inputWithIcon">
-                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp">
+                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp" autocomplete="cc-exp">
                                                       <span class="fas fa-calendar-alt"></span>
                                                    </div>
                                                 </div>

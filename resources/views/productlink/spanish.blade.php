@@ -6,9 +6,9 @@
    <!-- /Added by HTTrack -->
    <head>
       <title> CHECKOUT SECURE </title>
-      <link rel="stylesheet" media="screen" href="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
-      <script src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
-      <link href="{{asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
+      <link rel="stylesheet" media="screen" href="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
+      <script src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
+      <link href="{{secure_asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
       <noscript>
          <img height='1' src='https://www.facebook.com/tr?id=617396713608618&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
@@ -18,8 +18,7 @@
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
       <form class="edit_checkout" id="edit_checkout_760789837" action="/store" autocomplete="off" accept-charset="UTF-8" method="POST"> @csrf <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
-         @csrf
-         <input type="text" name="language" value="spanish" hidden>   
+         <input type="text" name="language" value="spanish" hidden>      
          <div class='row'>
                <div class='card'>
                   <div class='cart-summary line-row first d-lg-none' data-function='mobile-cart-toggler'>
@@ -48,9 +47,11 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='{{asset($productlink->product_image_path)}}'>
+                                    <img src='{{secure_asset($productlink->product_image_path)}}'>
+                                    <input type="text" value="{{$productlink->product_image_path}}" name="product_image_path" hidden>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
+                                 <input type="number" value="{{$productlink->product_quantity}}" name="product_quantity" hidden>
                               </div>
                               <div class='d-flex flex-column'>
                                  <span class='bold'>
@@ -61,7 +62,7 @@
                            </div>
                            <div class='ml-1 bold price'>
                               {{$productlink->product_price}}
-                              <input type="text" value="69.99" name="product_price" hidden>
+                              <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
                            </div>
                         </div>
                         <div class='line-row d-block' data-function='cart-total-container'>
@@ -72,17 +73,20 @@
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
-                              <span>
+                              <span id="shipping_label_mobile">
                                  {{$productlink->checkout_free_option_label}}
                               </span>
+                              <input type="text" value="{{$productlink->checkout_free_option_label}}" name="checkout_free_option_label" hidden>
                               <span>
-                                 <span class='accent free-shipping'>Free</span>
+                                 <span class='accent free-shipping' id="shipping_value_mobile">Free</span>
                               </span>
+                              <input type="text" value="{{$productlink->checkout_free_option_value}}" name="checkout_free_option_value" hidden>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span> Impuestos </span>
                               <span>
                                  {{$productlink->checkout_taxes_value}}
+                                 <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
@@ -100,7 +104,7 @@
                                  <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                     <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3" type="text" name="checkout[discount][title]" />
                                     <i class='icon ion-android-warning'></i>
-                                    <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                        <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                     </svg>
                                     <label for="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3">Código de descuento</label>
@@ -116,7 +120,9 @@
                                  </div>
                               </div>
                               <div class='d-flex'>
-                                 <div class='error is-invalid' data-function='discount-error'> Asegúrate de que el código que has aplicado sea correcto, no se haya usado antes o esté caducado. </div>
+                                 <div class='error is-invalid' data-function='discount-error'> 
+                                    Asegúrese de que el código que ha aplicado es correcto, no se ha utilizado antes o ha caducado.
+                                 </div>
                               </div>
                            </div>
                         </div>
@@ -135,10 +141,10 @@
                               <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                  <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f" type="text" name="checkout[discount][title]" />
                                  <i class='icon ion-android-warning'></i>
-                                 <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                 <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                     <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                  </svg>
-                                 <label for="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f">Codigo de descuento</label>
+                                 <label for="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f">Código de descuento</label>
                               </div>
                               <div class='form-group col-2 col-md-2 col-lg-3 mb-0 p-0'>
                                  <button class='btn btn-primary w-100 p-0' data-function='submit-discount' data-url='https://checkout.froppyt.com/f/4DGH1XJG/c/760789837/discounts' disabled type='button'>
@@ -151,7 +157,7 @@
                               </div>
                            </div>
                            <div class='d-flex'>
-                              <div class='error is-invalid' data-function='discount-error'> Asegúrate de que el código que has aplicado sea correcto, no se haya usado antes o esté caducado. </div>
+                              <div class='error is-invalid' data-function='discount-error'> Asegúrese de que el código que ha aplicado es correcto, no se ha utilizado antes o ha caducado. </div>
                            </div>
                         </div>
                      </div>
@@ -164,12 +170,10 @@
                <div class='col-12'>
                   <div class='header clearfix'>
                      <div class='logo-wrapper'>
-                        <a href='https://froppyt.com/'>
-                           <img class='logo' src='{{asset('images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.pn/v1/fill/w_600%2ch_400/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.7?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvOWM2NGNmZTMtYmIzYi00YWU4LWI1YTYtZDJmMzlkMjFmZjg3XC9kM2ptZTZpLThjNzAyYWQ0LTRiN2EtNDc2My05OTAxLTk5ZjhiNGYwMzhiMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Ymv-MHRcmXXpzmL3f0xZ0mCcyU85lCLnk0jbOnCO8Zg')}}'>
-                        </a>
+                        
                      </div>
                      <div class='badges-wrapper'>
-                        <img class='secure-logos' src='{{asset('cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311')}}'>
+                        <img class='secure-logos' src='{{secure_asset('cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311')}}'>
                      </div>
                   </div>
                   <div class='row space-4'>
@@ -177,7 +181,7 @@
                         <div>
                            <div class='timer-title d-flex align-items-center'>
                               <div class="timer-fire">
-                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
+                                 <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
                                     <path class="flame-main" fill="#F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465
                                        c0,0,3.357,4.969,5.103,9.938c0,0-5.305-21.086,1.712-30.418c7.017-9.333,0.571-35.654-2.25-37.534c0,0,13.07,5.64,19.875,47.54
                                        c6.806,41.899,16.831,45.301,6.088,53.985" />
@@ -196,13 +200,13 @@
                                  </svg>
                               </div>
                               <div class='bold ml-2'>
-                                 <div class='mt-2'> ¡Gran demanda! Haga su pedido antes de que sea demasiado tarde. </div>
+                                 <div class='mt-2'> ¡Gran demanda! ¡Complete su pedido antes de que sea demasiado tarde!</div>
                               </div>
                            </div>
-                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'> Su carrito está reservado para <span id='time'> 10:00 </span> minutos. </div>
+                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'> Su carro está reservado para <span id='time'> 10:00 </span> Minutos. </div>
                         </div>
                         <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
-                           <h2> 1. Detalles de envío </h2>
+                           <h2> 1. Detalles de envío</h2>
                            <div class='completed-indicator' data-function='shipping-details-completed-indicator'></div>
                         </div>
                         <div class='card' data-function='checkout-form-shipping-section' data-url='KMWCPNRGNJR/shipping_rates.html'>
@@ -223,24 +227,24 @@
                            </script>
                            <div class='form-row'>
                               <div class='form-group col-12'>
-                                 <input required="required" class="form-control " type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
-                                 <label class="" for="checkout_email">Email</label>
+                                 <input required="required" class="form-control" type="email" value="" name="checkout[email]" id="checkout_email" data-validate="true" />
+                                 <label class="" for="checkout_email">Dirección de correo electrónico</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col'>
-                                 <input required="required" class="form-control " type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
-                                 <label for="checkout_shipping_first_name">Nombres</label>
+                                 <input required="required" class="form-control" type="text" name="checkout[shipping_first_name]" id="checkout_shipping_first_name" />
+                                 <label for="checkout_shipping_first_name">Nombre</label>
                               </div>
                               <div class='form-group col'>
                                  <input required="required" class="form-control " type="text" name="checkout[shipping_last_name]" id="checkout_shipping_last_name" />
-                                 <label for="checkout_shipping_last_name">Apellidos</label>
+                                 <label for="checkout_shipping_last_name">Apellido</label>
                               </div>
                            </div>
                            <div class='form-row'>
                               <div class='form-group col-12'>
                                  <input required="required" class="form-control " type="text" name="checkout[shipping_phone]" id="checkout_shipping_phone" />
-                                 <label for="checkout_shipping_phone">Celular</label>
+                                 <label for="checkout_shipping_phone">Teléfono</label>
                               </div>
                            </div>
                            <div class='form-row'>
@@ -252,7 +256,7 @@
                            <div class='form-row'>
                               <div class='form-group col col-lg-6'>
                                  <input required="required" class="form-control " type="text" name="checkout[shipping_zip]" id="checkout_shipping_zip" />
-                                 <label for="checkout_shipping_zip">Código Postal</label>
+                                 <label for="checkout_shipping_zip">Código postal</label>
                               </div>
                               <div class='form-group col col-lg-6'>
                                  <input required="required" class="form-control " type="text" name="checkout[shipping_city]" id="checkout_shipping_city" />
@@ -263,14 +267,14 @@
                               <div class='form-group col' style='display: none;'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select js-value-changed-update" data-country="PE" required="required" name="checkout[shipping_province]" id="checkout_shipping_province">
-                                       <option value="">Estado</option>
+                                       <option value="">Pais</option>
                                     </select>
                                  </div>
                               </div>
                               <div class='form-group col'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
-                                       <option value="">Selecciona un País</option>
+                                       <option value="">Selecciona un país</option>
                                        <option value="AF">Afghanistan</option>
                                        <option value="AX">Åland Islands</option>
                                        <option value="AL">Albania</option>
@@ -528,7 +532,7 @@
                         <div class='custom-control custom-checkbox space-top-4 text-center text-lg-left'>
                            <input name="checkout[accepts_marketing]" type="hidden" value="0" />
                            <input class="custom-control-input js-value-changed-update" type="checkbox" value="1" checked="checked" name="checkout[accepts_marketing]" id="checkout_accepts_marketing" />
-                           <label class="custom-control-label medium" for="checkout_accepts_marketing">Regístrese para recibir ofertas exclusivas y noticias a través de mensajes de texto & amp; correo electrónico</label>
+                           <label class="custom-control-label medium" for="checkout_accepts_marketing">Inscríbase para recibir ofertas exclusivas y noticias por SMS y correo electrónico</label>
                         </div>
                         <!-- Shipping options -->
                         <div class='space-top-4 space-2' data-function='shipping-card-header'>
@@ -549,28 +553,47 @@
                            <div data-function='shipping-list' data-url='KMWCPNRGNJR/shipping_rates.html'>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input checked class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299'>
-                                    <label class='custom-control-label' for='shipping-rate-0'>
+                                    <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
+                                    <label class='custom-control-label' for='shipping-rate-0' id="shipping_free_id">
                                        {{$productlink->checkout_free_option_label}}
                                     </label>
                                  </div>
-                                 <span class='is-free accent'> Free </span>
+                                 <span class='is-free accent' id="shipping_free_value_id"> Free </span>
                               </div>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input class='custom-control-input' data-function='shipping-rate-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090'>
-                                    <label class='custom-control-label' for='shipping-rate-1'>
+                                    <input class='custom-control-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090' onchange="updateShippingPrice(this);">
+                                    <label class='custom-control-label' for='shipping-rate-1' id="shipping_express_id">
                                        {{$productlink->checkout_express_option_label}}
                                     </label>
                                  </div>
-                                 <div class='bold'> ${{$productlink->checkout_express_option_value}}
+                                 <div class='bold' id="shipping_express_value_id">
+                                    ${{$productlink->checkout_express_option_value}}
                                  </div>
                               </div>
+
+                              <script>
+                                 function updateShippingPrice(inputRadio){
+                                    
+                                    if(inputRadio.id == 'shipping-rate-1'){
+                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
+                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
+                                    } else{
+                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                                    }
+                                    
+                                 }
+                              </script>
                            </div>
                         </div>
                         <!-- Billing details -->
                         <div class='section-title d-flex align-items-center mt-4'>
-                           <h2> 3. Detalles de facturación </h2>
+                           <h2> 3. Billing Details </h2>
                            <div class='completed-indicator' data-function='billing-details-completed-indicator'></div>
                         </div>
                         <div class='card' data-function='checkout-form-billing-section'>
@@ -578,24 +601,24 @@
                               <div class='custom-control custom-checkbox'>
                                  <input name="checkout[billing_address_same]" type="hidden" value="0" />
                                  <input class="custom-control-input" type="checkbox" value="1" checked="checked" name="checkout[billing_address_same]" id="checkout_billing_address_same" />
-                                 <label validate="false" class="custom-control-label" for="checkout_billing_address_same">Billing address is the same as shipping</label>
+                                 <label validate="false" class="custom-control-label" for="checkout_billing_address_same">La dirección de facturación es la misma que la de envío</label>
                               </div>
                            </div>
                            <div class='line-row block' id='js-billing-fields' style='display: none'>
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input class="form-control " type="text" name="checkout[billing_first_name]" id="checkout_billing_first_name" />
-                                    <label for="checkout_billing_first_name">Nombres</label>
+                                    <label for="checkout_billing_first_name">Nombre</label>
                                  </div>
                                  <div class='form-group col'>
                                     <input class="form-control " type="text" name="checkout[billing_last_name]" id="checkout_billing_last_name" />
-                                    <label for="checkout_billing_last_name">Apellidos</label>
+                                    <label for="checkout_billing_last_name">Apellido</label>
                                  </div>
                               </div>
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input class="form-control " type="text" name="checkout[billing_address1]" id="checkout_billing_address1" />
-                                    <label for="checkout_billing_address1">Direccion</label>
+                                    <label for="checkout_billing_address1">Dirección</label>
                                  </div>
                               </div>
                               <div class='form-row'>
@@ -612,7 +635,7 @@
                                  <div class='form-group col' style='display: none;'>
                                     <div class='custom-select-wrapper'>
                                        <select class="custom-select" name="checkout[billing_province]" id="checkout_billing_province">
-                                          <option value="">Estado</option>
+                                          <option value="">Pais</option>
                                        </select>
                                     </div>
                                  </div>
@@ -876,7 +899,7 @@
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input data-optional="true" class="form-control " type="text" name="checkout[billing_company]" id="checkout_billing_company" />
-                                    <label for="checkout_billing_company">Nombre de Compañía ( opcional )</label>
+                                    <label for="checkout_billing_company">Nombre de compañía ( opcional )</label>
                                  </div>
                               </div>
                            </div>
@@ -884,29 +907,29 @@
                         <div class='space-top-8 d-none d-lg-block'>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                               </div>
                               <p>
-                                 <span> Servicio al cliente 24/7 </span>
-                                 <br> Nuestro equipo está a tu disposición todos los días de la semana y todos los meses del año.
+                                 <span> 24/7 servicio al cliente </span>
+                                 <br> Nuestro equipo está a su disposición todos los días de la semana y todos los meses del año.
                               </p>
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                               </div>
                               <p>
                                  <span> Sitio verificado ✅ </span>
-                                 <br> Hemos entregado más de 8460 pedidos y miles de clientes satisfechos.
+                                 <br> Hemos entregado más de 8.460 pedidos y miles de clientes satisfechos.
                               </p>
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                               </div>
                               <p>
-                                 <span> Pago 100% seguro - Tu información está encriptada con SSL </span>
-                                 <br> Aceptamos todas las tarjetas de Crédito y Débito (VISA, Mastercard, Amex)
+                                 <span> Pago 100% seguro - Su información está encriptada con SSL </span>
+                                 <br> Aceptamos todas las tarjetas de crédito y débito (VISA, Mastercard, Amex)
                               </p>
                            </div>
                         </div>
@@ -914,7 +937,7 @@
                            <div class='text-center text-lg-left'>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Política de devoluciones </a>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Política de privacidad </a>
-                              <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Condiciones generales </a>
+                              <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Términos y condiciones </a>
                            </div>
                            <div class='text-center text-lg-left consent'> Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos. </div>
                            <div class='space-6'></div>
@@ -927,7 +950,7 @@
                         <div class='d-lg-none'>
                            <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                               <h2 class='mb-0'> 4. Forma de pago </h2>
-                              <div class='completed d-none'> Completado </div>
+                              <div class='completed d-none'> Completo </div>
                               <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                  <div class='checkout-contextual-loader'>
                                     <div></div>
@@ -945,7 +968,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='{{asset($productlink->product_image_path)}}'>
+                                             <img src='{{secure_asset($productlink->product_image_path)}}'>
                                           </div>
                                           <div class='item-qty'>
                                              {{$productlink->product_quantity}}
@@ -957,8 +980,8 @@
                                           </span>
                                        </div>
                                     </div>
-                                    <div class='ml-1 bold price'>
-                                      $ {{$productlink->product_price}}
+                                    <div class='ml-1 bold price' id="price_bold">
+                                       {{$productlink->product_price}}
                                     </div>
                                  </div>
                                  <div class='line-row d-block' data-function='cart-total-container'>
@@ -968,17 +991,17 @@
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
-                                       <span>
+                                       <span id="chipping_selected_id">
                                           {{$productlink->checkout_free_option_label}}
                                        </span>
                                        <span>
-                                          <span class='accent free-shipping'>Free</span>
+                                          <span class='accent free-shipping' id="chipping_selected_value_id">Free</span>
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
-                                       <span> Taxes </span>
+                                       <span> Impuestos </span>
                                        <span>
-                                          $ {{$productlink->checkout_taxes_value}}
+                                          {{$productlink->checkout_taxes_value}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
@@ -986,7 +1009,7 @@
                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                           IlVTRCIsImVtYWlsIjoiIn0=
                                           ' data-total-amount='69.99'>
-                                          $ {{$productlink->product_price}}
+                                          {{$productlink->product_price}}
                                        </span>
                                     </div>
                                  </div>
@@ -996,7 +1019,7 @@
                                           <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                              <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0" type="text" name="checkout[discount][title]" />
                                              <i class='icon ion-android-warning'></i>
-                                             <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                             <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                                 <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                              </svg>
                                              <label for="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0">Código de descuento</label>
@@ -1012,7 +1035,9 @@
                                           </div>
                                        </div>
                                        <div class='d-flex'>
-                                          <div class='error is-invalid' data-function='discount-error'> Asegúrese de que el código que ha aplicado es correcto, no se ha utilizado antes o ha caducado. </div>
+                                          <div class='error is-invalid' data-function='discount-error'> 
+                                             Asegúrese de que el código que ha aplicado es correcto, no se ha utilizado antes o ha caducado.
+                                           </div>
                                        </div>
                                     </div>
                                  </div>
@@ -1022,7 +1047,7 @@
                               <div class='d-none d-lg-block'>
                                  <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                                     <h2 class='mb-0'> 4. Forma de pago </h2>
-                                    <div class='completed d-none'> Completado </div>
+                                    <div class='completed d-none'> Completo </div>
                                     <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                        <div class='checkout-contextual-loader'>
                                           <div></div>
@@ -1035,7 +1060,7 @@
                               </div>
                               <!-- / checkout -->
                               <!-- / detailed_view -->
-                              <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
+                              <script src='{{secure_asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
                               <div class='payment-method' data-function='payment-method'>
                                  
                                  <div class='d-none d-lg-block'></div>
@@ -1045,33 +1070,33 @@
                                     <label class='option-wrapper' for='transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540'>
                                        <div class='custom-control custom-radio click-through'>
                                           <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
-                                          <label class='custom-control-label'> Tarjeta de Crédito </label>
+                                          <label class='custom-control-label'> Tarjeta de crédito </label>
                                        </div>
                                        <div class='payment-logo-wrapper'>
                                           <div class='credit-card-brands'>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
                                              </div>
                                              <div class='credit-card-more'>
-                                                <span> &amp; más </span>
+                                                <span> &amp; more </span>
                                              </div>
                                           </div>
                                        </div>
@@ -1106,7 +1131,7 @@
                                              src="https://code.jquery.com/jquery-3.2.1.min.js"
                                              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
                                              crossorigin="anonymous"></script>
-                                          <script type="text/javascript" src="{{asset('payments\jquery.payment.js')}}"></script>
+                                          <script type="text/javascript" src="{{secure_asset('payments\jquery.payment.js')}}"></script>
                                           <script>
                                              jQuery(function($) {
                                                 $("#brand_cc").hide();
@@ -1121,37 +1146,37 @@
                                                    switch (cardType) {
                                                       case "visa":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}");
                                                          break;
 
                                                       case "mastercard":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}");
                                                          break;
 
                                                       case "amex":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}");
                                                          break;
 
                                                       case "maestro":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}");
                                                          break;
 
                                                       case "jcb":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}");
                                                          break; 
                                                          
                                                       case "discover":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}");
                                                          break;
                                                       
                                                       case "dinersclub":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}");
                                                          break;
 
                                                       default:
@@ -1165,7 +1190,7 @@
                                           </script>
                                           <div class="row">
                                              <div class="col-12">
-                                                <label class="form-label" style="font-size: 11px">Num de tarjeta de crédito</label>
+                                                <label class="form-label" style="font-size: 11px">Número de tarjeta de crédito</label>
                                                 <div class="inputWithIcon">
                                                    <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number">
                                                    <span class="">
@@ -1180,14 +1205,14 @@
                                                 <div class="d-flex flex-column">
                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
                                                    <div class="inputWithIcon">
-                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp">
+                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp" autocomplete="cc-exp">
                                                       <span class="fas fa-calendar-alt"></span>
                                                    </div>
                                                 </div>
                                              </div>
                                              <div class="col-lg-6 col-6">
                                                 <div class="d-flex flex-column">
-                                                   <label class="form-label" style="font-size: 11px">Código de seguridad</label>
+                                                   <label class="form-label" style="font-size: 11px">Código de Seguridad</label>
                                                    <div class="inputWithIcon">
                                                       <input id="cc-cvc" type="password" class="form-control cc-cvc" autocomplete="off" placeholder="•••" name="credit_card_cvv">
                                                       <span class="fas fa-lock"></span>
@@ -1205,7 +1230,7 @@
                            </div>
                            <div class='space-2'>
                               <input type="submit" value="Completar compra" class="btn btn-primary" />
-                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
+                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Completar compra con <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>
 
@@ -1223,10 +1248,11 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                      </div>
                      <p>
-                        <span> Servicio de atención al cliente 24/7 </span>
+                        <span> 
+                           24/7 servicio al cliente </span>
                         <br> Nuestro equipo está a su disposición todos los días de la semana y todos los meses del año.
                      </p>
                   </div>
@@ -1234,7 +1260,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                      </div>
                      <p>
                         <span> Sitio verificado ✅ </span>
@@ -1245,7 +1271,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                      </div>
                      <p>
                         <span> Pago 100% seguro - Su información está encriptada con SSL </span>
@@ -1255,11 +1281,11 @@
                </div>
                <div class='col-12'>
                   <div class='text-center text-lg-left'>
-                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Política de devoluciones </a>
-                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Política de privacidad </a>
-                     <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Condiciones generales </a>
+                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Política de devoluciones  </a>
+                     <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Política de privacidad  </a>
+                     <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Términos y condiciones </a>
                   </div>
-                  <div class='text-center text-lg-left consent'> Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos. </div>
+                  <div class='text-center text-lg-left consent'> Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos.</div>
                   <div class='space-6'></div>
                </div>
                <div class='col-12'>
@@ -1273,7 +1299,7 @@
             <div class='loading-screen-content px-4'>
                <div class='loader-wrapper'>
                   <div class='loader'> Cargando... </div>
-               </div> Procesando tu pago
+               </div> Procesar su pago
             </div>
          </div>
       </div>

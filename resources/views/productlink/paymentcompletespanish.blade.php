@@ -33,7 +33,7 @@
                      </div>
                   </div>
                   <div class='row space-4'>
-                     <div class='col-12 col-lg-8'>
+                    <div class='col-12 col-lg-7'>
                         <div>
                            <div class='timer-title d-flex align-items-center'>
                               <div class="timer-fire">
@@ -64,18 +64,18 @@
                         <div class='card' data-function='checkout-form-shipping-section' data-url='KMWCPNRGNJR/shipping_rates.html'>
 
                            <div class='form-row'>
-                              <div class='form-group col-12'>
+                              <div class='form-grouYp col-12'>
                                 <h2 class="form">Tu pago esta siendo procesado 💳...</h2>
                                  <p>
-                                    Estimado/a {{$shipping_first_name}},
+                                    Estimado {{$shipping_first_name}},
 
-                                    En nombre de todo el equipo, quiero expresarle nuestro más sincero agradecimiento por haber elegido nuestro producto. Es un verdadero honor para nosotros que haya confiado en nuestra marca para satisfacer sus necesidades.
+                                    En nombre de todo el equipo, me gustaría expresarle nuestro más sincero agradecimiento por haber elegido nuestro producto. Es un verdadero honor para nosotros que haya confiado en nuestra marca para satisfacer sus necesidades.
                                     
-                                    Quiero informarle que su pago ha sido recibido con éxito y estamos trabajando diligentemente para procesar su pedido lo antes posible. Le aseguramos que su compra será manejada con la máxima atención y cuidado, y le mantendremos informado/a sobre cualquier actualización en relación a su pedido.
+                                    Me gustaría informarle de que su pago ha sido recibido correctamente y estamos trabajando diligentemente para procesar su pedido lo antes posible. Le aseguramos que su compra será tratada con el máximo cuidado y atención, y le mantendremos informado de cualquier actualización relativa a su pedido.
                                     
-                                    Esperamos que disfrute de su producto VW4 tanto como nosotros disfrutamos de crearlo. Si tiene alguna pregunta o necesita asistencia adicional, por favor no dude en contactarnos en cualquier momento.
+                                    Esperamos que disfrute de su producto VW4 tanto como nosotros hemos disfrutado creándolo. Si tiene alguna pregunta o necesita más ayuda, no dude en ponerse en contacto con nosotros en cualquier momento.
                                     
-                                    Una vez más, muchas gracias por elegir nuestros productos y servicios. Valoramos su negocio y esperamos tener la oportunidad de servirle en el futuro.
+                                    De nuevo, gracias por elegir nuestros productos y servicios. Valoramos su negocio y esperamos tener la oportunidad de servirle en el futuro.
                                     
                                     Atentamente,
                                     El equipo de Checkout Secure.
@@ -83,7 +83,73 @@
                               </div>
                            </div>
                         </div>
-                     </div>
+                    </div>
+
+                    <div class='col-12 col-lg-5'>
+                        <div class='card'>
+                            <div class='js-cart d-lg-block'>
+                               <div class='cart'>
+                                  <div class='item line-row'>
+                                     <div class='d-flex align-items-center'>
+                                        <div class='item-img-wrapper'>
+                                           <div class='item-img'>
+                                              <img src='{{asset($product_image_path)}}'>
+                                           </div>
+                                           <div class='item-qty'>
+                                              {{$product_quantity}}
+                                           </div>
+                                        </div>
+                                        <div class='d-flex flex-column'>
+                                           <span class='bold'>
+                                              {{$product_name}}
+                                           </span>
+                                        </div>
+                                     </div>
+                                     <div class='ml-1 bold price'>
+                                       $ {{$product_price}}
+                                     </div>
+                                  </div>
+                                  <div class='line-row d-block' data-function='cart-total-container'>
+                                     <div class='d-flex justify-content-between'>
+                                        <span> Subtotal </span>
+                                        <span class='[]'> ${{$product_price}}
+                                        </span>
+                                     </div>
+                                     <div class='d-flex justify-content-between space-top-2'>
+                                        <span>
+                                          {{$checkout_free_option_label}}
+                                        </span>
+                                        <span>
+                                          @if ($checkout_free_option_value==0)
+                                              Gratis
+                                          @else
+                                             <span class='accent free-shipping'>{{$checkout_free_option_value}}</span>
+                                          @endif
+                                           
+                                        </span>
+                                     </div>
+                                     <div class='d-flex justify-content-between space-top-2'>
+                                        <span> Impuestos </span>
+                                        <span>
+                                          {{$checkout_taxes_value}}
+                                        </span>
+                                     </div>
+                                     <div class='d-flex justify-content-between space-top-2'>
+                                        <span class='bold'> Total </span>
+                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
+                                           IlVTRCIsImVtYWlsIjoiIn0=
+                                           ' data-total-amount='69.99'>
+                                           $ {{$product_price}}
+                                        </span>
+                                     </div>
+                                  </div>
+
+                               </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+
                   </div>
                </div>
             </div>
