@@ -170,9 +170,7 @@
                <div class='col-12'>
                   <div class='header clearfix'>
                      <div class='logo-wrapper'>
-                        <a href='https://froppyt.com/'>
-                           <img class='logo' src='{{secure_asset('images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.pn/v1/fill/w_600%2ch_400/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.7?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvOWM2NGNmZTMtYmIzYi00YWU4LWI1YTYtZDJmMzlkMjFmZjg3XC9kM2ptZTZpLThjNzAyYWQ0LTRiN2EtNDc2My05OTAxLTk5ZjhiNGYwMzhiMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Ymv-MHRcmXXpzmL3f0xZ0mCcyU85lCLnk0jbOnCO8Zg')}}'>
-                        </a>
+                        
                      </div>
                      <div class='badges-wrapper'>
                         <img class='secure-logos' src='{{secure_asset('cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311')}}'>
