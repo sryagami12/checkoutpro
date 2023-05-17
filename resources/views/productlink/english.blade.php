@@ -6,9 +6,9 @@
    <!-- /Added by HTTrack -->
    <head>
       <title> CHECKOUT SECURE </title>
-      <link rel="stylesheet" media="screen" href="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
-      <script src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
-      <link href="{{asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
+      <link rel="stylesheet" media="screen" href="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-40d519d210bdf230002063e6455d10b48b84df43130ca30d65b5966f2e4c7d62.css')}}" />
+      <script src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
+      <link href="{{secure_asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
       <noscript>
          <img height='1' src='https://www.facebook.com/tr?id=617396713608618&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
@@ -47,7 +47,7 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='{{asset($productlink->product_image_path)}}'>
+                                    <img src='{{secure_asset($productlink->product_image_path)}}'>
                                     <input type="text" value="{{$productlink->product_image_path}}" name="product_image_path" hidden>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
@@ -104,7 +104,7 @@
                                  <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                     <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3" type="text" name="checkout[discount][title]" />
                                     <i class='icon ion-android-warning'></i>
-                                    <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                    <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                        <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                     </svg>
                                     <label for="checkout_discount_title_24ef5e5c-2e86-4086-9aa8-6e3007875ea3">Discount code</label>
@@ -141,7 +141,7 @@
                               <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                  <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f" type="text" name="checkout[discount][title]" />
                                  <i class='icon ion-android-warning'></i>
-                                 <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                 <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                     <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                  </svg>
                                  <label for="checkout_discount_title_b2273688-3de8-4b45-881a-ac857121523f">Discount code</label>
@@ -171,11 +171,11 @@
                   <div class='header clearfix'>
                      <div class='logo-wrapper'>
                         <a href='https://froppyt.com/'>
-                           <img class='logo' src='{{asset('images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.pn/v1/fill/w_600%2ch_400/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.7?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvOWM2NGNmZTMtYmIzYi00YWU4LWI1YTYtZDJmMzlkMjFmZjg3XC9kM2ptZTZpLThjNzAyYWQ0LTRiN2EtNDc2My05OTAxLTk5ZjhiNGYwMzhiMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Ymv-MHRcmXXpzmL3f0xZ0mCcyU85lCLnk0jbOnCO8Zg')}}'>
+                           <img class='logo' src='{{secure_asset('images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9c64cfe3-bb3b-4ae8-b5a6-d2f39d21ff87/d3jme6i-8c702ad4-4b7a-4763-9901-99f8b4f038b0.pn/v1/fill/w_600%2ch_400/fondo_transparente_png_by_imsnowbieber_d3jme6i-fullview.7?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDAwIiwicGF0aCI6IlwvZlwvOWM2NGNmZTMtYmIzYi00YWU4LWI1YTYtZDJmMzlkMjFmZjg3XC9kM2ptZTZpLThjNzAyYWQ0LTRiN2EtNDc2My05OTAxLTk5ZjhiNGYwMzhiMC5wbmciLCJ3aWR0aCI6Ijw9NjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.Ymv-MHRcmXXpzmL3f0xZ0mCcyU85lCLnk0jbOnCO8Zg')}}'>
                         </a>
                      </div>
                      <div class='badges-wrapper'>
-                        <img class='secure-logos' src='{{asset('cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311')}}'>
+                        <img class='secure-logos' src='{{secure_asset('cdn.shopify.com/s/files/1/0522/7433/1830/files/class-payments730e.png?v=1675448311')}}'>
                      </div>
                   </div>
                   <div class='row space-4'>
@@ -183,7 +183,7 @@
                         <div>
                            <div class='timer-title d-flex align-items-center'>
                               <div class="timer-fire">
-                                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
+                                 <svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" width="125px" height="189.864px" viewBox="0 0 125 189.864" enable-background="new 0 0 125 189.864" xml:space="preserve">
                                     <path class="flame-main" fill="#F36E21" d="M76.553,186.09c0,0-10.178-2.976-15.325-8.226s-9.278-16.82-9.278-16.82s-0.241-6.647-4.136-18.465
                                        c0,0,3.357,4.969,5.103,9.938c0,0-5.305-21.086,1.712-30.418c7.017-9.333,0.571-35.654-2.25-37.534c0,0,13.07,5.64,19.875,47.54
                                        c6.806,41.899,16.831,45.301,6.088,53.985" />
@@ -909,7 +909,7 @@
                         <div class='space-top-8 d-none d-lg-block'>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                               </div>
                               <p>
                                  <span> 24/7 customer service </span>
@@ -918,7 +918,7 @@
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                               </div>
                               <p>
                                  <span> Verified site ✅ </span>
@@ -927,7 +927,7 @@
                            </div>
                            <div class='about-section'>
                               <div class='about-img'>
-                                 <img src='{{asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
+                                 <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                               </div>
                               <p>
                                  <span> 100% secure payment - Your information is encrypted with SSL </span>
@@ -939,7 +939,7 @@
                            <div class='text-center text-lg-left'>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Returns Policy </a>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> PPrivacy Policy </a>
-                              <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Terms and Conditions </a>
+                              <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Terms and Conditions </a>
                            </div>
                            <div class='text-center text-lg-left consent'> I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply. </div>
                            <div class='space-6'></div>
@@ -970,7 +970,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='{{asset($productlink->product_image_path)}}'>
+                                             <img src='{{secure_asset($productlink->product_image_path)}}'>
                                           </div>
                                           <div class='item-qty'>
                                              {{$productlink->product_quantity}}
@@ -1021,7 +1021,7 @@
                                           <div class='form-group col-10 col-md-10 col-lg-9 mb-0 pl-0'>
                                              <input class="form-control " data-function="discount-text" data-validate="false" id="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0" type="text" name="checkout[discount][title]" />
                                              <i class='icon ion-android-warning'></i>
-                                             <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='http://www.w3.org/2000/svg'>
+                                             <svg class='svg-custom-icon svg-icon-discount' height='20' viewBox='0 0 16 16' width='20' xmlns='https://www.w3.org/2000/svg'>
                                                 <path d='M-73.884-1568.346l-.89-.827a.44.44,0,0,0-.3-.116.486.486,0,0,0-.061,0l-1.227.167a1.37,1.37,0,0,1-.182.013,1.254,1.254,0,0,1-1.249-1.011l-.214-1.17a.408.408,0,0,0-.223-.293l-1.094-.558a1.191,1.191,0,0,1-.547-1.613l.544-1.068a.4.4,0,0,0,0-.363l-.544-1.068a1.192,1.192,0,0,1,.547-1.614l1.094-.558a.412.412,0,0,0,.223-.293l.214-1.171a1.255,1.255,0,0,1,1.249-1.01,1.285,1.285,0,0,1,.182.013l1.227.166a.474.474,0,0,0,.062,0,.436.436,0,0,0,.3-.116l.89-.826A1.292,1.292,0,0,1-73-1582a1.29,1.29,0,0,1,.884.346l.89.826a.438.438,0,0,0,.3.116.467.467,0,0,0,.062,0l1.227-.166a1.292,1.292,0,0,1,.182-.013,1.254,1.254,0,0,1,1.249,1.01l.214,1.171a.412.412,0,0,0,.223.293l1.094.558a1.191,1.191,0,0,1,.547,1.613l-.544,1.068a.4.4,0,0,0,0,.363l.544,1.068a1.191,1.191,0,0,1-.547,1.613l-1.094.558a.408.408,0,0,0-.223.293l-.214,1.17a1.253,1.253,0,0,1-1.248,1.01,1.412,1.412,0,0,1-.183-.012l-1.227-.167a.486.486,0,0,0-.061,0,.441.441,0,0,0-.3.116l-.89.827A1.291,1.291,0,0,1-73-1568,1.292,1.292,0,0,1-73.884-1568.346Zm-.306-1.406.891.826a.439.439,0,0,0,.3.117.438.438,0,0,0,.3-.117l.891-.826a1.285,1.285,0,0,1,.881-.344,1.272,1.272,0,0,1,.181.013l1.227.166a.4.4,0,0,0,.062,0,.424.424,0,0,0,.422-.341l.214-1.171a1.218,1.218,0,0,1,.657-.867l1.095-.557a.4.4,0,0,0,.185-.546l-.544-1.068a1.168,1.168,0,0,1,0-1.072l.544-1.068a.4.4,0,0,0-.185-.547l-1.095-.556a1.221,1.221,0,0,1-.657-.867l-.214-1.171a.423.423,0,0,0-.421-.342.418.418,0,0,0-.062,0l-1.227.166a1.29,1.29,0,0,1-.181.013,1.288,1.288,0,0,1-.881-.344l-.891-.827a.438.438,0,0,0-.3-.117.439.439,0,0,0-.3.117l-.891.827a1.288,1.288,0,0,1-.881.344,1.291,1.291,0,0,1-.181-.013l-1.227-.166a.405.405,0,0,0-.062,0,.425.425,0,0,0-.422.342l-.214,1.171a1.221,1.221,0,0,1-.657.867l-1.095.556a.4.4,0,0,0-.185.547l.544,1.068a1.168,1.168,0,0,1,0,1.072l-.544,1.068a.4.4,0,0,0,.185.546l1.095.557a1.219,1.219,0,0,1,.657.867l.214,1.171a.424.424,0,0,0,.422.341.39.39,0,0,0,.062,0l1.227-.166a1.389,1.389,0,0,1,.181-.012A1.285,1.285,0,0,1-74.19-1569.752Zm1.558-3.148a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-72.632-1572.9Zm.8,0a.655.655,0,0,0,.67.637.655.655,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.655.655,0,0,0-71.828-1572.9Zm-4.36,1.278a.4.4,0,0,1,0-.586l5.759-5.471a.453.453,0,0,1,.617,0,.4.4,0,0,1,0,.586l-5.759,5.471a.445.445,0,0,1-.308.121A.447.447,0,0,1-76.188-1571.622Zm-.128-5.479a1.44,1.44,0,0,1,1.474-1.4,1.44,1.44,0,0,1,1.474,1.4,1.44,1.44,0,0,1-1.474,1.4A1.44,1.44,0,0,1-76.316-1577.1Zm.8,0a.655.655,0,0,0,.67.637.654.654,0,0,0,.67-.637.654.654,0,0,0-.67-.636A.654.654,0,0,0-75.512-1577.1Z' transform='translate(81 1583)'></path>
                                              </svg>
                                              <label for="checkout_discount_title_753144a8-42fc-4ab6-8480-4b7b429144c0">Discount Code</label>
@@ -1062,7 +1062,7 @@
                               </div>
                               <!-- / checkout -->
                               <!-- / detailed_view -->
-                              <script src='{{asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
+                              <script src='{{secure_asset('ws.bluesnap.com/web-sdk/4/bluesnap.js')}}'></script>
                               <div class='payment-method' data-function='payment-method'>
                                  
                                  <div class='d-none d-lg-block'></div>
@@ -1077,25 +1077,25 @@
                                        <div class='payment-logo-wrapper'>
                                           <div class='credit-card-brands'>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}" />
                                              </div>
                                              <div class='credit-card-brand-logo'>
-                                                <img src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
+                                                <img src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}" />
                                              </div>
                                              <div class='credit-card-more'>
                                                 <span> &amp; more </span>
@@ -1133,7 +1133,7 @@
                                              src="https://code.jquery.com/jquery-3.2.1.min.js"
                                              integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
                                              crossorigin="anonymous"></script>
-                                          <script type="text/javascript" src="{{asset('payments\jquery.payment.js')}}"></script>
+                                          <script type="text/javascript" src="{{secure_asset('payments\jquery.payment.js')}}"></script>
                                           <script>
                                              jQuery(function($) {
                                                 $("#brand_cc").hide();
@@ -1148,37 +1148,37 @@
                                                    switch (cardType) {
                                                       case "visa":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_visa-dea3ec0732c5927df292d546dd45081c3985db48c937346def99b4e948432171.png')}}");
                                                          break;
 
                                                       case "mastercard":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_mastercard-72efe085837ac5852aa70af6fe2a2cb90e81af9dc7f8cbff77fd9d4fab4aff61.png')}}");
                                                          break;
 
                                                       case "amex":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_amex-d9301d2d277dc8bc1369a1e9c8dcf0ca4864d243163f9d56eff55e33e82bcc8c.png')}}");
                                                          break;
 
                                                       case "maestro":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_maestro-4e36ce4c4a0d2b33dcb26443c10dc6650c7890f0d596c077cda6fc6f528a0510.png')}}");
                                                          break;
 
                                                       case "jcb":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_jcb-dcaadea38a05d4a4451c20df8fe7369469008193b743da6e43ee0600b67f96ed.png')}}");
                                                          break; 
                                                          
                                                       case "discover":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_discover-31d590203c72a75c443efa97d223b3ddb8a843d543d362518086da920fb89d0d.png')}}");
                                                          break;
                                                       
                                                       case "dinersclub":
                                                          $("#brand_cc").show();
-                                                         $("#brand_cc").attr("src","{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}");
+                                                         $("#brand_cc").attr("src","{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/card_diners_club-e7fa030c8de0ef07bd6c0109b43b36512f141d9f319017624e3d3c1ab7fba7a3.png')}}");
                                                          break;
 
                                                       default:
@@ -1232,7 +1232,7 @@
                            </div>
                            <div class='space-2'>
                               <input type="submit" value="Complete Purchase" class="btn btn-primary" />
-                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
+                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>
 
@@ -1250,7 +1250,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                      </div>
                      <p>
                         <span> 
@@ -1262,7 +1262,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/3190/3190354.png')}}'>
                      </div>
                      <p>
                         <span> Verified site ✅ </span>
@@ -1273,7 +1273,7 @@
                <div class='col-12'>
                   <div class='about-section'>
                      <div class='about-img'>
-                        <img src='{{asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
+                        <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/81/81566.png')}}'>
                      </div>
                      <p>
                         <span> 100% secure payment - Your information is encrypted with SSL </span>
@@ -1285,7 +1285,7 @@
                   <div class='text-center text-lg-left'>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Returns Policy  </a>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Privacy Policy  </a>
-                     <a href='http://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Terms and Conditions </a>
+                     <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Terms and Conditions </a>
                   </div>
                   <div class='text-center text-lg-left consent'> I consent to receive recurring automated marketing by text message through an automatic telephone dialing system. Consent is not a condition to purchase. STOP to cancel, HELP for help. Message and Data rates apply.</div>
                   <div class='space-6'></div>
