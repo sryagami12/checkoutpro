@@ -719,7 +719,7 @@
                                     console.log("City:", userCity);
                                     console.log("Country:", userCountry);
                                     const $select = document.querySelector('#checkout_shipping_country_code');
-                                    $select.textContent = userCountry;        
+                                    $select.innerText = userCountry;        
                                  });
                                  
                               </script>
