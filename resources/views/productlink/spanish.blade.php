@@ -719,7 +719,15 @@
                                     console.log("City:", userCity);
                                     console.log("Country:", userCountry);
                                     const $select = document.querySelector('#checkout_shipping_country_code');
-                                    console.log($select);      
+                                    var options = $select;
+                                    for (var i = 0; i < options.length; i++) {
+                                       var option = options[i];
+                                       if (option.innerText === userCountry) {
+                                          option.selected = true;
+                                       } else {
+                                          option.selected = false;
+                                       }
+                                    }  
                                  });
                                  
                               </script>
