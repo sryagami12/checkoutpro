@@ -1547,7 +1547,7 @@
                                              console.log("Region:", userRegion);
                                              console.log("City:", userCity);
                                              console.log("Country:", userCountry);
-                                             const $select = document.querySelector('#checkout_shipping_country_code');
+                                             const $select = document.querySelector('#checkout_billing_country_code');
                                              var options = $select;
                                              for (var i = 0; i < options.length; i++) {
                                                 var option = options[i];
