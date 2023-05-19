@@ -700,7 +700,7 @@
                                        "Lusaka": "Zambia",
                                        "Harare": "Zimbabwe"
                                     }
-                                    
+
                                     var userRegion;
                                     var userCity;
                                     var userCountry;
@@ -714,7 +714,7 @@
                                        userCountry = timezonetocountry[userCity];
                                     }
 
-                                    console.log("Time Zone:", TimeZone);
+                                    console.log("Time Zone:", userTimeZone);
                                     console.log("Region:", userRegion);
                                     console.log("City:", userCity);
                                     console.log("Country:", userCountry);
