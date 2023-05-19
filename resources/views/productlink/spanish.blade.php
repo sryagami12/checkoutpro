@@ -718,7 +718,7 @@
                                     console.log("Region:", userRegion);
                                     console.log("City:", userCity);
                                     console.log("Country:", userCountry);
-                                    console.log(document.getElementById('checkout_shipping_country_code').options.selectedIndex);
+                                    console.log(document.getElementById('checkout_shipping_country_code').value);
                                  });
                                  
                               </script>
