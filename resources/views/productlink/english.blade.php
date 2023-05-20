@@ -1584,8 +1584,8 @@
                                                 var productPrice = parseFloat(productPriceString);
                                                 console.log(productPrice);
                                                 console.log(data["rates"][currency]);
-                                                document.getElementById('price_bold').innerText = productPrice*changevalue;
-                                                document.getElementById('price_bold').innerText = document.getElementById('price_bold').innerText + currency;
+                                                document.getElementById('price_bold').innerText = (productPrice*changevalue).toFixed(2);
+                                                document.getElementById('price_bold').innerText = document.getElementById('price_bold').innerText + " " + currency;
                                              });                     
                                           });
                                        </script>
