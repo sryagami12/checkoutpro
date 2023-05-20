@@ -1579,7 +1579,7 @@
 
                                              
                                              $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
-                                                console.log(data["rates"]);
+                                                console.log(data["rates"].currency);
                                              });
                                           });
                                        </script>
