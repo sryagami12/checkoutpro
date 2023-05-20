@@ -1579,6 +1579,9 @@
 
                                              
                                              $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
+                                                var changevalue = data["rates"][currency];
+                                                var productPrice = document.getElementById('price_bold').innerText;
+                                                console.log(productPrice);
                                                 console.log(data["rates"][currency]);
                                              });
                                           });
