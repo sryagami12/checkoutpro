@@ -1570,10 +1570,16 @@
 
                                              const selectElement = document.getElementById('checkout_billing_country_code');
                                              var index = selectElement.selectedIndex;
+                                             var countryCode = selectElement.options[index].value;
+                                             var currency = countryToCurrency[ countryCode ];
+
+                                             console.log(index);
+                                             console.log(countryCode);
+                                             console.log(currency);
 
                                              
                                              $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
-                                                console.log(data["rates"](countryToCurrency[ selectElement.options[index].value ] ));
+                                                console.log(data["rates"]( currency));
                                              });
                                           });
                                        </script>
