@@ -1584,7 +1584,9 @@
                                                 var productPrice = parseFloat(productPriceString);
                                                 console.log(productPrice);
                                                 console.log(data["rates"][currency]);
-                                             });
+                                                document.getElementById('price_bold').innerText = productPrice*changevalue;
+                                                document.getElementById('price_bold').innerText = document.getElementById('price_bold').innerText + currency;
+                                             });                     
                                           });
                                        </script>
                                        <select class="custom-select" name="checkout[billing_country_code]" id="checkout_billing_country_code">
