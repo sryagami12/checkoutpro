@@ -1101,6 +1101,11 @@
                                  <div class='form-group col'>
                                     <div class='custom-select-wrapper'>
                                        <script>
+                                          $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
+                                          console.log(data);
+                                       });
+                                       </script>
+                                       <script>
                                           window.addEventListener('load', function() {
                                              var timezonetocountry = {
                                                 "Andorra": "Andorra",
