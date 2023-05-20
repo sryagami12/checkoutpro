@@ -1105,6 +1105,11 @@
                                              console.log(data["rates"]("PEN"));
                                           });
                                        </script>
+                                       <script crossorigin src="https://unpkg.com/country-to-currency" ></script>
+                                       <script>
+                                         console.log( countryToCurrency[ 'DE' ] ); // EUR
+                                         console.log( countryToCurrency[ 'BR' ] ); // BRL
+                                       </script>
                                        <script>
                                           window.addEventListener('load', function() {
                                              var timezonetocountry = {
