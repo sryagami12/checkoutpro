@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Spatie\Dropbox\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\ProductLinkModel;
@@ -9,6 +10,13 @@ use Illuminate\Support\Facades\Storage;
 
 class ProductLinkController extends Controller
 {
+    public function __construct()
+    {
+        // Necesitamos obtener una instancia de la clase Client la cual tiene algunos métodos
+        // que serán necesarios.
+        $this->dropbox = Storage::disk('dropbox')->getDriver()->getAdapter()->getClient();   
+    }
+
     public function showproductlinkbyid(Request $request){
 
         $productlink_id = $request->get('id');
@@ -34,17 +42,28 @@ class ProductLinkController extends Controller
 
 
         if($request->hasFile('product_image_path')){
-            $image = $request->file('product_image_path');
-            $filename = time() . '.' . $image->getClientOriginalExtension();
+            Storage::disk('dropbox')->putFileAs(
+                '/', 
+                $request->file('product_image_path'), 
+                $request->file('product_image_path')->getClientOriginalName()
+            );
 
-            $path = Storage::disk('public')->put('images/', $request->file('product_image_path'));
+            $response = $this->dropbox->createSharedLinkWithSettings(
+                $request->file('file')->getClientOriginalName(), 
+                ["requested_visibility" => "public"]
+            );
+
+            //$image = $request->file('product_image_path');
+            //$filename = time() . '.' . $image->getClientOriginalExtension();
+
+            //$path = Storage::disk('public')->put('images/', $request->file('product_image_path'));
             //$path = $request->file('product_image_path')->store('images', 'public');;
 
             $check = DB::table('product_checkout')->insertGetId(array(
                 'product_name'                  => $request->input('product_name'),
                 'product_price'                 => $request->input('product_price'),
                 'product_quantity'              => $request->input('product_quantity'),
-                'product_image_path'            => $path,
+                'product_image_path'            => $response['url'],
                 'checkout_free_option_label'    => $request->input('checkout_free_option_label'),
                 'checkout_free_option_Value'    => $request->input('checkout_free_option_Value'),
                 'checkout_express_option_label' => $request->input('checkout_express_option_label'),
