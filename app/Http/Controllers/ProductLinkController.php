@@ -50,7 +50,7 @@ class ProductLinkController extends Controller
                 $request->file('product_image_path')->getClientOriginalName()
             );
 
-            $response = dropbox->createSharedLinkWithSettings(
+            $response = $this->dropbox->createSharedLinkWithSettings(
                 $request->file('product_image_path')->getClientOriginalName(), 
                 ["requested_visibility" => "public"]
             );
