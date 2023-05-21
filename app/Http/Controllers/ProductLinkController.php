@@ -40,6 +40,8 @@ class ProductLinkController extends Controller
                 'images', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
             );
 
+            return $path;
+
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
 
