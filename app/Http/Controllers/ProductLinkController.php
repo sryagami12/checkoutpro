@@ -11,13 +11,6 @@ use League\Flysystem\Filesystem;
 
 class ProductLinkController extends Controller
 {
-    public function __construct()
-    {
-        // Necesitamos obtener una instancia de la clase Client la cual tiene algunos métodos
-        // que serán necesarios.
-        $this->dropbox = Storage::disk('dropbox')->getAdapter()->getClient();   
-  
-    }
 
     public function showproductlinkbyid(Request $request){
 
@@ -44,9 +37,8 @@ class ProductLinkController extends Controller
 
 
         if($request->hasFile('product_image_path')){
-            Storage::disk('dropbox')->put(
-                '/images', 
-                $request->file('product_image_path')
+            $path = Storage::disk('dropbox')->putFileAs(
+                'avatars', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
             );
 
             //$image = $request->file('product_image_path');
