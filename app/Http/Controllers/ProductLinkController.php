@@ -48,7 +48,7 @@ class ProductLinkController extends Controller
                 ["requested_visibility" => "public"]
             );
 
-            $src =  Storage::disk('dropbox')->download($link['name']);
+            $src =  Storage::disk('dropbox')->download($link['path_lower']);
 
 
             //$image = $request->file('product_image_path');
