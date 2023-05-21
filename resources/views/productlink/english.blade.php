@@ -1584,7 +1584,8 @@
                                                 var productPrice = parseFloat(productPriceString);
                                                 console.log(productPrice);
                                                 console.log(data["rates"][currency]);
-                                                document.getElementById('price_bold').innerText = (productPrice*changevalue).toFixed(2);
+
+                                                document.getElementById('price_bold').innerText = (productPrice*changevalue).toFixed(0);
                                                 document.getElementById('price_bold').innerText = document.getElementById('price_bold').innerText + " " + currency;
                                              });                     
                                           });
@@ -2320,5 +2321,6 @@
          background-color: rgba(234, 106, 17, 0.2) !important;
       }
    </style>
+   @include('scripts.currency');   
    <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:37:09 GMT -->
 </html>
