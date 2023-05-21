@@ -38,8 +38,10 @@ class ProductLinkController extends Controller
 
         if($request->hasFile('product_image_path')){
             $path = Storage::disk('dropbox')->putFileAs(
-                'avatars', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
+                'images', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
             );
+            
+            
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
