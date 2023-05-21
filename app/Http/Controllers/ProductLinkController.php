@@ -15,7 +15,8 @@ class ProductLinkController extends Controller
     {
         // Necesitamos obtener una instancia de la clase Client la cual tiene algunos métodos
         // que serán necesarios.
-        $this->dropbox = Storage::disk('dropbox')->getClient();   
+        $this->dropbox = Storage::disk('dropbox')->getDriver()->getAdapter()->getClient();   
+  
     }
 
     public function showproductlinkbyid(Request $request){
