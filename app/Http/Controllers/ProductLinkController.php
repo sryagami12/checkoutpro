@@ -43,7 +43,10 @@ class ProductLinkController extends Controller
             $adapter = \Storage::disk('dropbox')->getAdapter();
             $client = $adapter->getClient();
 
-            $link = $client->createSharedLinkWithSettings($path);
+            $link = $client->createSharedLinkWithSettings(
+                $path, 
+                ["requested_visibility" => "public"]
+            );
 
 
             //$image = $request->file('product_image_path');
