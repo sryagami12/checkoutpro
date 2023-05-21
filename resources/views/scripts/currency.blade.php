@@ -480,8 +480,8 @@
                     optionBilling.selected = true;
                     optionShipping.selected = true;
                 } else {
-                    optionBilling.selected = true;
-                    optionShipping.selected = true;
+                    optionBilling.selected = false;
+                    optionShipping.selected = false;
                 }
             }
         }
