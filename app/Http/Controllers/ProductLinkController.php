@@ -2,12 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Spatie\Dropbox\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-use App\Models\ProductLinkModel;
 use Illuminate\Support\Facades\Storage;
-use League\Flysystem\Filesystem;
 
 class ProductLinkController extends Controller
 {
@@ -37,11 +33,10 @@ class ProductLinkController extends Controller
 
 
         if($request->hasFile('product_image_path')){
-            $path = Storage::disk('dropbox')->putFileAs(
+
+            $path = Storage::disk('dropbox')->put(
                 'images', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
             );
-            
-            
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
