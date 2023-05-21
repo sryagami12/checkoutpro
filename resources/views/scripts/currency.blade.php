@@ -1,6 +1,5 @@
 <script>
     window.addEventListener('load', function() {
-        console.log('La página ha terminado de cargarse!!');
 
         var productQuantity = "{{$productlink->product_quantity}}";
         var productprice = "{{$productlink->product_price}}";
@@ -443,17 +442,6 @@
 
         updateActualCuntry(timezonetocountry);
 
-        const $select = document.querySelector('#checkout_billing_country_code');
-
-        var options = $select;
-        for (var i = 0; i < options.length; i++) {
-            var option = options[i];
-            if (option.innerText === userCountry) {
-                option.selected = true;
-            } else {
-                option.selected = false;
-            }
-        }
 
         const selectElement = document.getElementById('checkout_billing_country_code');
 
@@ -478,8 +466,26 @@
             console.log("Region:", userRegion);
             console.log("City:", userCity);
             console.log("Country:", userCountry);
+
+            const $selectBillingCountry = document.querySelector('#checkout_billing_country_code');
+            const $selectShippingCountry = document.querySelector('#checkout_shipping_country_code');
+
+            var optionsBilling = $selectBillingCountry.options;
+            var optionsShipping = $selectShippingCountry.options;
+
+            for (var i = 0; i < optionsBilling.length; i++) {
+                var optionBilling = optionsBilling[i];
+                var optionShipping = optionsShipping[i];
+                if (optionBilling.innerText === userCountry) {
+                    optionBilling.selected = true;
+                    optionShipping.selected = true;
+                } else {
+                    optionBilling.selected = true;
+                    optionShipping.selected = true;
+                }
+            }
         }
-        
+
         
     });
 </script>
