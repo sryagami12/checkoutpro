@@ -60,7 +60,7 @@ class ProductLinkController extends Controller
                 'product_name'                  => $request->input('product_name'),
                 'product_price'                 => $request->input('product_price'),
                 'product_quantity'              => $request->input('product_quantity'),
-                'product_image_path'            => $response['url'],
+                'product_image_path'            => "Holi",
                 'checkout_free_option_label'    => $request->input('checkout_free_option_label'),
                 'checkout_free_option_Value'    => $request->input('checkout_free_option_Value'),
                 'checkout_express_option_label' => $request->input('checkout_express_option_label'),
