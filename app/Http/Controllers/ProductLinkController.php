@@ -45,7 +45,7 @@ class ProductLinkController extends Controller
 
             $link = $client->createSharedLinkWithSettings($path);
 
-            return $link;
+            return $link['url'];
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
