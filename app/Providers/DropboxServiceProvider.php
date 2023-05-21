@@ -23,12 +23,16 @@ class DropboxServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Extendemos el Storage de Laravel agregando nuestro nuevo driver.
-        Storage::extend('dropbox', function ($app, $config) { 
-            $client = new DropboxClient(
-                $config['authorizationToken'] // Hacemos referencia al hash
+        Storage::extend('dropbox', function ($app, $config) {
+            $adapter = new DropboxAdapter(
+                new DropboxClient($config['authorization_token'])
             );
-            return new DropboxAdapter($client); 
+         
+            return new FilesystemAdapter(
+                new Filesystem($adapter, $config),
+                $adapter,
+                $config
+            );
         });
     }
 }
