@@ -40,7 +40,12 @@ class ProductLinkController extends Controller
                 'images', $request->file('product_image_path'), $request->file('product_image_path')->getClientOriginalName()
             );
 
-            return $path;
+            $adapter = \Storage::disk('dropbox')->getDriver()->getAdapter();
+            $client = $adapter->getClient();
+            
+            $link = $client->createSharedLinkWithSettings($path);
+
+            return $link;
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
