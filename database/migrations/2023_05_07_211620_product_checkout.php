@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('product_name');
             $table->decimal('product_price',8,3);
             $table->integer('product_quantity');
-            $table->string('product_image_path');
+            $table->text('product_image_path');
             $table->string('checkout_free_option_label');
             $table->decimal('checkout_free_option_Value',8,3);
             $table->string('checkout_express_option_label');
