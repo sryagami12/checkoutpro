@@ -47,7 +47,7 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='{{secure_asset($productlink->product_image_path)}}'>
+                                    <img src='{{($productlink->product_image_path)}}'>
                                     <input type="text" value="{{$productlink->product_image_path}}" name="product_image_path" hidden>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
@@ -1916,7 +1916,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='{{secure_asset($productlink->product_image_path)}}'>
+                                             <img src='{{($productlink->product_image_path)}}'>
                                           </div>
                                           <div class='item-qty'>
                                              {{$productlink->product_quantity}}
