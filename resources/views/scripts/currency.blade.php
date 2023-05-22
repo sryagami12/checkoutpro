@@ -1,3 +1,4 @@
+<script crossorigin src="https://unpkg.com/country-to-currency" ></script>
 <script>
     window.addEventListener('load', function() {
 
@@ -441,17 +442,7 @@
         var userTimeZone;
 
         updateActualCuntry(timezonetocountry);
-
-
-        const selectElement = document.getElementById('checkout_billing_country_code');
-
-        var index = selectElement.selectedIndex;
-        var countryCode = selectElement.options[index].value;
-        var currency = countryToCurrency[ countryCode ];
-
-        console.log(index);
-        console.log(countryCode);
-        console.log(currency);
+        updateActualCurrency();
 
 
         function updateActualCuntry(timezonetocountry){
@@ -484,6 +475,22 @@
                     optionShipping.selected = false;
                 }
             }
+        }
+
+        function updateActualCurrency(){
+            const selectElement = document.getElementById('checkout_billing_country_code');
+
+            var index = selectElement.selectedIndex;
+            var countryCode = selectElement.options[index].value;
+            var currency = countryToCurrency[ countryCode ];
+
+            console.log(index);
+            console.log(countryCode);
+            console.log(currency);
+
+            $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
+                console.log(data["rates"](currency));
+            });
         }
 
         
