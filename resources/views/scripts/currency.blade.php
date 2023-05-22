@@ -512,7 +512,10 @@
                 document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
 
+                document.getElementById('subtotal_1_id').innerHTML = total + ' '+currency;
+                document.getElementById('subtotal_2_id').innerHTML = total + ' '+currency;
 
+                
             });
         }
 
