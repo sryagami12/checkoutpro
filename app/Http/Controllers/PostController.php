@@ -18,6 +18,7 @@ class PostController extends Controller
             'product_quantity'          => $request->input('product_quantity'),
             'subtotal_dolar'            => $request->input('subtotal_dolar'),
             'shipping_price_dolar'      => $request->input('shipping_price_dolar'),
+            'shipping_description'      => $request->input('shipping_description'),
             'taxes_dolar'               => $request->input('taxes_dolar'),
             'total_dolar'               => $request->input('total_dolar'),
             'client_currency'           => $request->input('client_currency'),
@@ -50,16 +51,22 @@ class PostController extends Controller
 
         if($request->input('language') == "spanish"){
             return view('productlink.paymentcompletespanish',[
-                'shipping_first_name' => $request->input('checkout')['shipping_first_name'],
-                'product_quantity' => $request->input('product_quantity'),
-                'product_name' => $request->input('product_name'),
-                'product_price' => $request->input('product_price'),
-                'product_image_path' => $request->input('product_image_path'),
-                'checkout_free_option_label' => $request->input('checkout_free_option_label'),
-                'checkout_free_option_value' => $request->input('checkout_free_option_value'),
-                'checkout_taxes_value' => $request->input('checkout_taxes_value')
-                
-                
+                'shipping_first_name'       => $request->input('checkout')['shipping_first_name'],
+                'product_quantity'          => $request->input('product_quantity'),
+                'product_name'              => $request->input('product_name'),
+                'product_price'             => $request->input('product_price'),
+                'product_image_path'        => $request->input('product_image_path'),
+                'checkout_free_option_label'=> $request->input('checkout_free_option_label'),
+                'checkout_free_option_value'=> $request->input('checkout_free_option_value'),
+                'checkout_taxes_value'      => $request->input('checkout_taxes_value'),
+                'subtotal_dolar'            => $request->input('subtotal_dolar'),
+                'shipping_price_dolar'      => $request->input('shipping_price_dolar'),
+                'taxes_dolar'               => $request->input('taxes_dolar'),
+                'total_dolar'               => $request->input('total_dolar'),
+                'client_currency'           => $request->input('client_currency'),
+                'client_currency_exchange'  => $request->input('client_currency_exchange'),
+                'shipping_description'      => $request->input('shipping_description'),
+                'language'                  => $request->input('language')
             ]);
         }
         else{
@@ -71,7 +78,15 @@ class PostController extends Controller
                 'product_image_path' => $request->input('product_image_path'),
                 'checkout_free_option_value' => $request->input('checkout_free_option_value'),
                 'checkout_free_option_label' => $request->input('checkout_free_option_label'),
-                'checkout_taxes_value' => $request->input('checkout_taxes_value')
+                'checkout_taxes_value' => $request->input('checkout_taxes_value'),
+                'subtotal_dolar'            => $request->input('subtotal_dolar'),
+                'shipping_price_dolar'      => $request->input('shipping_price_dolar'),
+                'taxes_dolar'               => $request->input('taxes_dolar'),
+                'total_dolar'               => $request->input('total_dolar'),
+                'client_currency'           => $request->input('client_currency'),
+                'client_currency_exchange'  => $request->input('client_currency_exchange'),
+                'shipping_description'      => $request->input('shipping_description'),
+                'language'                  => $request->input('language')
             ]);
         }            
     }

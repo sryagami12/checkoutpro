@@ -105,32 +105,27 @@
                                            </span>
                                         </div>
                                      </div>
-                                     <div class='ml-1 bold price'>
+                                     <div class='ml-1 bold price' id="total_1">
                                        $ {{$product_price}}
                                      </div>
                                   </div>
                                   <div class='line-row d-block' data-function='cart-total-container'>
                                      <div class='d-flex justify-content-between'>
                                         <span> Subtotal </span>
-                                        <span class='[]'> ${{$product_price}}
+                                        <span class='[]' id="subtotal_1"> ${{$product_price}}
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
-                                        <span>
+                                        <span id="shipping_description_id">
                                           {{$checkout_free_option_label}}
                                         </span>
-                                        <span>
-                                          @if ($checkout_free_option_value==0)
-                                              Gratis
-                                          @else
-                                             <span class='accent free-shipping'>{{$checkout_free_option_value}}</span>
-                                          @endif
-                                           
+                                        <span id="shipping_value_id">
+                                              GRATIS
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span> Impuestos </span>
-                                        <span>
+                                        <span id="taxes_id">
                                           {{$checkout_taxes_value}}
                                         </span>
                                      </div>
@@ -138,7 +133,7 @@
                                         <span class='bold'> Total </span>
                                         <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                            IlVTRCIsImVtYWlsIjoiIn0=
-                                           ' data-total-amount='69.99'>
+                                           ' data-total-amount='69.99' id="total_2">
                                            $ {{$product_price}}
                                         </span>
                                      </div>
@@ -155,6 +150,7 @@
             </div>
          </div>
       </form>
+      @include('scripts.thankspage');
    </body>
    <style>
       .icon-custom {

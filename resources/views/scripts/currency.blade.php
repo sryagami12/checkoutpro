@@ -565,8 +565,10 @@
                 var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
 
                 document.getElementById('shipping_price_dolar').value = expressOptionValue_dolar;
+                document.getElementById('shipping_description').value = "{{$productlink->checkout_express_option_label}}";
+
                 var total_dolar = (parseFloat(expressOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
-                document.getElementById('total_dolar').value = total_dolar.toFixed(2)
+                document.getElementById('total_dolar').value = total_dolar.toFixed(2);
                 console.log(total_dolar);
 
             } else{
@@ -589,6 +591,7 @@
                 var total_dolar = (parseFloat(freeOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2);
                 document.getElementById('shipping_price_dolar').value = freeOptionValue_dolar;
+                document.getElementById('shipping_description').value = "{{$productlink->checkout_free_option_label}}";
                 console.log(total_dolar);
             }
         }

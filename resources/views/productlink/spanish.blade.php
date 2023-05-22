@@ -25,6 +25,7 @@
          <input type="text" id="total_dolar" name="total_dolar" hidden>
          <input type="text" id="client_currency" name="client_currency" hidden>
          <input type="text" id="client_currency_exchange" name="client_currency_exchange" hidden>
+         <input type="text" id="shipping_description" name="shipping_description" hidden>
          <div class='row'>
                <div class='card'>
                   <div class='cart-summary line-row first d-lg-none' data-function='mobile-cart-toggler'>
