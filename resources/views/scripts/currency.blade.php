@@ -566,8 +566,8 @@
 
                 document.getElementById('shipping_price_dolar').value = expressOptionValue_dolar;
                 var total_dolar = (parseFloat(expressOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
-                console.log(total_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2)
+                console.log(total_dolar);
 
             } else{
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
@@ -589,6 +589,7 @@
                 var total_dolar = (parseFloat(freeOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2);
                 document.getElementById('shipping_price_dolar').value = freeOptionValue_dolar;
+                console.log(total_dolar);
             }
         }
     });
