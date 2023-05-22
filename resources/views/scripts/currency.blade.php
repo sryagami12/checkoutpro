@@ -506,7 +506,7 @@
                 var subtotal = productQuantity*productprice;
                 var total = subtotal + freeOptionValue + taxes;
 
-                getElementById('label_total_mobile_value_id').innerText = total + ' '+currency; 
+                document.getElementById('label_total_mobile_value_id').innerText = total + ' '+currency; 
 
 
             });
