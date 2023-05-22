@@ -31,7 +31,7 @@
                         <i class='ion-chevron-down cart-toggle'></i>
                      </div>
                      <div class='cart-price' data-function='cart-summary-price'>
-                        <div class='final-price'>
+                        <div class='final-price' id="mobile_total_1_id">
                            {{$productlink->product_price}}
                         </div>
                      </div>
@@ -47,7 +47,7 @@
                            <div class='d-flex align-items-center'>
                               <div class='item-img-wrapper'>
                                  <div class='item-img'>
-                                    <img src='{{secure_asset($productlink->product_image_path)}}'>
+                                    <img src='{{($productlink->product_image_path)}}'>
                                     <input type="text" value="{{$productlink->product_image_path}}" name="product_image_path" hidden>
                                  </div>
                                  <div class='item-qty'> {{$productlink->product_quantity}} </div>
@@ -60,15 +60,15 @@
                                  <input type="text" value="{{$productlink->product_name}}" name="product_name" hidden>
                               </div>
                            </div>
-                           <div class='ml-1 bold price'>
-                              {{$productlink->product_price}}
-                              <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
+                           <div class='ml-1 bold price' id="mobile_total_2_id">
+                              {{$productlink->product_price}} USD
                            </div>
+                           <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
                         </div>
                         <div class='line-row d-block' data-function='cart-total-container'>
                            <div class='d-flex justify-content-between'>
                               <span> Subtotal </span>
-                              <span class='[]'>
+                              <span class='[]' id="subtotal_2_id">
                                  {{$productlink->product_price}}
                               </span>
                            </div>
@@ -78,22 +78,22 @@
                               </span>
                               <input type="text" value="{{$productlink->checkout_free_option_label}}" name="checkout_free_option_label" hidden>
                               <span>
-                                 <span class='accent free-shipping' id="shipping_value_mobile">Free</span>
+                                 <span class='accent free-shipping' id="shipping_value_mobile">GRATIS</span>
                               </span>
                               <input type="text" value="{{$productlink->checkout_free_option_value}}" name="checkout_free_option_value" hidden>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span> Impuestos </span>
-                              <span>
+                              <span id="taxes_2_id">
                                  {{$productlink->checkout_taxes_value}}
-                                 <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                               </span>
+                              <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span class='bold'> Total </span>
                               <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                  IlVTRCIsImVtYWlsIjoiIn0=
-                                 ' data-total-amount='69.99'>
+                                 ' data-total-amount='69.99' id="mobile_total_5_id">
                                  {{$productlink->product_price}}
                               </span>
                            </div>
@@ -200,10 +200,10 @@
                                  </svg>
                               </div>
                               <div class='bold ml-2'>
-                                 <div class='mt-2'> ¡Gran demanda! ¡Complete su pedido antes de que sea demasiado tarde!</div>
+                                 <div class='mt-2'> ¡Gran demanda! ¡Complete su pedido antes de que sea demasiado tarde! </div>
                               </div>
                            </div>
-                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'> Su carro está reservado para <span id='time'> 10:00 </span> Minutos. </div>
+                           <div class='time-wrapper' data-finished-text='Your cart reservation has ended.' id='time-wrapper'> Su carro está reservado para <span id='time'> 10:00 </span> minutos. </div>
                         </div>
                         <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                            <h2> 1. Detalles de envío</h2>
@@ -250,7 +250,7 @@
                            <div class='form-row'>
                               <div class='form-group col'>
                                  <input required="required" class="form-control " type="text" name="checkout[shipping_address1]" id="checkout_shipping_address1" />
-                                 <label for="checkout_shipping_address1">Dirección</label>
+                                 <label for="checkout_shipping_address1">Direccion</label>
                               </div>
                            </div>
                            <div class='form-row'>
@@ -267,469 +267,10 @@
                               <div class='form-group col' style='display: none;'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select js-value-changed-update" data-country="PE" required="required" name="checkout[shipping_province]" id="checkout_shipping_province">
-                                       <option value="">Pais</option>
+                                       <option value="">País</option>
                                     </select>
                                  </div>
                               </div>
-                              <script>
-                                 window.addEventListener('load', function() {
-                                    var timezonetocountry = {
-                                       "Andorra": "Andorra",
-                                       "Dubai": "United Arab Emirates",
-                                       "Kabul": "Afghanistan",
-                                       "Tirane": "Albania",
-                                       "Yerevan": "Armenia",
-                                       "Casey": "Antarctica",
-                                       "Davis": "Antarctica",
-                                       "Mawson": "Antarctica",
-                                       "Palmer": "Antarctica",
-                                       "Rothera": "Antarctica",
-                                       "Troll": "Antarctica",
-                                       "Vostok": "Antarctica",
-                                       "Buenos_Aires": "Argentina",
-                                       "Cordoba": "Argentina",
-                                       "Salta": "Argentina",
-                                       "Jujuy": "Argentina",
-                                       "Tucuman": "Argentina",
-                                       "Catamarca": "Argentina",
-                                       "La_Rioja": "Argentina",
-                                       "San_Juan": "Argentina",
-                                       "Mendoza": "Argentina",
-                                       "San_Luis": "Argentina",
-                                       "Rio_Gallegos": "Argentina",
-                                       "Ushuaia": "Argentina",
-                                       "Pago_Pago": "Samoa (American)",
-                                       "Vienna": "Austria",
-                                       "Lord_Howe": "Australia",
-                                       "Macquarie": "Australia",
-                                       "Hobart": "Australia",
-                                       "Melbourne": "Australia",
-                                       "Sydney": "Australia",
-                                       "Broken_Hill": "Australia",
-                                       "Brisbane": "Australia",
-                                       "Lindeman": "Australia",
-                                       "Adelaide": "Australia",
-                                       "Darwin": "Australia",
-                                       "Perth": "Australia",
-                                       "Eucla": "Australia",
-                                       "Baku": "Azerbaijan",
-                                       "Barbados": "Barbados",
-                                       "Dhaka": "Bangladesh",
-                                       "Brussels": "Belgium",
-                                       "Sofia": "Bulgaria",
-                                       "Bermuda": "Bermuda",
-                                       "Brunei": "Brunei",
-                                       "La_Paz": "Bolivia",
-                                       "Noronha": "Brazil",
-                                       "Belem": "Brazil",
-                                       "Fortaleza": "Brazil",
-                                       "Recife": "Brazil",
-                                       "Araguaina": "Brazil",
-                                       "Maceio": "Brazil",
-                                       "Bahia": "Brazil",
-                                       "Sao_Paulo": "Brazil",
-                                       "Campo_Grande": "Brazil",
-                                       "Cuiaba": "Brazil",
-                                       "Santarem": "Brazil",
-                                       "Porto_Velho": "Brazil",
-                                       "Boa_Vista": "Brazil",
-                                       "Manaus": "Brazil",
-                                       "Eirunepe": "Brazil",
-                                       "Rio_Branco": "Brazil",
-                                       "Thimphu": "Bhutan",
-                                       "Minsk": "Belarus",
-                                       "Belize": "Belize",
-                                       "St_Johns": "Canada",
-                                       "Halifax": "Canada",
-                                       "Glace_Bay": "Canada",
-                                       "Moncton": "Canada",
-                                       "Goose_Bay": "Canada",
-                                       "Toronto": "Canada",
-                                       "Nipigon": "Canada",
-                                       "Thunder_Bay": "Canada",
-                                       "Iqaluit": "Canada",
-                                       "Pangnirtung": "Canada",
-                                       "Winnipeg": "Canada",
-                                       "Rainy_River": "Canada",
-                                       "Resolute": "Canada",
-                                       "Rankin_Inlet": "Canada",
-                                       "Regina": "Canada",
-                                       "Swift_Current": "Canada",
-                                       "Edmonton": "Canada",
-                                       "Cambridge_Bay": "Canada",
-                                       "Yellowknife": "Canada",
-                                       "Inuvik": "Canada",
-                                       "Dawson_Creek": "Canada",
-                                       "Fort_Nelson": "Canada",
-                                       "Whitehorse": "Canada",
-                                       "Dawson": "Canada",
-                                       "Vancouver": "Canada",
-                                       "Cocos": "Cocos (Keeling) Islands",
-                                       "Zurich": "Switzerland",
-                                       "Abidjan": "Côte d'Ivoire",
-                                       "Rarotonga": "Cook Islands",
-                                       "Santiago": "Chile",
-                                       "Punta_Arenas": "Chile",
-                                       "Easter": "Chile",
-                                       "Shanghai": "China",
-                                       "Urumqi": "China",
-                                       "Bogota": "Colombia",
-                                       "Costa_Rica": "Costa Rica",
-                                       "Havana": "Cuba",
-                                       "Cape_Verde": "Cape Verde",
-                                       "Christmas": "Christmas Island",
-                                       "Nicosia": "Cyprus",
-                                       "Famagusta": "Cyprus",
-                                       "Prague": "Czech Republic",
-                                       "Berlin": "Germany",
-                                       "Copenhagen": "Denmark",
-                                       "Santo_Domingo": "Dominican Republic",
-                                       "Algiers": "Algeria",
-                                       "Guayaquil": "Ecuador",
-                                       "Galapagos": "Ecuador",
-                                       "Tallinn": "Estonia",
-                                       "Cairo": "Egypt",
-                                       "El_Aaiun": "Western Sahara",
-                                       "Madrid": "Spain",
-                                       "Ceuta": "Spain",
-                                       "Canary": "Spain",
-                                       "Helsinki": "Finland",
-                                       "Fiji": "Fiji",
-                                       "Stanley": "Falkland Islands",
-                                       "Chuuk": "Micronesia",
-                                       "Pohnpei": "Micronesia",
-                                       "Kosrae": "Micronesia",
-                                       "Faroe": "Faroe Islands",
-                                       "Paris": "France",
-                                       "London": "Britain (UK)",
-                                       "Tbilisi": "Georgia",
-                                       "Cayenne": "French Guiana",
-                                       "Gibraltar": "Gibraltar",
-                                       "Nuuk": "Greenland",
-                                       "Danmarkshavn": "Greenland",
-                                       "Scoresbysund": "Greenland",
-                                       "Thule": "Greenland",
-                                       "Athens": "Greece",
-                                       "South_Georgia": "South Georgia & the South Sandwich Islands",
-                                       "Guatemala": "Guatemala",
-                                       "Guam": "Guam",
-                                       "Bissau": "Guinea-Bissau",
-                                       "Guyana": "Guyana",
-                                       "Hong_Kong": "Hong Kong",
-                                       "Tegucigalpa": "Honduras",
-                                       "Port-au-Prince": "Haiti",
-                                       "Budapest": "Hungary",
-                                       "Jakarta": "Indonesia",
-                                       "Pontianak": "Indonesia",
-                                       "Makassar": "Indonesia",
-                                       "Jayapura": "Indonesia",
-                                       "Dublin": "Ireland",
-                                       "Jerusalem": "Israel",
-                                       "Kolkata": "India",
-                                       "Calcutta": "India",
-                                       "Chagos": "British Indian Ocean Territory",
-                                       "Baghdad": "Iraq",
-                                       "Tehran": "Iran",
-                                       "Reykjavik": "Iceland",
-                                       "Rome": "Italy",
-                                       "Jamaica": "Jamaica",
-                                       "Amman": "Jordan",
-                                       "Tokyo": "Japan",
-                                       "Nairobi": "Kenya",
-                                       "Bishkek": "Kyrgyzstan",
-                                       "Tarawa": "Kiribati",
-                                       "Kanton": "Kiribati",
-                                       "Kiritimati": "Kiribati",
-                                       "Pyongyang": "Korea (North)",
-                                       "Seoul": "Korea (South)",
-                                       "Almaty": "Kazakhstan",
-                                       "Qyzylorda": "Kazakhstan",
-                                       "Qostanay": "Kazakhstan",
-                                       "Aqtobe": "Kazakhstan",
-                                       "Aqtau": "Kazakhstan",
-                                       "Atyrau": "Kazakhstan",
-                                       "Oral": "Kazakhstan",
-                                       "Beirut": "Lebanon",
-                                       "Colombo": "Sri Lanka",
-                                       "Monrovia": "Liberia",
-                                       "Vilnius": "Lithuania",
-                                       "Luxembourg": "Luxembourg",
-                                       "Riga": "Latvia",
-                                       "Tripoli": "Libya",
-                                       "Casablanca": "Morocco",
-                                       "Monaco": "Monaco",
-                                       "Chisinau": "Moldova",
-                                       "Majuro": "Marshall Islands",
-                                       "Kwajalein": "Marshall Islands",
-                                       "Yangon": "Myanmar (Burma)",
-                                       "Ulaanbaatar": "Mongolia",
-                                       "Hovd": "Mongolia",
-                                       "Choibalsan": "Mongolia",
-                                       "Macau": "Macau",
-                                       "Martinique": "Martinique",
-                                       "Malta": "Malta",
-                                       "Mauritius": "Mauritius",
-                                       "Maldives": "Maldives",
-                                       "Mexico_City": "Mexico",
-                                       "Cancun": "Mexico",
-                                       "Merida": "Mexico",
-                                       "Monterrey": "Mexico",
-                                       "Matamoros": "Mexico",
-                                       "Mazatlan": "Mexico",
-                                       "Chihuahua": "Mexico",
-                                       "Ojinaga": "Mexico",
-                                       "Hermosillo": "Mexico",
-                                       "Tijuana": "Mexico",
-                                       "Bahia_Banderas": "Mexico",
-                                       "Kuala_Lumpur": "Malaysia",
-                                       "Kuching": "Malaysia",
-                                       "Maputo": "Mozambique",
-                                       "Windhoek": "Namibia",
-                                       "Noumea": "New Caledonia",
-                                       "Norfolk": "Norfolk Island",
-                                       "Lagos": "Nigeria",
-                                       "Managua": "Nicaragua",
-                                       "Amsterdam": "Netherlands",
-                                       "Oslo": "Norway",
-                                       "Kathmandu": "Nepal",
-                                       "Nauru": "Nauru",
-                                       "Niue": "Niue",
-                                       "Auckland": "New Zealand",
-                                       "Chatham": "New Zealand",
-                                       "Panama": "Panama",
-                                       "Lima": "Peru",
-                                       "Tahiti": "French Polynesia",
-                                       "Marquesas": "French Polynesia",
-                                       "Gambier": "French Polynesia",
-                                       "Port_Moresby": "Papua New Guinea",
-                                       "Bougainville": "Papua New Guinea",
-                                       "Manila": "Philippines",
-                                       "Karachi": "Pakistan",
-                                       "Warsaw": "Poland",
-                                       "Miquelon": "St Pierre & Miquelon",
-                                       "Pitcairn": "Pitcairn",
-                                       "Puerto_Rico": "Puerto Rico",
-                                       "Gaza": "Palestine",
-                                       "Hebron": "Palestine",
-                                       "Lisbon": "Portugal",
-                                       "Madeira": "Portugal",
-                                       "Azores": "Portugal",
-                                       "Palau": "Palau",
-                                       "Asuncion": "Paraguay",
-                                       "Qatar": "Qatar",
-                                       "Reunion": "Réunion",
-                                       "Bucharest": "Romania",
-                                       "Belgrade": "Serbia",
-                                       "Kaliningrad": "Russia",
-                                       "Moscow": "Russia",
-                                       "Simferopol": "Russia",
-                                       "Kirov": "Russia",
-                                       "Volgograd": "Russia",
-                                       "Astrakhan": "Russia",
-                                       "Saratov": "Russia",
-                                       "Ulyanovsk": "Russia",
-                                       "Samara": "Russia",
-                                       "Yekaterinburg": "Russia",
-                                       "Omsk": "Russia",
-                                       "Novosibirsk": "Russia",
-                                       "Barnaul": "Russia",
-                                       "Tomsk": "Russia",
-                                       "Novokuznetsk": "Russia",
-                                       "Krasnoyarsk": "Russia",
-                                       "Irkutsk": "Russia",
-                                       "Chita": "Russia",
-                                       "Yakutsk": "Russia",
-                                       "Khandyga": "Russia",
-                                       "Vladivostok": "Russia",
-                                       "Ust-Nera": "Russia",
-                                       "Magadan": "Russia",
-                                       "Sakhalin": "Russia",
-                                       "Srednekolymsk": "Russia",
-                                       "Kamchatka": "Russia",
-                                       "Anadyr": "Russia",
-                                       "Riyadh": "Saudi Arabia",
-                                       "Guadalcanal": "Solomon Islands",
-                                       "Mahe": "Seychelles",
-                                       "Khartoum": "Sudan",
-                                       "Stockholm": "Sweden",
-                                       "Singapore": "Singapore",
-                                       "Paramaribo": "Suriname",
-                                       "Juba": "South Sudan",
-                                       "Sao_Tome": "Sao Tome & Principe",
-                                       "El_Salvador": "El Salvador",
-                                       "Damascus": "Syria",
-                                       "Grand_Turk": "Turks & Caicos Is",
-                                       "Ndjamena": "Chad",
-                                       "Kerguelen": "French Southern & Antarctic Lands",
-                                       "Bangkok": "Thailand",
-                                       "Dushanbe": "Tajikistan",
-                                       "Fakaofo": "Tokelau",
-                                       "Dili": "East Timor",
-                                       "Ashgabat": "Turkmenistan",
-                                       "Tunis": "Tunisia",
-                                       "Tongatapu": "Tonga",
-                                       "Istanbul": "Turkey",
-                                       "Funafuti": "Tuvalu",
-                                       "Taipei": "Taiwan",
-                                       "Kiev": "Ukraine",
-                                       "Uzhgorod": "Ukraine",
-                                       "Zaporozhye": "Ukraine",
-                                       "Wake": "US minor outlying islands",
-                                       "New_York": "United States",
-                                       "Detroit": "United States",
-                                       "Louisville": "United States",
-                                       "Monticello": "United States",
-                                       "Indianapolis": "United States",
-                                       "Vincennes": "United States",
-                                       "Winamac": "United States",
-                                       "Marengo": "United States",
-                                       "Petersburg": "United States",
-                                       "Vevay": "United States",
-                                       "Chicago": "United States",
-                                       "Tell_City": "United States",
-                                       "Knox": "United States",
-                                       "Menominee": "United States",
-                                       "Center": "United States",
-                                       "New_Salem": "United States",
-                                       "Beulah": "United States",
-                                       "Denver": "United States",
-                                       "Boise": "United States",
-                                       "Phoenix": "United States",
-                                       "Los_Angeles": "United States",
-                                       "Anchorage": "United States",
-                                       "Juneau": "United States",
-                                       "Sitka": "United States",
-                                       "Metlakatla": "United States",
-                                       "Yakutat": "United States",
-                                       "Nome": "United States",
-                                       "Adak": "United States",
-                                       "Honolulu": "United States",
-                                       "Montevideo": "Uruguay",
-                                       "Samarkand": "Uzbekistan",
-                                       "Tashkent": "Uzbekistan",
-                                       "Caracas": "Venezuela",
-                                       "Ho_Chi_Minh": "Vietnam",
-                                       "Efate": "Vanuatu",
-                                       "Wallis": "Wallis & Futuna",
-                                       "Apia": "Samoa (western)",
-                                       "Johannesburg": "South Africa",
-                                       "Antigua": "Antigua & Barbuda",
-                                       "Anguilla": "Anguilla",
-                                       "Luanda": "Angola",
-                                       "McMurdo": "Antarctica",
-                                       "DumontDUrville": "Antarctica",
-                                       "Syowa": "Antarctica",
-                                       "Aruba": "Aruba",
-                                       "Mariehamn": "Åland Islands",
-                                       "Sarajevo": "Bosnia & Herzegovina",
-                                       "Ouagadougou": "Burkina Faso",
-                                       "Bahrain": "Bahrain",
-                                       "Bujumbura": "Burundi",
-                                       "Porto-Novo": "Benin",
-                                       "St_Barthelemy": "St Barthelemy",
-                                       "Kralendijk": "Caribbean NL",
-                                       "Nassau": "Bahamas",
-                                       "Gaborone": "Botswana",
-                                       "Blanc-Sablon": "Canada",
-                                       "Atikokan": "Canada",
-                                       "Creston": "Canada",
-                                       "Kinshasa": "Congo (Dem. Rep.)",
-                                       "Lubumbashi": "Congo (Dem. Rep.)",
-                                       "Bangui": "Central African Rep.",
-                                       "Brazzaville": "Congo (Rep.)",
-                                       "Douala": "Cameroon",
-                                       "Curacao": "Curaçao",
-                                       "Busingen": "Germany",
-                                       "Djibouti": "Djibouti",
-                                       "Dominica": "Dominica",
-                                       "Asmara": "Eritrea",
-                                       "Addis_Ababa": "Ethiopia",
-                                       "Libreville": "Gabon",
-                                       "Grenada": "Grenada",
-                                       "Guernsey": "Guernsey",
-                                       "Accra": "Ghana",
-                                       "Banjul": "Gambia",
-                                       "Conakry": "Guinea",
-                                       "Guadeloupe": "Guadeloupe",
-                                       "Malabo": "Equatorial Guinea",
-                                       "Zagreb": "Croatia",
-                                       "Isle_of_Man": "Isle of Man",
-                                       "Jersey": "Jersey",
-                                       "Phnom_Penh": "Cambodia",
-                                       "Comoro": "Comoros",
-                                       "St_Kitts": "St Kitts & Nevis",
-                                       "Kuwait": "Kuwait",
-                                       "Cayman": "Cayman Islands",
-                                       "Vientiane": "Laos",
-                                       "St_Lucia": "St Lucia",
-                                       "Vaduz": "Liechtenstein",
-                                       "Maseru": "Lesotho",
-                                       "Podgorica": "Montenegro",
-                                       "Marigot": "St Martin (French)",
-                                       "Antananarivo": "Madagascar",
-                                       "Skopje": "North Macedonia",
-                                       "Bamako": "Mali",
-                                       "Saipan": "Northern Mariana Islands",
-                                       "Nouakchott": "Mauritania",
-                                       "Montserrat": "Montserrat",
-                                       "Blantyre": "Malawi",
-                                       "Niamey": "Niger",
-                                       "Muscat": "Oman",
-                                       "Kigali": "Rwanda",
-                                       "St_Helena": "St Helena",
-                                       "Ljubljana": "Slovenia",
-                                       "Longyearbyen": "Svalbard & Jan Mayen",
-                                       "Bratislava": "Slovakia",
-                                       "Freetown": "Sierra Leone",
-                                       "San_Marino": "San Marino",
-                                       "Dakar": "Senegal",
-                                       "Mogadishu": "Somalia",
-                                       "Lower_Princes": "St Maarten (Dutch)",
-                                       "Mbabane": "Eswatini (Swaziland)",
-                                       "Lome": "Togo",
-                                       "Port_of_Spain": "Trinidad & Tobago",
-                                       "Dar_es_Salaam": "Tanzania",
-                                       "Kampala": "Uganda",
-                                       "Midway": "US minor outlying islands",
-                                       "Vatican": "Vatican City",
-                                       "St_Vincent": "St Vincent",
-                                       "Tortola": "Virgin Islands (UK)",
-                                       "St_Thomas": "Virgin Islands (US)",
-                                       "Aden": "Yemen",
-                                       "Mayotte": "Mayotte",
-                                       "Lusaka": "Zambia",
-                                       "Harare": "Zimbabwe"
-                                    }
-
-                                    var userRegion;
-                                    var userCity;
-                                    var userCountry;
-                                    var userTimeZone;
-
-                                    if (Intl) {
-                                       userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                                       var tzArr = userTimeZone.split("/");
-                                       userRegion = tzArr[0];
-                                       userCity = tzArr[tzArr.length - 1];
-                                       userCountry = timezonetocountry[userCity];
-                                    }
-
-                                    console.log("Time Zone:", userTimeZone);
-                                    console.log("Region:", userRegion);
-                                    console.log("City:", userCity);
-                                    console.log("Country:", userCountry);
-                                    const $select = document.querySelector('#checkout_shipping_country_code');
-                                    var options = $select;
-                                    for (var i = 0; i < options.length; i++) {
-                                       var option = options[i];
-                                       if (option.innerText === userCountry) {
-                                          option.selected = true;
-                                       } else {
-                                          option.selected = false;
-                                       }
-                                    }  
-                                 });
-                              </script>
                               <div class='form-group col'>
                                  <div class='custom-select-wrapper'>
                                     <select class="custom-select" name="checkout[shipping_country_code]" id="checkout_shipping_country_code">
@@ -1012,16 +553,16 @@
                            <div data-function='shipping-list' data-url='KMWCPNRGNJR/shipping_rates.html'>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299' onchange="updateShippingPrice(this);">
+                                    <input checked class='custom-control-input' id='shipping-rate-0' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='138299'>
                                     <label class='custom-control-label' for='shipping-rate-0' id="shipping_free_id">
                                        {{$productlink->checkout_free_option_label}}
                                     </label>
                                  </div>
-                                 <span class='is-free accent' id="shipping_free_value_id"> Free </span>
+                                 <span class='is-free accent' id="shipping_free_value_id"> GRATIS </span>
                               </div>
                               <div class='line-row'>
                                  <div class='custom-control custom-radio'>
-                                    <input class='custom-control-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090' onchange="updateShippingPrice(this);">
+                                    <input class='custom-control-input' id='shipping-rate-1' name='checkout[shipping_rate_id]' required type='radio' validate='true' value='123090'>
                                     <label class='custom-control-label' for='shipping-rate-1' id="shipping_express_id">
                                        {{$productlink->checkout_express_option_label}}
                                     </label>
@@ -1030,29 +571,11 @@
                                     ${{$productlink->checkout_express_option_value}}
                                  </div>
                               </div>
-
-                              <script>
-                                 function updateShippingPrice(inputRadio){
-                                    
-                                    if(inputRadio.id == 'shipping-rate-1'){
-                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
-                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
-                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_express_id').innerHTML;
-                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
-                                    } else{
-                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
-                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
-                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
-                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
-                                    }
-                                    
-                                 }
-                              </script>
                            </div>
                         </div>
                         <!-- Billing details -->
                         <div class='section-title d-flex align-items-center mt-4'>
-                           <h2> 3. Billing Details </h2>
+                           <h2> 3. Datos de facturación </h2>
                            <div class='completed-indicator' data-function='billing-details-completed-indicator'></div>
                         </div>
                         <div class='card' data-function='checkout-form-billing-section'>
@@ -1077,7 +600,7 @@
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input class="form-control " type="text" name="checkout[billing_address1]" id="checkout_billing_address1" />
-                                    <label for="checkout_billing_address1">Dirección</label>
+                                    <label for="checkout_billing_address1">Direccion</label>
                                  </div>
                               </div>
                               <div class='form-row'>
@@ -1094,470 +617,21 @@
                                  <div class='form-group col' style='display: none;'>
                                     <div class='custom-select-wrapper'>
                                        <select class="custom-select" name="checkout[billing_province]" id="checkout_billing_province">
-                                          <option value="">Pais</option>
+                                          <option value="">Estado</option>
                                        </select>
                                     </div>
                                  </div>
                                  <div class='form-group col'>
                                     <div class='custom-select-wrapper'>
                                        <script>
-                                          window.addEventListener('load', function() {
-                                             var timezonetocountry = {
-                                                "Andorra": "Andorra",
-                                                "Dubai": "United Arab Emirates",
-                                                "Kabul": "Afghanistan",
-                                                "Tirane": "Albania",
-                                                "Yerevan": "Armenia",
-                                                "Casey": "Antarctica",
-                                                "Davis": "Antarctica",
-                                                "Mawson": "Antarctica",
-                                                "Palmer": "Antarctica",
-                                                "Rothera": "Antarctica",
-                                                "Troll": "Antarctica",
-                                                "Vostok": "Antarctica",
-                                                "Buenos_Aires": "Argentina",
-                                                "Cordoba": "Argentina",
-                                                "Salta": "Argentina",
-                                                "Jujuy": "Argentina",
-                                                "Tucuman": "Argentina",
-                                                "Catamarca": "Argentina",
-                                                "La_Rioja": "Argentina",
-                                                "San_Juan": "Argentina",
-                                                "Mendoza": "Argentina",
-                                                "San_Luis": "Argentina",
-                                                "Rio_Gallegos": "Argentina",
-                                                "Ushuaia": "Argentina",
-                                                "Pago_Pago": "Samoa (American)",
-                                                "Vienna": "Austria",
-                                                "Lord_Howe": "Australia",
-                                                "Macquarie": "Australia",
-                                                "Hobart": "Australia",
-                                                "Melbourne": "Australia",
-                                                "Sydney": "Australia",
-                                                "Broken_Hill": "Australia",
-                                                "Brisbane": "Australia",
-                                                "Lindeman": "Australia",
-                                                "Adelaide": "Australia",
-                                                "Darwin": "Australia",
-                                                "Perth": "Australia",
-                                                "Eucla": "Australia",
-                                                "Baku": "Azerbaijan",
-                                                "Barbados": "Barbados",
-                                                "Dhaka": "Bangladesh",
-                                                "Brussels": "Belgium",
-                                                "Sofia": "Bulgaria",
-                                                "Bermuda": "Bermuda",
-                                                "Brunei": "Brunei",
-                                                "La_Paz": "Bolivia",
-                                                "Noronha": "Brazil",
-                                                "Belem": "Brazil",
-                                                "Fortaleza": "Brazil",
-                                                "Recife": "Brazil",
-                                                "Araguaina": "Brazil",
-                                                "Maceio": "Brazil",
-                                                "Bahia": "Brazil",
-                                                "Sao_Paulo": "Brazil",
-                                                "Campo_Grande": "Brazil",
-                                                "Cuiaba": "Brazil",
-                                                "Santarem": "Brazil",
-                                                "Porto_Velho": "Brazil",
-                                                "Boa_Vista": "Brazil",
-                                                "Manaus": "Brazil",
-                                                "Eirunepe": "Brazil",
-                                                "Rio_Branco": "Brazil",
-                                                "Thimphu": "Bhutan",
-                                                "Minsk": "Belarus",
-                                                "Belize": "Belize",
-                                                "St_Johns": "Canada",
-                                                "Halifax": "Canada",
-                                                "Glace_Bay": "Canada",
-                                                "Moncton": "Canada",
-                                                "Goose_Bay": "Canada",
-                                                "Toronto": "Canada",
-                                                "Nipigon": "Canada",
-                                                "Thunder_Bay": "Canada",
-                                                "Iqaluit": "Canada",
-                                                "Pangnirtung": "Canada",
-                                                "Winnipeg": "Canada",
-                                                "Rainy_River": "Canada",
-                                                "Resolute": "Canada",
-                                                "Rankin_Inlet": "Canada",
-                                                "Regina": "Canada",
-                                                "Swift_Current": "Canada",
-                                                "Edmonton": "Canada",
-                                                "Cambridge_Bay": "Canada",
-                                                "Yellowknife": "Canada",
-                                                "Inuvik": "Canada",
-                                                "Dawson_Creek": "Canada",
-                                                "Fort_Nelson": "Canada",
-                                                "Whitehorse": "Canada",
-                                                "Dawson": "Canada",
-                                                "Vancouver": "Canada",
-                                                "Cocos": "Cocos (Keeling) Islands",
-                                                "Zurich": "Switzerland",
-                                                "Abidjan": "Côte d'Ivoire",
-                                                "Rarotonga": "Cook Islands",
-                                                "Santiago": "Chile",
-                                                "Punta_Arenas": "Chile",
-                                                "Easter": "Chile",
-                                                "Shanghai": "China",
-                                                "Urumqi": "China",
-                                                "Bogota": "Colombia",
-                                                "Costa_Rica": "Costa Rica",
-                                                "Havana": "Cuba",
-                                                "Cape_Verde": "Cape Verde",
-                                                "Christmas": "Christmas Island",
-                                                "Nicosia": "Cyprus",
-                                                "Famagusta": "Cyprus",
-                                                "Prague": "Czech Republic",
-                                                "Berlin": "Germany",
-                                                "Copenhagen": "Denmark",
-                                                "Santo_Domingo": "Dominican Republic",
-                                                "Algiers": "Algeria",
-                                                "Guayaquil": "Ecuador",
-                                                "Galapagos": "Ecuador",
-                                                "Tallinn": "Estonia",
-                                                "Cairo": "Egypt",
-                                                "El_Aaiun": "Western Sahara",
-                                                "Madrid": "Spain",
-                                                "Ceuta": "Spain",
-                                                "Canary": "Spain",
-                                                "Helsinki": "Finland",
-                                                "Fiji": "Fiji",
-                                                "Stanley": "Falkland Islands",
-                                                "Chuuk": "Micronesia",
-                                                "Pohnpei": "Micronesia",
-                                                "Kosrae": "Micronesia",
-                                                "Faroe": "Faroe Islands",
-                                                "Paris": "France",
-                                                "London": "Britain (UK)",
-                                                "Tbilisi": "Georgia",
-                                                "Cayenne": "French Guiana",
-                                                "Gibraltar": "Gibraltar",
-                                                "Nuuk": "Greenland",
-                                                "Danmarkshavn": "Greenland",
-                                                "Scoresbysund": "Greenland",
-                                                "Thule": "Greenland",
-                                                "Athens": "Greece",
-                                                "South_Georgia": "South Georgia & the South Sandwich Islands",
-                                                "Guatemala": "Guatemala",
-                                                "Guam": "Guam",
-                                                "Bissau": "Guinea-Bissau",
-                                                "Guyana": "Guyana",
-                                                "Hong_Kong": "Hong Kong",
-                                                "Tegucigalpa": "Honduras",
-                                                "Port-au-Prince": "Haiti",
-                                                "Budapest": "Hungary",
-                                                "Jakarta": "Indonesia",
-                                                "Pontianak": "Indonesia",
-                                                "Makassar": "Indonesia",
-                                                "Jayapura": "Indonesia",
-                                                "Dublin": "Ireland",
-                                                "Jerusalem": "Israel",
-                                                "Kolkata": "India",
-                                                "Calcutta": "India",
-                                                "Chagos": "British Indian Ocean Territory",
-                                                "Baghdad": "Iraq",
-                                                "Tehran": "Iran",
-                                                "Reykjavik": "Iceland",
-                                                "Rome": "Italy",
-                                                "Jamaica": "Jamaica",
-                                                "Amman": "Jordan",
-                                                "Tokyo": "Japan",
-                                                "Nairobi": "Kenya",
-                                                "Bishkek": "Kyrgyzstan",
-                                                "Tarawa": "Kiribati",
-                                                "Kanton": "Kiribati",
-                                                "Kiritimati": "Kiribati",
-                                                "Pyongyang": "Korea (North)",
-                                                "Seoul": "Korea (South)",
-                                                "Almaty": "Kazakhstan",
-                                                "Qyzylorda": "Kazakhstan",
-                                                "Qostanay": "Kazakhstan",
-                                                "Aqtobe": "Kazakhstan",
-                                                "Aqtau": "Kazakhstan",
-                                                "Atyrau": "Kazakhstan",
-                                                "Oral": "Kazakhstan",
-                                                "Beirut": "Lebanon",
-                                                "Colombo": "Sri Lanka",
-                                                "Monrovia": "Liberia",
-                                                "Vilnius": "Lithuania",
-                                                "Luxembourg": "Luxembourg",
-                                                "Riga": "Latvia",
-                                                "Tripoli": "Libya",
-                                                "Casablanca": "Morocco",
-                                                "Monaco": "Monaco",
-                                                "Chisinau": "Moldova",
-                                                "Majuro": "Marshall Islands",
-                                                "Kwajalein": "Marshall Islands",
-                                                "Yangon": "Myanmar (Burma)",
-                                                "Ulaanbaatar": "Mongolia",
-                                                "Hovd": "Mongolia",
-                                                "Choibalsan": "Mongolia",
-                                                "Macau": "Macau",
-                                                "Martinique": "Martinique",
-                                                "Malta": "Malta",
-                                                "Mauritius": "Mauritius",
-                                                "Maldives": "Maldives",
-                                                "Mexico_City": "Mexico",
-                                                "Cancun": "Mexico",
-                                                "Merida": "Mexico",
-                                                "Monterrey": "Mexico",
-                                                "Matamoros": "Mexico",
-                                                "Mazatlan": "Mexico",
-                                                "Chihuahua": "Mexico",
-                                                "Ojinaga": "Mexico",
-                                                "Hermosillo": "Mexico",
-                                                "Tijuana": "Mexico",
-                                                "Bahia_Banderas": "Mexico",
-                                                "Kuala_Lumpur": "Malaysia",
-                                                "Kuching": "Malaysia",
-                                                "Maputo": "Mozambique",
-                                                "Windhoek": "Namibia",
-                                                "Noumea": "New Caledonia",
-                                                "Norfolk": "Norfolk Island",
-                                                "Lagos": "Nigeria",
-                                                "Managua": "Nicaragua",
-                                                "Amsterdam": "Netherlands",
-                                                "Oslo": "Norway",
-                                                "Kathmandu": "Nepal",
-                                                "Nauru": "Nauru",
-                                                "Niue": "Niue",
-                                                "Auckland": "New Zealand",
-                                                "Chatham": "New Zealand",
-                                                "Panama": "Panama",
-                                                "Lima": "Peru",
-                                                "Tahiti": "French Polynesia",
-                                                "Marquesas": "French Polynesia",
-                                                "Gambier": "French Polynesia",
-                                                "Port_Moresby": "Papua New Guinea",
-                                                "Bougainville": "Papua New Guinea",
-                                                "Manila": "Philippines",
-                                                "Karachi": "Pakistan",
-                                                "Warsaw": "Poland",
-                                                "Miquelon": "St Pierre & Miquelon",
-                                                "Pitcairn": "Pitcairn",
-                                                "Puerto_Rico": "Puerto Rico",
-                                                "Gaza": "Palestine",
-                                                "Hebron": "Palestine",
-                                                "Lisbon": "Portugal",
-                                                "Madeira": "Portugal",
-                                                "Azores": "Portugal",
-                                                "Palau": "Palau",
-                                                "Asuncion": "Paraguay",
-                                                "Qatar": "Qatar",
-                                                "Reunion": "Réunion",
-                                                "Bucharest": "Romania",
-                                                "Belgrade": "Serbia",
-                                                "Kaliningrad": "Russia",
-                                                "Moscow": "Russia",
-                                                "Simferopol": "Russia",
-                                                "Kirov": "Russia",
-                                                "Volgograd": "Russia",
-                                                "Astrakhan": "Russia",
-                                                "Saratov": "Russia",
-                                                "Ulyanovsk": "Russia",
-                                                "Samara": "Russia",
-                                                "Yekaterinburg": "Russia",
-                                                "Omsk": "Russia",
-                                                "Novosibirsk": "Russia",
-                                                "Barnaul": "Russia",
-                                                "Tomsk": "Russia",
-                                                "Novokuznetsk": "Russia",
-                                                "Krasnoyarsk": "Russia",
-                                                "Irkutsk": "Russia",
-                                                "Chita": "Russia",
-                                                "Yakutsk": "Russia",
-                                                "Khandyga": "Russia",
-                                                "Vladivostok": "Russia",
-                                                "Ust-Nera": "Russia",
-                                                "Magadan": "Russia",
-                                                "Sakhalin": "Russia",
-                                                "Srednekolymsk": "Russia",
-                                                "Kamchatka": "Russia",
-                                                "Anadyr": "Russia",
-                                                "Riyadh": "Saudi Arabia",
-                                                "Guadalcanal": "Solomon Islands",
-                                                "Mahe": "Seychelles",
-                                                "Khartoum": "Sudan",
-                                                "Stockholm": "Sweden",
-                                                "Singapore": "Singapore",
-                                                "Paramaribo": "Suriname",
-                                                "Juba": "South Sudan",
-                                                "Sao_Tome": "Sao Tome & Principe",
-                                                "El_Salvador": "El Salvador",
-                                                "Damascus": "Syria",
-                                                "Grand_Turk": "Turks & Caicos Is",
-                                                "Ndjamena": "Chad",
-                                                "Kerguelen": "French Southern & Antarctic Lands",
-                                                "Bangkok": "Thailand",
-                                                "Dushanbe": "Tajikistan",
-                                                "Fakaofo": "Tokelau",
-                                                "Dili": "East Timor",
-                                                "Ashgabat": "Turkmenistan",
-                                                "Tunis": "Tunisia",
-                                                "Tongatapu": "Tonga",
-                                                "Istanbul": "Turkey",
-                                                "Funafuti": "Tuvalu",
-                                                "Taipei": "Taiwan",
-                                                "Kiev": "Ukraine",
-                                                "Uzhgorod": "Ukraine",
-                                                "Zaporozhye": "Ukraine",
-                                                "Wake": "US minor outlying islands",
-                                                "New_York": "United States",
-                                                "Detroit": "United States",
-                                                "Louisville": "United States",
-                                                "Monticello": "United States",
-                                                "Indianapolis": "United States",
-                                                "Vincennes": "United States",
-                                                "Winamac": "United States",
-                                                "Marengo": "United States",
-                                                "Petersburg": "United States",
-                                                "Vevay": "United States",
-                                                "Chicago": "United States",
-                                                "Tell_City": "United States",
-                                                "Knox": "United States",
-                                                "Menominee": "United States",
-                                                "Center": "United States",
-                                                "New_Salem": "United States",
-                                                "Beulah": "United States",
-                                                "Denver": "United States",
-                                                "Boise": "United States",
-                                                "Phoenix": "United States",
-                                                "Los_Angeles": "United States",
-                                                "Anchorage": "United States",
-                                                "Juneau": "United States",
-                                                "Sitka": "United States",
-                                                "Metlakatla": "United States",
-                                                "Yakutat": "United States",
-                                                "Nome": "United States",
-                                                "Adak": "United States",
-                                                "Honolulu": "United States",
-                                                "Montevideo": "Uruguay",
-                                                "Samarkand": "Uzbekistan",
-                                                "Tashkent": "Uzbekistan",
-                                                "Caracas": "Venezuela",
-                                                "Ho_Chi_Minh": "Vietnam",
-                                                "Efate": "Vanuatu",
-                                                "Wallis": "Wallis & Futuna",
-                                                "Apia": "Samoa (western)",
-                                                "Johannesburg": "South Africa",
-                                                "Antigua": "Antigua & Barbuda",
-                                                "Anguilla": "Anguilla",
-                                                "Luanda": "Angola",
-                                                "McMurdo": "Antarctica",
-                                                "DumontDUrville": "Antarctica",
-                                                "Syowa": "Antarctica",
-                                                "Aruba": "Aruba",
-                                                "Mariehamn": "Åland Islands",
-                                                "Sarajevo": "Bosnia & Herzegovina",
-                                                "Ouagadougou": "Burkina Faso",
-                                                "Bahrain": "Bahrain",
-                                                "Bujumbura": "Burundi",
-                                                "Porto-Novo": "Benin",
-                                                "St_Barthelemy": "St Barthelemy",
-                                                "Kralendijk": "Caribbean NL",
-                                                "Nassau": "Bahamas",
-                                                "Gaborone": "Botswana",
-                                                "Blanc-Sablon": "Canada",
-                                                "Atikokan": "Canada",
-                                                "Creston": "Canada",
-                                                "Kinshasa": "Congo (Dem. Rep.)",
-                                                "Lubumbashi": "Congo (Dem. Rep.)",
-                                                "Bangui": "Central African Rep.",
-                                                "Brazzaville": "Congo (Rep.)",
-                                                "Douala": "Cameroon",
-                                                "Curacao": "Curaçao",
-                                                "Busingen": "Germany",
-                                                "Djibouti": "Djibouti",
-                                                "Dominica": "Dominica",
-                                                "Asmara": "Eritrea",
-                                                "Addis_Ababa": "Ethiopia",
-                                                "Libreville": "Gabon",
-                                                "Grenada": "Grenada",
-                                                "Guernsey": "Guernsey",
-                                                "Accra": "Ghana",
-                                                "Banjul": "Gambia",
-                                                "Conakry": "Guinea",
-                                                "Guadeloupe": "Guadeloupe",
-                                                "Malabo": "Equatorial Guinea",
-                                                "Zagreb": "Croatia",
-                                                "Isle_of_Man": "Isle of Man",
-                                                "Jersey": "Jersey",
-                                                "Phnom_Penh": "Cambodia",
-                                                "Comoro": "Comoros",
-                                                "St_Kitts": "St Kitts & Nevis",
-                                                "Kuwait": "Kuwait",
-                                                "Cayman": "Cayman Islands",
-                                                "Vientiane": "Laos",
-                                                "St_Lucia": "St Lucia",
-                                                "Vaduz": "Liechtenstein",
-                                                "Maseru": "Lesotho",
-                                                "Podgorica": "Montenegro",
-                                                "Marigot": "St Martin (French)",
-                                                "Antananarivo": "Madagascar",
-                                                "Skopje": "North Macedonia",
-                                                "Bamako": "Mali",
-                                                "Saipan": "Northern Mariana Islands",
-                                                "Nouakchott": "Mauritania",
-                                                "Montserrat": "Montserrat",
-                                                "Blantyre": "Malawi",
-                                                "Niamey": "Niger",
-                                                "Muscat": "Oman",
-                                                "Kigali": "Rwanda",
-                                                "St_Helena": "St Helena",
-                                                "Ljubljana": "Slovenia",
-                                                "Longyearbyen": "Svalbard & Jan Mayen",
-                                                "Bratislava": "Slovakia",
-                                                "Freetown": "Sierra Leone",
-                                                "San_Marino": "San Marino",
-                                                "Dakar": "Senegal",
-                                                "Mogadishu": "Somalia",
-                                                "Lower_Princes": "St Maarten (Dutch)",
-                                                "Mbabane": "Eswatini (Swaziland)",
-                                                "Lome": "Togo",
-                                                "Port_of_Spain": "Trinidad & Tobago",
-                                                "Dar_es_Salaam": "Tanzania",
-                                                "Kampala": "Uganda",
-                                                "Midway": "US minor outlying islands",
-                                                "Vatican": "Vatican City",
-                                                "St_Vincent": "St Vincent",
-                                                "Tortola": "Virgin Islands (UK)",
-                                                "St_Thomas": "Virgin Islands (US)",
-                                                "Aden": "Yemen",
-                                                "Mayotte": "Mayotte",
-                                                "Lusaka": "Zambia",
-                                                "Harare": "Zimbabwe"
-                                             }
-         
-                                             var userRegion;
-                                             var userCity;
-                                             var userCountry;
-                                             var userTimeZone;
-         
-                                             if (Intl) {
-                                                userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-                                                var tzArr = userTimeZone.split("/");
-                                                userRegion = tzArr[0];
-                                                userCity = tzArr[tzArr.length - 1];
-                                                userCountry = timezonetocountry[userCity];
-                                             }
-         
-                                             console.log("Time Zone:", userTimeZone);
-                                             console.log("Region:", userRegion);
-                                             console.log("City:", userCity);
-                                             console.log("Country:", userCountry);
-                                             const $select = document.querySelector('#checkout_billing_country_code');
-                                             var options = $select;
-                                             for (var i = 0; i < options.length; i++) {
-                                                var option = options[i];
-                                                if (option.innerText === userCountry) {
-                                                   option.selected = true;
-                                                } else {
-                                                   option.selected = false;
-                                                }
-                                             }  
+                                          $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
+                                             console.log(data["rates"](countryToCurrency[ document.getElementById() ] ));
                                           });
+                                       </script>
+                                       <script crossorigin src="https://unpkg.com/country-to-currency" ></script>
+                                       <script>
+                                         console.log( countryToCurrency[ 'DE' ] ); // EUR
+                                         console.log( countryToCurrency[ 'BR' ] ); // BRL
                                        </script>
                                        <select class="custom-select" name="checkout[billing_country_code]" id="checkout_billing_country_code">
                                           <option value="">Selecciona un país</option>
@@ -1828,7 +902,7 @@
                                  <img src='{{secure_asset('cdn-icons-png.flaticon.com/512/18/18188.png')}}'>
                               </div>
                               <p>
-                                 <span> 24/7 servicio al cliente </span>
+                                 <span> Servicio de atención al cliente 24/7 </span>
                                  <br> Nuestro equipo está a su disposición todos los días de la semana y todos los meses del año.
                               </p>
                            </div>
@@ -1854,8 +928,8 @@
                         <div class='d-none d-lg-block'>
                            <div class='text-center text-lg-left'>
                               <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Política de devoluciones </a>
-                              <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Política de privacidad </a>
-                              <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Términos y condiciones </a>
+                              <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> PPolítica de privacidad </a>
+                              <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Condiciones generales </a>
                            </div>
                            <div class='text-center text-lg-left consent'> Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos. </div>
                            <div class='space-6'></div>
@@ -1863,12 +937,12 @@
                      </div>
                      <div class='col-12 col-lg-5'>
                         <div class='d-none d-lg-flex justify-content-between'>
-                           <h2> Resumen del pedido </h2>
+                           <h2> Order Summary </h2>
                         </div>
                         <div class='d-lg-none'>
                            <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                               <h2 class='mb-0'> 4. Forma de pago </h2>
-                              <div class='completed d-none'> Completo </div>
+                              <div class='completed d-none'> Completar </div>
                               <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                  <div class='checkout-contextual-loader'>
                                     <div></div>
@@ -1886,7 +960,7 @@
                                     <div class='d-flex align-items-center'>
                                        <div class='item-img-wrapper'>
                                           <div class='item-img'>
-                                             <img src='{{secure_asset($productlink->product_image_path)}}'>
+                                             <img src='{{($productlink->product_image_path)}}'>
                                           </div>
                                           <div class='item-qty'>
                                              {{$productlink->product_quantity}}
@@ -1898,14 +972,14 @@
                                           </span>
                                        </div>
                                     </div>
-                                    <div class='ml-1 bold price' id="price_bold">
+                                    <div class='ml-1 bold price' id="mobile_total_3_id">
                                        {{$productlink->product_price}}
                                     </div>
                                  </div>
                                  <div class='line-row d-block' data-function='cart-total-container'>
                                     <div class='d-flex justify-content-between'>
                                        <span> Subtotal </span>
-                                       <span class='[]'> ${{$productlink->product_price}}
+                                       <span class='[]' id="subtotal_1_id"> ${{$productlink->product_price}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
@@ -1918,7 +992,7 @@
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
                                        <span> Impuestos </span>
-                                       <span>
+                                       <span id="taxes_1_id">
                                           {{$productlink->checkout_taxes_value}}
                                        </span>
                                     </div>
@@ -1926,7 +1000,7 @@
                                        <span class='bold'> Total </span>
                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                           IlVTRCIsImVtYWlsIjoiIn0=
-                                          ' data-total-amount='69.99'>
+                                          ' data-total-amount='69.99' id="mobile_total_4_id">
                                           {{$productlink->product_price}}
                                        </span>
                                     </div>
@@ -1965,7 +1039,7 @@
                               <div class='d-none d-lg-block'>
                                  <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
                                     <h2 class='mb-0'> 4. Forma de pago </h2>
-                                    <div class='completed d-none'> Completo </div>
+                                    <div class='completed d-none'> Complete </div>
                                     <div class='checkout-contextual-loader-wrapper' data-function='payment-method-loader' style='display: none;'>
                                        <div class='checkout-contextual-loader'>
                                           <div></div>
@@ -1988,7 +1062,7 @@
                                     <label class='option-wrapper' for='transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540'>
                                        <div class='custom-control custom-radio click-through'>
                                           <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
-                                          <label class='custom-control-label'> Tarjeta de crédito </label>
+                                          <label class='custom-control-label'> Credit Card </label>
                                        </div>
                                        <div class='payment-logo-wrapper'>
                                           <div class='credit-card-brands'>
@@ -2108,7 +1182,7 @@
                                           </script>
                                           <div class="row">
                                              <div class="col-12">
-                                                <label class="form-label" style="font-size: 11px">Número de tarjeta de crédito</label>
+                                                <label class="form-label" style="font-size: 11px">Núm de tarjeta de crédito</label>
                                                 <div class="inputWithIcon">
                                                    <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number">
                                                    <span class="">
@@ -2130,7 +1204,7 @@
                                              </div>
                                              <div class="col-lg-6 col-6">
                                                 <div class="d-flex flex-column">
-                                                   <label class="form-label" style="font-size: 11px">Código de Seguridad</label>
+                                                   <label class="form-label" style="font-size: 11px">Código de seguridad</label>
                                                    <div class="inputWithIcon">
                                                       <input id="cc-cvc" type="password" class="form-control cc-cvc" autocomplete="off" placeholder="•••" name="credit_card_cvv">
                                                       <span class="fas fa-lock"></span>
@@ -2147,15 +1221,15 @@
                               </div>
                            </div>
                            <div class='space-2'>
-                              <input type="submit" value="Completar compra" class="btn btn-primary" />
-                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Completar compra con <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
+                              <input type="submit" value="Complete Purchase" class="btn btn-primary" />
+                              <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>
 
                            <br>
                         </div>
                         <div class='text-center space-top-4 space-4'>
-                           <i class='ion-locked accent mr-1'></i> Transacción segura mediante SSL
+                           <i class='ion-locked accent mr-1'></i> Transaction secured over SSL
                         </div>
                         <div class='text-center space-4 d-none d-lg-block'></div>
                      </div>
@@ -2170,7 +1244,7 @@
                      </div>
                      <p>
                         <span> 
-                           24/7 servicio al cliente </span>
+                           Servicio de atención al cliente 24/7 </span>
                         <br> Nuestro equipo está a su disposición todos los días de la semana y todos los meses del año.
                      </p>
                   </div>
@@ -2201,7 +1275,7 @@
                   <div class='text-center text-lg-left'>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/refund-policy/' target='_blank'> Política de devoluciones  </a>
                      <a class='mr-2' href='https://home.bluesnap.com/privacy-policy/' target='_blank'> Política de privacidad  </a>
-                     <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Términos y condiciones </a>
+                     <a href='https://home.bluesnap.com/ecommerce/legal/terms_and_conditions' target='_blank'> Condiciones generales </a>
                   </div>
                   <div class='text-center text-lg-left consent'> Doy mi consentimiento para recibir marketing automatizado recurrente por mensaje de texto a través de un sistema de marcación telefónica automática. El consentimiento no es una condición para la compra. STOP para cancelar, HELP para obtener ayuda. Se aplican tarifas de mensajes y datos.</div>
                   <div class='space-6'></div>
@@ -2216,8 +1290,8 @@
          <div class='loading-screen-wrapper'>
             <div class='loading-screen-content px-4'>
                <div class='loader-wrapper'>
-                  <div class='loader'> Cargando... </div>
-               </div> Procesar su pago
+                  <div class='loader'> Loading... </div>
+               </div> Processing your payment
             </div>
          </div>
       </div>
@@ -2290,5 +1364,6 @@
          background-color: rgba(234, 106, 17, 0.2) !important;
       }
    </style>
+   @include('scripts.currency');
    <!-- Mirrored from checkout.froppyt.com/f/4DGH1XJG/c/KMWCPNRGNJR by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Apr 2023 03:37:09 GMT -->
 </html>
