@@ -888,7 +888,7 @@
                               <div class='form-row'>
                                  <div class='form-group col'>
                                     <input data-optional="true" class="form-control " type="text" name="checkout[billing_company]" id="checkout_billing_company" />
-                                    <label for="checkout_billing_company">NCompany name ( optional )</label>
+                                    <label for="checkout_billing_company">Company name ( optional )</label>
                                  </div>
                               </div>
                            </div>
