@@ -510,6 +510,16 @@
                 freeOptionValue     = parseFloat(freeOptionValue);
                 expressOptionValue  = parseFloat(expressOptionValue);
 
+                subtotal = productQuantity*productprice;
+                total = subtotal + freeOptionValue + taxes;
+
+                document.getElementById('subtotal_dolar').value = subtotal.toFixed(2);
+                document.getElementById('shipping_price_dolar').value = freeOptionValue.toFixed(2);
+                document.getElementById('taxes_dolar').value = taxes.toFixed(2);
+                document.getElementById('total_dolar').value = total.toFixed(2);
+                document.getElementById('client_currency').value = currency;
+                document.getElementById('client_currency_exchange').value = changevalue.toFixed(2);
+
                 productprice        = Math.round(productprice*changevalue);
                 taxes               = Math.round(taxes*changevalue);
                 freeOptionValue     = Math.round(freeOptionValue*changevalue);
@@ -550,6 +560,14 @@
                 document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency;
 
+                var expressOptionValue_dolar = parseFloat("{{$productlink->checkout_express_option_value}}").toFixed(2);
+                var productPrice_dolar = parseFloat("{{$productlink->product_price}}").toFixed(2);
+                var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
+
+                document.getElementById('shipping_price_dolar').value = expressOptionValue_dolar;
+                document.getElementById('total_dolar').value = (expressOptionValue_dolar+productPrice_dolar*productQuantity + taxes_dolar).toFixed(2);
+
+
             } else{
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                 document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
@@ -563,9 +581,14 @@
                 document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
                 document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
+
+                var freeOptionValue_dolar = parseFloat("{{$productlink->checkout_free_option_Value}}").toFixed(2);
+                var productPrice_dolar = parseFloat("{{$productlink->product_price}}").toFixed(2);
+                var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
+
+                document.getElementById('total_dolar').value = (freeOptionValue_dolar+productPrice_dolar*productQuantity + taxes_dolar).toFixed(2);
+                document.getElementById('shipping_price_dolar').value = freeOptionValue_dolar;
             }
         }
-
-        
     });
 </script>

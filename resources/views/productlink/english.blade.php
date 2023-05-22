@@ -18,7 +18,13 @@
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
       <form class="edit_checkout" id="edit_checkout_760789837" action="/store" autocomplete="off" accept-charset="UTF-8" method="POST"> @csrf <div class='container-fluid d-lg-none cart-summary-wrapper splitter'>
-         <input type="text" name="language" value="english" hidden>      
+         <input type="text" name="language" value="english" hidden>
+         <input type="number" id="subtotal_dolar" name="subtotal_dolar" value="00.00">
+         <input type="number" id="shipping_price_dolar" name="shipping_price_dolar" value="00.00">
+         <input type="number" id="taxes_dolar" name="taxes_dolar" value="00.00">
+         <input type="number" id="total_dolar" name="total_dolar" value="00.00">
+         <input type="text" id="client_currency" name="client_currency" value="00.00">
+         <input type="number" id="client_currency_exchange" name="client_currency_exchange" value="00.00">     
          <div class='row'>
                <div class='card'>
                   <div class='cart-summary line-row first d-lg-none' data-function='mobile-cart-toggler'>
