@@ -571,12 +571,6 @@
                                     ${{$productlink->checkout_express_option_value}}
                                  </div>
                               </div>
-
-                              <script>
-                                 function updateShippingPrice(inputRadio){
-                                    
-                                 }
-                              </script>
                            </div>
                         </div>
                         <!-- Billing details -->
