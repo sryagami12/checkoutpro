@@ -629,16 +629,6 @@
                                  </div>
                                  <div class='form-group col'>
                                     <div class='custom-select-wrapper'>
-                                       <script>
-                                          $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
-                                             console.log(data["rates"](countryToCurrency[ document.getElementById() ] ));
-                                          });
-                                       </script>
-                                       <script crossorigin src="https://unpkg.com/country-to-currency" ></script>
-                                       <script>
-                                         console.log( countryToCurrency[ 'DE' ] ); // EUR
-                                         console.log( countryToCurrency[ 'BR' ] ); // BRL
-                                       </script>
                                        <select class="custom-select" name="checkout[billing_country_code]" id="checkout_billing_country_code">
                                           <option value="">Select a Country</option>
                                           <option value="AF">Afghanistan</option>

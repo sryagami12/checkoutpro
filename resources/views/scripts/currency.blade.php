@@ -518,7 +518,7 @@
                 document.getElementById('taxes_dolar').value = taxes.toFixed(2);
                 document.getElementById('total_dolar').value = total.toFixed(2);
                 document.getElementById('client_currency').value = currency;
-                document.getElementById('client_currency_exchange').value = changevalue.toFixed(2);
+                document.getElementById('client_currency_exchange').value = changevalue;
 
                 productprice        = Math.round(productprice*changevalue);
                 taxes               = Math.round(taxes*changevalue);

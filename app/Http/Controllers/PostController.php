@@ -21,7 +21,7 @@ class PostController extends Controller
             'taxes_dolar'               => $request->input('taxes_dolar'),
             'total_dolar'               => $request->input('total_dolar'),
             'client_currency'           => $request->input('client_currency'),
-            'client_currency_exchange' => $request->input('client_currency_exchange'),
+            'client_currency_exchange'  => $request->input('client_currency_exchange'),
             'email'                     => $request->input('checkout')["email"],
             'shipping_first_name'       => $request->input('checkout')['shipping_first_name'],
             'shipping_last_name'        => $request->input('checkout')['shipping_last_name'],
