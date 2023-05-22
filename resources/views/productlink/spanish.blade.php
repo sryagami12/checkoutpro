@@ -937,7 +937,7 @@
                      </div>
                      <div class='col-12 col-lg-5'>
                         <div class='d-none d-lg-flex justify-content-between'>
-                           <h2> Order Summary </h2>
+                           <h2> Resumen del pedido  </h2>
                         </div>
                         <div class='d-lg-none'>
                            <div class='section-title d-flex align-items-center mt-2 mt-lg-0'>
