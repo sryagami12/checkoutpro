@@ -565,7 +565,7 @@
                 var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
 
                 document.getElementById('shipping_price_dolar').value = expressOptionValue_dolar;
-                var total_dolar = expressOptionValue_dolar + productPrice_dolar*parseInt(productQuantity) + taxes_dolar;
+                var total_dolar = (parseFloat(expressOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
                 console.log(total_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2)
 
@@ -586,7 +586,7 @@
                 var freeOptionValue_dolar = parseFloat("{{$productlink->checkout_free_option_Value}}").toFixed(2);
                 var productPrice_dolar = parseFloat("{{$productlink->product_price}}").toFixed(2);
                 var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
-                var total_dolar = freeOptionValue_dolar+productPrice_dolar*parseInt(productQuantity) + taxes_dolar;
+                var total_dolar = (parseFloat(freeOptionValue_dolar) + parseFloat(productPrice_dolar*parseInt(productQuantity))) + parseFloat(taxes_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2);
                 document.getElementById('shipping_price_dolar').value = freeOptionValue_dolar;
             }
