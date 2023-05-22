@@ -39,7 +39,7 @@
                                       </div>
                                       <div class="mb-3">
                                           <label for="exampleFormControlInput1" class="form-label">Product Quantity</label>
-                                          <input type="number" name="product_quantity" class="form-control" id="exampleFormControlInput1" placeholder="0">
+                                          <input type="number" name="product_quantity" class="form-control" id="exampleFormControlInput1" placeholder="0" value="1">
                                       </div>
                                       <div class="mb-3">
                                           <label for="formFile" class="form-label">Product Image</label>
