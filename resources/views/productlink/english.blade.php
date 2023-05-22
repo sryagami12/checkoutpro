@@ -575,18 +575,6 @@
                               <script>
                                  function updateShippingPrice(inputRadio){
                                     
-                                    if(inputRadio.id == 'shipping-rate-1'){
-                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
-                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
-                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_express_id').innerHTML;
-                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
-                                    } else{
-                                       document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
-                                       document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
-                                       document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
-                                       document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
-                                    }
-                                    
                                  }
                               </script>
                            </div>

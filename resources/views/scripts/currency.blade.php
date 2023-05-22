@@ -8,6 +8,9 @@
         var freeOptionValue = "{{$productlink->checkout_free_option_Value}}";
         var expressOptionValue = "{{$productlink->checkout_express_option_value}}";
 
+        var subtotal;
+        var total;
+
         var timezonetocountry = {
             "Andorra": "Andorra",
             "Dubai": "United Arab Emirates",
@@ -519,12 +522,31 @@
                 document.getElementById('taxes_2_id').innerHTML = taxes + ' '+currency;
 
                 document.getElementById('shipping_express_value_id').innerHTML = expressOptionValue + ' '+currency;
-
-                
-                
-
-                
+   
             });
+        }
+
+        function updateShippingPrice(inputRadio){
+            if(inputRadio.id == 'shipping-rate-1'){
+                document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
+                document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_express_id').innerHTML;
+                document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
+
+                total = total + expressOptionValue;
+
+                document.getElementById('mobile_total_1_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
+                document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
+                
+            } else{
+                document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
+                document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+            }
         }
 
         
