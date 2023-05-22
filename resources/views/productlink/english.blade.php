@@ -31,7 +31,7 @@
                         <i class='ion-chevron-down cart-toggle'></i>
                      </div>
                      <div class='cart-price' data-function='cart-summary-price'>
-                        <div class='final-price'>
+                        <div class='final-price' id="mobile_total_1_id">
                            {{$productlink->product_price}}
                         </div>
                      </div>
@@ -60,7 +60,7 @@
                                  <input type="text" value="{{$productlink->product_name}}" name="product_name" hidden>
                               </div>
                            </div>
-                           <div class='ml-1 bold price' id="label_total_mobile_value_id">
+                           <div class='ml-1 bold price' id="mobile_total_2_id">
                               {{$productlink->product_price}} USD
                            </div>
                            <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
@@ -990,7 +990,7 @@
                                           </span>
                                        </div>
                                     </div>
-                                    <div class='ml-1 bold price' id="price_bold">
+                                    <div class='ml-1 bold price' id="mobile_total_3_id">
                                        {{$productlink->product_price}}
                                     </div>
                                  </div>
@@ -1018,7 +1018,7 @@
                                        <span class='bold'> Total </span>
                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                           IlVTRCIsImVtYWlsIjoiIn0=
-                                          ' data-total-amount='69.99'>
+                                          ' data-total-amount='69.99' id="mobile_total_4_id">
                                           {{$productlink->product_price}}
                                        </span>
                                     </div>
