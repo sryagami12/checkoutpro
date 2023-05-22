@@ -548,7 +548,7 @@
                 document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
                 document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
-                document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
+                document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency;
 
             } else{
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
@@ -556,7 +556,7 @@
                 document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                 document.getElementById('shipping_value_mobile').innerHTML = "FREE";
                 
-                total = total - expressOptionValue;
+                total = total;
 
                 document.getElementById('mobile_total_1_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
