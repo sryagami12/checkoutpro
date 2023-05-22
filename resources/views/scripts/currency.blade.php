@@ -565,7 +565,8 @@
                 var taxes_dolar = parseFloat("{{$productlink->checkout_taxes_value}}").toFixed(2);
 
                 document.getElementById('shipping_price_dolar').value = expressOptionValue_dolar;
-                var total_dolar = expressOptionValue_dolar+productPrice_dolar*parseInt(productQuantity) + taxes_dolar;
+                var total_dolar = expressOptionValue_dolar + productPrice_dolar*parseInt(productQuantity) + taxes_dolar;
+                console.log(total_dolar);
                 document.getElementById('total_dolar').value = total_dolar.toFixed(2)
 
             } else{
