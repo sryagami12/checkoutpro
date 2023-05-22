@@ -450,7 +450,7 @@
 
         document.getElementById('shipping-rate-1').addEventListener('change', function(){
             var element = document.getElementById('shipping-rate-1');
-            updateShippingPrice(element);
+            updateShippingPrice(element,currency);
         });
 
         function updateActualCuntry(timezonetocountry){
@@ -531,7 +531,7 @@
             });
         }
 
-        function updateShippingPrice(inputRadio){
+        function updateShippingPrice(inputRadio, currency){
             if(inputRadio.id == 'shipping-rate-1'){
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
                 document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
