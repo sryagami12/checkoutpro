@@ -60,10 +60,10 @@
                                  <input type="text" value="{{$productlink->product_name}}" name="product_name" hidden>
                               </div>
                            </div>
-                           <div class='ml-1 bold price'>
-                              {{$productlink->product_price}}
-                              <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
+                           <div class='ml-1 bold price' id="label_total_mobile_value_id">
+                              {{$productlink->product_price}} USD
                            </div>
+                           <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
                         </div>
                         <div class='line-row d-block' data-function='cart-total-container'>
                            <div class='d-flex justify-content-between'>

@@ -489,7 +489,26 @@
             console.log(currency);
 
             $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
-                console.log(data["rates"][currency]);
+                
+                var changevalue = data["rates"][currency];
+
+                productQuantity     = parseInt(productQuantity);
+                productprice        = parseFloat(productprice);
+                taxes               = parseFloat(taxes);
+                freeOptionValue     = parseFloat(freeOptionValue);
+                expressOptionValue  = parseFloat(expressOptionValue);
+
+                productprice        = Math.round(productprice*changevalue);
+                taxes               = Math.round(taxes*changevalue);
+                freeOptionValue     = Math.round(freeOptionValue*changevalue);
+                expressOptionValue  = Math.round(expressOptionValue*changevalue);
+                
+                var subtotal = productQuantity*productprice;
+                var total = subtotal + freeOptionValue + taxes;
+
+                getElementById('label_total_mobile_value_id').innerText = total + ' '+currency; 
+
+
             });
         }
 
