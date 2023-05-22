@@ -443,6 +443,7 @@
         var userCity;
         var userCountry;
         var userTimeZone;
+        var currency;
 
         updateActualCuntry(timezonetocountry);
         updateActualCurrency();
@@ -489,7 +490,7 @@
 
             var index = selectElement.selectedIndex;
             var countryCode = selectElement.options[index].value;
-            var currency = countryToCurrency[ countryCode ];
+            currency = countryToCurrency[ countryCode ];
 
             console.log(index);
             console.log(countryCode);
