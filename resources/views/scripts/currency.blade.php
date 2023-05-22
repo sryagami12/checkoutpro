@@ -452,6 +452,10 @@
             var element = document.getElementById('shipping-rate-1');
             updateShippingPrice(element,currency, total);
         });
+        document.getElementById('shipping-rate-0').addEventListener('change', function(){
+            var element = document.getElementById('shipping-rate-0');
+            updateShippingPrice(element,currency, total);
+        });
 
         function updateActualCuntry(timezonetocountry){
             if (Intl) {
@@ -511,8 +515,8 @@
                 freeOptionValue     = Math.round(freeOptionValue*changevalue);
                 expressOptionValue  = Math.round(expressOptionValue*changevalue);
                 
-                var subtotal = productQuantity*productprice;
-                var total = subtotal + freeOptionValue + taxes;
+                subtotal = productQuantity*productprice;
+                total = subtotal + freeOptionValue + taxes;
 
                 document.getElementById('mobile_total_1_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
