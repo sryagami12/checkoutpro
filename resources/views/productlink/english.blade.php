@@ -84,10 +84,10 @@
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span> Taxes </span>
-                              <span>
+                              <span id="taxes_2_id">
                                  {{$productlink->checkout_taxes_value}}
-                                 <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                               </span>
+                              <input type="text" value="{{$productlink->checkout_taxes_value}}" name="checkout_taxes_value" hidden>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
                               <span class='bold'> Total </span>
@@ -1010,7 +1010,7 @@
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
                                        <span> Taxes </span>
-                                       <span>
+                                       <span id="taxes_1_id">
                                           {{$productlink->checkout_taxes_value}}
                                        </span>
                                     </div>
