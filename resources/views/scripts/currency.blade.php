@@ -8,8 +8,8 @@
         var freeOptionValue = "{{$productlink->checkout_free_option_Value}}";
         var expressOptionValue = "{{$productlink->checkout_express_option_value}}";
 
-        var subtotal;
-        var total;
+        var subtotal=0;
+        var total=0;
 
         var timezonetocountry = {
             "Andorra": "Andorra",
@@ -447,6 +447,10 @@
         updateActualCuntry(timezonetocountry);
         updateActualCurrency();
 
+        document.getElementById('shipping-rate-1').addEventListener('change', function(){
+            var element = document.getElementById('shipping-rate-1');
+            updateShippingPrice(element);
+        });
 
         function updateActualCuntry(timezonetocountry){
             if (Intl) {
@@ -540,12 +544,20 @@
                 document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
                 document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
-                
+
             } else{
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                 document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
                 document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                 document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                
+                total = total - expressOptionValue;
+
+                document.getElementById('mobile_total_1_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
+                document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
             }
         }
 
