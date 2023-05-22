@@ -125,4 +125,5 @@
         </div>
     </div>
 </div>
+@include('scripts.modal')
 @endsection
