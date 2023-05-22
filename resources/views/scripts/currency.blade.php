@@ -509,7 +509,8 @@
                 document.getElementById('mobile_total_1_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_2_id').innerHTML = total + ' '+currency;
                 document.getElementById('mobile_total_3_id').innerHTML = total + ' '+currency; 
-                document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency; 
+                document.getElementById('mobile_total_4_id').innerHTML = total + ' '+currency;
+                document.getElementById('mobile_total_5_id').innerHTML = total + ' '+currency; 
 
 
             });

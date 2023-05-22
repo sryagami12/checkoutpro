@@ -93,7 +93,7 @@
                               <span class='bold'> Total </span>
                               <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                  IlVTRCIsImVtYWlsIjoiIn0=
-                                 ' data-total-amount='69.99'>
+                                 ' data-total-amount='69.99' id="mobile_total_5_id">
                                  {{$productlink->product_price}}
                               </span>
                            </div>
