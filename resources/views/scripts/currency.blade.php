@@ -518,6 +518,9 @@
                 document.getElementById('taxes_1_id').innerHTML = taxes + ' '+currency;
                 document.getElementById('taxes_2_id').innerHTML = taxes + ' '+currency;
 
+                document.getElementById('shipping_express_value_id').innerHTML = expressOptionValue + ' '+currency;
+
+                
                 
 
                 
