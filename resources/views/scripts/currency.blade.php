@@ -450,7 +450,7 @@
 
         document.getElementById('shipping-rate-1').addEventListener('change', function(){
             var element = document.getElementById('shipping-rate-1');
-            updateShippingPrice(element,currency);
+            updateShippingPrice(element,currency, total);
         });
 
         function updateActualCuntry(timezonetocountry){
@@ -531,7 +531,7 @@
             });
         }
 
-        function updateShippingPrice(inputRadio, currency){
+        function updateShippingPrice(inputRadio, currency, total){
             if(inputRadio.id == 'shipping-rate-1'){
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_express_id').innerHTML;
                 document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_express_value_id').innerHTML;
@@ -550,7 +550,7 @@
                 document.getElementById('chipping_selected_id').innerHTML = document.getElementById('shipping_free_id').innerHTML;
                 document.getElementById('chipping_selected_value_id').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
                 document.getElementById('shipping_label_mobile').innerHTML = document.getElementById('shipping_free_id').innerHTML;
-                document.getElementById('shipping_value_mobile').innerHTML = document.getElementById('shipping_free_value_id').innerHTML;
+                document.getElementById('shipping_value_mobile').innerHTML = "FREE";
                 
                 total = total - expressOptionValue;
 
