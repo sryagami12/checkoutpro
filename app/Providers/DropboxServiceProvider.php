@@ -9,6 +9,7 @@ use Spatie\FlysystemDropbox\DropboxAdapter;
 use League\Flysystem\Filesystem;
 use Illuminate\Filesystem\FilesystemAdapter;
 use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Support\Facades\Http;
 
 
 class DropboxServiceProvider extends ServiceProvider
