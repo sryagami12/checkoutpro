@@ -103,7 +103,7 @@
                                 <td>{{$productlink->checkout_language}}</td>
                                 <td><img src="{{$productlink->product_image_path}}" alt="image product" width="50px;"></td>
                                 <td>{{$productlink->product_name}}</td>
-                                <td>$ {{$productlink->product_price}}</td>
+                                <td>$ {{ round($productlink->product_price, 2)}}</td>
                                 <td>
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
