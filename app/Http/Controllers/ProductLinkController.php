@@ -48,8 +48,8 @@ class ProductLinkController extends Controller
                 ["requested_visibility" => "public"]
             );
 
-            $url = trim($link['url'], "?dl=0");
-            $url = $url."?raw=1";
+        
+            $url = str_replace ( "?dl=0" , "?dl=1", $link['url'] );
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
