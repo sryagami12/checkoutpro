@@ -10,9 +10,23 @@
       <script src="{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
       <link href="{{secure_asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
-      <noscript>
-         <img height='1' src='https://www.facebook.com/tr?id=617396713608618&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
-      </noscript>
+      <!-- Meta Pixel Code -->
+      <script>
+         !function(f,b,e,v,n,t,s)
+         {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+         n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+         if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+         n.queue=[];t=b.createElement(e);t.async=!0;
+         t.src=v;s=b.getElementsByTagName(e)[0];
+         s.parentNode.insertBefore(t,s)}(window, document,'script',
+         'https://connect.facebook.net/en_US/fbevents.js');
+         fbq('init', '1198371520827281');
+         fbq('track', 'PageView');
+      </script>
+      <noscript><img height="1" width="1" style="display:none"
+         src="https://www.facebook.com/tr?id=1198371520827281&ev=PageView&noscript=1"
+      /></noscript>
+      <!-- End Meta Pixel Code -->
 
    </head>
    <body class='front-shops-checkouts-show'>
@@ -1218,7 +1232,13 @@
                               </div>
                            </div>
                            <div class='space-2'>
-                              <input type="submit" value="Complete Purchase" class="btn btn-primary" />
+                              <input type="submit" value="Completar compra" class="btn btn-primary" id="btn_purchase_id"/>
+                              <script type="text/javascript">
+                                 $('#btn_purchase_id').click(function() {
+                                    var dolar_value = document.getElementById('total_dolar').value
+                                   fbq('track', 'Purchase', {currency: "USD", value: dolar_value});
+                                 });
+                               </script>
                               <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
                               </button>
                            </div>

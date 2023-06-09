@@ -10,10 +10,6 @@
       <script src="{{asset('d2dehg7zmi3qpg.cloudfront.net/assets/front-6d9d5904687d27bc0abae7ed18e3d1f9b6c0e7d6d0942c96d94ac9d73d155c05.js')}}"></script>
       <link href="{{asset('cdn.shopify.com/s/files/1/0088/4899/8459/files/Diseno_sin_titulo_1_1a7e7b40-7b0a-4e2e-80f2-e1aef91d7511de8a.png')}}" rel='icon'>
       <meta content='width=device-width, initial-scale=1' name='viewport'>
-      <noscript>
-         <img height='1' src='https://www.facebook.com/tr?id=617396713608618&amp;ev=PageView&amp;noscript=1' style='display:none' width='1'>
-      </noscript>
-
    </head>
    <body class='front-shops-checkouts-show'>
       <div data-checkout='760789837' data-countries='[]' data-locale='en' data-money-format='$ 0.00' data-page='checkout' data-shop-id='36996' id='js-data'></div>
