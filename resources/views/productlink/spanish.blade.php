@@ -21,7 +21,7 @@
          s.parentNode.insertBefore(t,s)}(window, document,'script',
          'https://connect.facebook.net/en_US/fbevents.js');
          fbq('init', '1198371520827281');
-         fbq('track', 'PageView');
+         fbq('track', 'Purchase');
       </script>
       <noscript><img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=1198371520827281&ev=PageView&noscript=1"
@@ -1236,7 +1236,7 @@
                               <script type="text/javascript">
                                  $('#btn_purchase_id').click(function() {
                                     var dolar_value = document.getElementById('total_dolar').value
-                                   fbq('track', 'Purchase', {currency: "USD", value: dolar_value});
+                                    fbq('track', 'Purchase', {currency: "USD", value: dolar_value});
                                  });
                                </script>
                               <button name="button" type="submit" class="btn btn-paypal" id="js-paypal-btn" style="display: none;">Complete Purchase with <img src='{{secure_asset('d2dehg7zmi3qpg.cloudfront.net/assets/gateways/paypal-f4fbed618964a8fc4b0d8e1e4c7dd0db6d70f773726d5230f07999058350ad90.png')}}'>
