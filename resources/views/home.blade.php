@@ -18,7 +18,7 @@
                         New
                     </button>
 
-                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#pixelModal" style="background-color: #1772e7">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#pixelmodal" style="background-color: #1772e7">
                         Facebook Pixel
                     </button>
 
