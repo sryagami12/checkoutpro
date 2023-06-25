@@ -102,7 +102,7 @@
                                     
                                       <div class="mb-3">
                                           <label for="exampleFormControlInput1" class="form-label">Pixel ID</label>
-                                          <input type="text" name="fbpixel" class="form-control" id="fbpixel_id" placeholder="Pixel Facebook Here...">
+                                          <input type="text" name="fbpixel" class="form-control" id="fbpixel_id" placeholder="Pixel ID Here...">
                                       </div>
       
                                   </div>

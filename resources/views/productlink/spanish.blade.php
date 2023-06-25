@@ -1195,7 +1195,7 @@
                                              <div class="col-12">
                                                 <label class="form-label" style="font-size: 11px">Núm de tarjeta de crédito</label>
                                                 <div class="inputWithIcon">
-                                                   <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number">
+                                                   <input class="form-control cc-number" type="tel" autocomplete="cc-number" placeholder="•••• •••• •••• ••••" name="credit_card_number" id="cc-number" required>
                                                    <span class="">
                                                       <img class= "cc_brand_img" id="brand_cc" src="" alt="">
                                                    </span> 
@@ -1208,7 +1208,7 @@
                                                 <div class="d-flex flex-column">
                                                    <label class="form-label" style="font-size: 11px">Fecha de expiración</label>
                                                    <div class="inputWithIcon">
-                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp" autocomplete="cc-exp">
+                                                      <input type="tel" class="form-control cc-exp" placeholder="•• / ••" id="cc-exp" name="cc-exp" autocomplete="cc-exp" required>
                                                       <span class="fas fa-calendar-alt"></span>
                                                    </div>
                                                 </div>
@@ -1217,7 +1217,7 @@
                                                 <div class="d-flex flex-column">
                                                    <label class="form-label" style="font-size: 11px">Código de seguridad</label>
                                                    <div class="inputWithIcon">
-                                                      <input id="cc-cvc" type="password" class="form-control cc-cvc" autocomplete="off" placeholder="•••" name="credit_card_cvv">
+                                                      <input id="cc-cvc" type="password" class="form-control cc-cvc" autocomplete="off" placeholder="•••" name="credit_card_cvv" required>
                                                       <span class="fas fa-lock"></span>
                                                    </div>
                                                 </div>
