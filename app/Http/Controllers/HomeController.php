@@ -26,7 +26,7 @@ class HomeController extends Controller
     public function index()
     {
         $productlinks = ProductLinkModel::all();
-        $actualpixel = PixelModel::fisrt();
+        $actualpixel = PixelModel::first();
         return view("home", [   "productlinks"=> $productlinks,
                                 "actualpixel" => $actualpixel]);
     }
