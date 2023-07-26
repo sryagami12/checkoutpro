@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ProductLinkModel;
+use App\Models\PixelModel;
 
 class HomeController extends Controller
 {
@@ -25,6 +26,8 @@ class HomeController extends Controller
     public function index()
     {
         $productlinks = ProductLinkModel::all();
-        return view("home", ["productlinks"=>$productlinks]);
+        $actualpixel = PixelModel::fisrt();
+        return view("home", [   "productlinks"=> $productlinks,
+                                "actualpixel" => $actualpixel]);
     }
 }

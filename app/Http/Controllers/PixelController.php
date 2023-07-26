@@ -25,6 +25,6 @@ class PixelController extends Controller
             $actualPixel->save();
         }
         
-        return PixelModel::first();
+        return redirect()->route('home') ;
     }
 }
