@@ -21,7 +21,7 @@ class PixelController extends Controller
             ));
         }
         else{
-            $actualPixel->pixel_code = $newpixel;
+            $actualPixel->pixeel = $newpixel;
             $actualPixel->save();
         }
         
