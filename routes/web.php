@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductLinkController;
+use App\Http\Controllers\PixelController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
