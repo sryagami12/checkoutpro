@@ -50,6 +50,7 @@ class ProductLinkController extends Controller
 
         
             $url = str_replace ( "?dl=0" , "?dl=1", $link['url'] );
+            $url = str_replace ( "dl=0" , "dl=1", $link['url'] );
 
             //$image = $request->file('product_image_path');
             //$filename = time() . '.' . $image->getClientOriginalExtension();
