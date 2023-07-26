@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use DB;
 use App\Models\ProductLinkModel;
+use App\Models\PixelModel;
 
 class ProductLinkController extends Controller
 {
@@ -14,10 +15,12 @@ class ProductLinkController extends Controller
 
         $productlink_id = $request->get('id');
         $productlink = ProductLinkModel::find($productlink_id);
+        $actualPixel = PixelModel::first();
+
         if($productlink->checkout_language=="Spanish"){
-            return view('productlink.spanish',['productlink'=>$productlink]);
+            return view('productlink.spanish',['productlink'=>$productlink, 'actualPixel' => $actualPixel]);
         }else{
-            return view('productlink.english',['productlink'=>$productlink]);
+            return view('productlink.english',['productlink'=>$productlink, 'actualPixel' => $actualPixel]);
         }
 
     }
