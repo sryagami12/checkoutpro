@@ -12,10 +12,20 @@ class PixelController extends Controller
 
     public function updatepixel(Request $request){
 
-        //$newpixel = $request->get('fbpixel');
-        $actualPixel = PixelModel::all();
+        $newpixel = $request->input('fbpixel');
+        /*$actualPixel = PixelModel::first();
+
+        if(!$actualPixel){
+            DB::table('pixel_code')->insertGetId(array(
+                'pixeel' => $newpixel,
+            ));
+        }
+        else{
+            $actualPixel->pixel_code = $newpixel;
+            $actualPixel->save();
+        }*/
         
-        return $actualPixel;
+        return $newpixel;
 
     }
 }
