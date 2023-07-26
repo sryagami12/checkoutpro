@@ -22,7 +22,7 @@
          'https://connect.facebook.net/en_US/fbevents.js');
          fbq('init', '3248135308792509');
          fbq('track', 'Purchase');
-         console.log("{{$actualpixel->pixeel}}")
+         console.log("{{$actualPixel->pixeel}}")
       </script>
       <noscript><img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=1198371520827281&ev=PageView&noscript=1"
