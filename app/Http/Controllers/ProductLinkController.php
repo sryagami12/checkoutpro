@@ -61,7 +61,7 @@ class ProductLinkController extends Controller
             //$path = Storage::disk('public')->put('images/', $request->file('product_image_path'));
             //$path = $request->file('product_image_path')->store('images', 'public');;
 
-            $check = DB::table('product_checkout')->insertGetId(array(
+            $check = DB::table('product_checkout')->insert(array(
                 'product_name'                  => $request->input('product_name'),
                 'product_price'                 => $request->input('product_price'),
                 'product_quantity'              => $request->input('product_quantity'),

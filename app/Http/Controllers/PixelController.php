@@ -16,7 +16,7 @@ class PixelController extends Controller
         $actualPixel = PixelModel::first();
 
         if(!$actualPixel){
-            DB::table('pixel_code')->insertGetId(array(
+            DB::table('pixel_code')->insert(array(
                 'pixeel' => $newpixel,
             ));
         }
