@@ -984,13 +984,13 @@
                                        </div>
                                     </div>
                                     <div class='ml-1 bold price' id="mobile_total_3_id">
-                                       {{$productlink->product_price}}
+                                       {{number_format($productlink->product_price, 2, '.', '')}}
                                     </div>
                                  </div>
                                  <div class='line-row d-block' data-function='cart-total-container'>
                                     <div class='d-flex justify-content-between'>
                                        <span> Subtotal </span>
-                                       <span class='[]' id="subtotal_1_id">{{ number_format($productlink->product_price, 2, '.', '');}}
+                                       <span class='[]' id="subtotal_1_id">$ {{ number_format($productlink->product_price, 2, '.', '')}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
@@ -1004,7 +1004,7 @@
                                     <div class='d-flex justify-content-between space-top-2'>
                                        <span> Impuestos </span>
                                        <span id="taxes_1_id">
-                                          {{$productlink->checkout_taxes_value}}
+                                          {{number_format($productlink->checkout_taxes_value, 2, '.', '')}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
@@ -1012,7 +1012,7 @@
                                        <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                           IlVTRCIsImVtYWlsIjoiIn0=
                                           ' data-total-amount='69.99' id="mobile_total_4_id">
-                                          {{$productlink->product_price}}
+                                          {{number_format($productlink->product_price, 2, '.', '')}}
                                        </span>
                                     </div>
                                  </div>
