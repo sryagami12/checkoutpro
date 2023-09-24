@@ -53,7 +53,7 @@
                      </div>
                      <div class='cart-price' data-function='cart-summary-price'>
                         <div class='final-price' id="mobile_total_1_id">
-                           {{$productlink->product_price}}
+                           {{number_format($productlink->product_price, 2, '.', '')}}
                         </div>
                      </div>
                      <script>
