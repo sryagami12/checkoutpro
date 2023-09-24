@@ -102,8 +102,8 @@
                                     
                                       <div class="mb-3">
                                           <label for="exampleFormControlInput1" class="form-label">Pixel ID</label>
-                                          @if ($actualpixel->pixeel)
-                                            <input type="text" name="fbpixel" class="form-control" id="fbpixel_id" placeholder="Pixel ID Here..." value="{{$actualpixel->pixeel}}">
+                                          @if ($actualpixel)
+                                            <input type="text" name="fbpixel" class="form-control" id="fbpixel_id" placeholder="Pixel ID Here...">
                                           @else
                                             <input type="text" name="fbpixel" class="form-control" id="fbpixel_id" placeholder="Pixel ID Here..."> 
                                           @endif
