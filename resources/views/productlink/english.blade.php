@@ -1072,7 +1072,7 @@
                                  <div class='gateway-option'>
                                     <label class='option-wrapper' for='transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540'>
                                        <div class='custom-control custom-radio click-through'>
-                                          <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input js-BluesnapGateway js-gateway-option-input" type="radio" value="437d5370-f911-4a82-9188-1d487d5ec540" name="transaction[gateway_id]" id="transaction_gateway_id_437d5370-f911-4a82-9188-1d487d5ec540" />
+                                          <input test_id="437d5370-f911-4a82-9188-1d487d5ec540" data-gateway-type="BluesnapGateway" data-dynamic="true" class="custom-control-input" type="radio" checked/>
                                           <label class='custom-control-label'> Credit Card </label>
                                        </div>
                                        <div class='payment-logo-wrapper'>
