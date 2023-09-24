@@ -129,8 +129,7 @@
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span> Taxes </span>
                                         <span id="taxes_id">
-                                          {{number_format($$checkout_taxes_value, 2, '.', '')}}{{$checkout_taxes_value}}
-                                        </span>
+                                          {{number_format($checkout_taxes_value, 2, '.', '')}}                                        </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span class='bold'> Total </span>
