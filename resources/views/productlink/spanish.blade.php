@@ -990,7 +990,7 @@
                                  <div class='line-row d-block' data-function='cart-total-container'>
                                     <div class='d-flex justify-content-between'>
                                        <span> Subtotal </span>
-                                       <span class='[]' id="subtotal_1_id"> ${{ number_format($productlink->product_price, 2, '.', '');}}
+                                       <span class='[]' id="subtotal_1_id">{{ number_format($productlink->product_price, 2, '.', '');}}
                                        </span>
                                     </div>
                                     <div class='d-flex justify-content-between space-top-2'>
