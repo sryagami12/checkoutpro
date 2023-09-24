@@ -82,7 +82,7 @@
                               </div>
                            </div>
                            <div class='ml-1 bold price' id="mobile_total_2_id">
-                              {{$productlink->product_price}} USD
+                              {{number_format($productlink->product_price, 2, '.', '')}} USD
                            </div>
                            <input type="text" value="{{$productlink->product_price}}" name="product_price" hidden>
                         </div>
@@ -90,7 +90,7 @@
                            <div class='d-flex justify-content-between'>
                               <span> Subtotal </span>
                               <span class='[]' id="subtotal_2_id">
-                                 {{$productlink->product_price}}
+                                 {{number_format($productlink->product_price, 2, '.', '')}}
                               </span>
                            </div>
                            <div class='d-flex justify-content-between space-top-2'>
@@ -115,7 +115,7 @@
                               <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                  IlVTRCIsImVtYWlsIjoiIn0=
                                  ' data-total-amount='69.99' id="mobile_total_5_id">
-                                 {{$productlink->product_price}}
+                                 {{number_format($productlink->product_price, 2, '.', '')}}
                               </span>
                            </div>
                         </div>

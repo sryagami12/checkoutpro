@@ -589,7 +589,7 @@
                                     </label>
                                  </div>
                                  <div class='bold' id="shipping_express_value_id">
-                                    ${{$productlink->checkout_express_option_value}}
+                                    $ {{number_format($productlink->checkout_express_option_value, 2, '.', '')}}
                                  </div>
                               </div>
                            </div>
