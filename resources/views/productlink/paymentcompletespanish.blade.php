@@ -113,13 +113,13 @@
                                         </div>
                                      </div>
                                      <div class='ml-1 bold price' id="total_1">
-                                       $ {{$product_price}}
+                                       $ {{number_format($product_price, 2, '.', '')}}
                                      </div>
                                   </div>
                                   <div class='line-row d-block' data-function='cart-total-container'>
                                      <div class='d-flex justify-content-between'>
                                         <span> Subtotal </span>
-                                        <span class='[]' id="subtotal_1"> ${{$product_price}}
+                                        <span class='[]' id="subtotal_1"> ${{number_format($product_price, 2, '.', '')}}
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
@@ -133,7 +133,7 @@
                                      <div class='d-flex justify-content-between space-top-2'>
                                         <span> Impuestos </span>
                                         <span id="taxes_id">
-                                          {{$checkout_taxes_value}}
+                                          {{number_format($checkout_taxes_value, 2, '.', '')}}
                                         </span>
                                      </div>
                                      <div class='d-flex justify-content-between space-top-2'>
@@ -141,7 +141,7 @@
                                         <span class='bold' data-function='three-d-secure-data-container' data-three-d-secure='eyJlbmFibGVkIjpmYWxzZSwiYW1vdW50IjoiNjkuOTkiLCJjdXJyZW5jeSI6
                                            IlVTRCIsImVtYWlsIjoiIn0=
                                            ' data-total-amount='69.99' id="total_2">
-                                           $ {{$product_price}}
+                                           $ {{number_format($product_price, 2, '.', '')}}
                                         </span>
                                      </div>
                                   </div>
