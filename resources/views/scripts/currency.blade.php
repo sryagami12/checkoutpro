@@ -500,7 +500,7 @@
             console.log(countryCode);
             console.log(currency);
 
-            $.get('https://openexchangerates.org/api/latest.json', {app_id: 'ef64265ccfcf4e60bd08ab9387433cd5'}, function(data) {
+            $.get('https://openexchangerates.org/api/latest.json', {app_id: 'c85c34de30c2444ba53cdd6365ef58d6'}, function(data) {
                 
                 var changevalue = data["rates"][currency];
 
